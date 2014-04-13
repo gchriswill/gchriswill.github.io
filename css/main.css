@@ -28,6 +28,7 @@ html,
 body {
   height: 100%;
   background-color: #000;
+  
 }
 body {
   color: #fff;
@@ -46,6 +47,8 @@ body {
 }
 
 .site-wrapper-inner {
+  
+
   display: table-cell;
   vertical-align: top;
 }
@@ -114,6 +117,7 @@ body {
 
 .cover {
   padding: 0 20px;
+  
 }
 .cover .btn-lg {
   padding: 10px 20px;
@@ -133,6 +137,7 @@ body {
 .mastfoot {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
+  
 }
 
 
@@ -145,6 +150,7 @@ body {
   .masthead {
     position: fixed;
     top: 0;
+    
   }
   .mastfoot {
     position: fixed;
@@ -167,5 +173,6 @@ body {
   .mastfoot,
   .cover-container {
     width: 700px;
+    
   }
 }
