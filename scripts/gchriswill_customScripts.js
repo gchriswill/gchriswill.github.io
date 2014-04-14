@@ -1,17 +1,16 @@
 
 $( document ).ready(function() {
-  
-
+  	
 	$( ".gchriswill-profileImage" ).fadeOut( 1,function() {
 		$( ".gchriswill-profileImage" ).fadeIn( 1500 );
 	});
 				
 	$( ".gchriswill-twitterHandle" ).fadeOut( 1,function() {
-		$( ".gchriswill-twitterHandle" ).fadeIn( 3500 );
+		$( ".gchriswill-twitterHandle" ).fadeIn( 4000 );
 	});
 	
 	$( ".gchriswill-description" ).fadeOut( 1,function() {
-		$( ".gchriswill-description" ).fadeIn( 5500 );
+		$( ".gchriswill-description" ).fadeIn( 6500 );
 	});
 	
 });
