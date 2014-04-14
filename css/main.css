@@ -1,4 +1,5 @@
-/*
+/* CSS by @mdo
+ * 
  * Globals
  */
 
@@ -122,12 +123,6 @@ body {
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
-}
-
-#me-logo {
-	width: 21.031em;
-	height: 14.906em;
-	
 }
 
 /*
