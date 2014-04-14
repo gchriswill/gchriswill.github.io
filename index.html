@@ -1,6 +1,14 @@
 <!doctype html>
 <!--
 	
+	< @gchriswill note="IMPORTANT NOTE!" >
+	
+		This website has been made with Bootstrap. 
+		The HTML5 and CSS structure's origin is from a template provided from http://getbootstrap.com/getting-started/#examples and maintained by @mdo.
+		Customizations updates are been applied in weekly basis by @gchriswill.
+		Licensed under MIT.
+	
+	</ @gchriswill >
 	
 -->
 
@@ -14,6 +22,7 @@
 	    <title>gchriswill | Developer</title>
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/gchriswill_customStyles.css">
 		<script src="scripts/respond.js"></script>
 	
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -31,7 +40,7 @@
 	
 	        <div class="cover-container" >
 				
-	          <div id="navFixed" class="masthead clearfix">
+	          <div id="navFixed" class="masthead clearfix" >
 	            <div class="inner">
 	              <h3 class="masthead-brand"> < / Hello World! ></h3>
 	              <ul class="nav masthead-nav">
@@ -44,17 +53,18 @@
 	            </div>
 	          </div>
 	
-	          <div id="me-logoTest" class="inner cover" >
-	            <!-- <a href="https://twitter.com/gchriswill"> --><img id="me-logo" class="img-rounded" src="images/MeSignature.png" alt="Christopher Gonzalez, Christopher, Gonzalez, @gchriswill, gchriswill, GchrisWill">
-				<h1 class="cover-heading">@gchriswill</h1><!-- </a> -->
+	          <div class="inner cover gchriswill-container-1" >
+	            <!-- <a href="https://twitter.com/gchriswill"> --><img class="img-rounded gchriswill-profileImage" src="images/MeSignature.png" alt="Christopher Gonzalez, Christopher, Gonzalez, @gchriswill, gchriswill, GchrisWill">
+				<h1 class="cover-heading gchriswill-twitterHandle">@gchriswill</h1><!-- </a> -->
 	            <!-- <h1 id="logo2">Testing</h1> -->
-	            <p class="lead">I am a genius, a mathematician and a programmer. A undiscovered gifted and talented guy, independently spirited and fiercely unconventional...</p>
+	            <p class="lead gchriswill-description" >Hi! I'm gchriswill...<br>Some people believe I'm a genius, a mathematician and a skilled programmer. But most believe that I'm a undiscovered gifted and talented guy, independently spirited and fiercely unconventional.<br>But I think I'm not that much...</p>
 	            
 	          </div>
 	
 	          <div class="mastfoot">
 	            <div class="inner">
-	              <p>Made with <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>, <br>and customized by <a href="https://twitter.com/gchriswill">@gchriswill</a></p>
+	              <p>Made with <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/gchriswill">@gchriswill</a></p>
+	            
 	            </div>
 	          </div>
 	
@@ -66,13 +76,8 @@
 		
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<script>
-			$( "#clickTest" ).click(function() {
-				$( "#me-logoTest" ).slideUp( "slow", function() {
-					$( "#me-logoTest" ).slideDown( "slow")
-				});
-			});
-		</script>
+		<script src="scripts/gchriswill_customScripts.js"></script>
+		
 		<!-- <script> alert("This website is under construction and customization.") </script> -->
 	
 	</body>
