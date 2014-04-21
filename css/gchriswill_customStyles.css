@@ -2,9 +2,91 @@
  * CSS by @gchriswill 
  *	
  */
+ 
+ 
+body.global_Style {
+	
+	font-family: Lato, "Helvetica Neue";
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	-webkit-backface-visibility: hidden;
+};
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, 
+a,
+p {
+	font-family: inherit;
+	font-weight: inherit;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
+	}
+
+	50% {
+		box-shadow: 0 0 200px rgba(255, 0, 0, 0.3);
+	}
+
+	100% {
+		box-shadow: 0 0 5px rgba(255 , 0, 0, 0.1);
+	}
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		box-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
+	}
+
+	50% {
+		box-shadow: 0 0 200px rgba(255, 0, 0, 0.3);
+	}
+
+	100% {
+		box-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
+	}
+}
+.masthead-brand {
+	 font-size: 1.625em;
+	 font-weight: inherit;
+}
 .gchriswill-profileImage {
+	
 	width: 21.031em;
 	height: 14.906em;
+	border-radius: 50px;
+	-webkit-animation: pulse 2.2s infinite ease-in-out;
+	-ms-animation: pulse 2.2s infinite ease-in-out;
+	-moz-animation: pulse 2.2s infinite ease-in-out;
+}
+
+
+h3.gchriswill-intro {
+	font-size: 2em;
+	font-weight: inherit;
+}
+
+.gchriswill-description {
+	font-size: 1.625em;
 	
 }
+
+
+a,
+ul.masthead-nav > li > a {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+.mastfoot > div > p > a.footerLinks {
+	 color: red;
+	 font-weight: normal;
+}
+

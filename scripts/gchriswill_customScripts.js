@@ -23,3 +23,5 @@ $( "#clickTest" ).click(function() {
 	});
 	
 });
+
+$(".correo").attr("href", "mailto:" + "gchriswill" + "@" + "icloud" + "." + "com");
