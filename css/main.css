@@ -7,7 +7,7 @@
 a:focus,
 a:hover {
   color: #999;
-  font-size: 24px;
+  font-size: 36px;
 }
 
 
@@ -61,8 +61,8 @@ body {
  * Header
  */
 .masthead-brand {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .masthead-nav > li {
