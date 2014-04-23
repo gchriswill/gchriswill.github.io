@@ -3,16 +3,45 @@
  *	
  */
  
+ .lightDarkColor {
+	 background-color: #727272;
+ }
  
-body.global_Style {
-	
+ .NotSoDarkColor {
+	 background-color: #484848;
+ }
+ .darkColor {
+	 background-color: #1d1d1d;
+ }
+ 
+
+html > body {
+	background-color: #000000;
 	font-family: Lato, "Helvetica Neue";
-	font-weight: 300;
+	font-weight: 600;
 	-webkit-font-smoothing: antialiased;
 	-webkit-backface-visibility: hidden;
 };
 
+ 
+div#main_navbar_collapse > ul > li > a.testing {
+	
+}
 
+.navbar-nav > .dropdown > .dropdown-menu , 
+.modal > .modal-dialog > .modal-content,
+.modal > .modal-dialog > .modal-content > .modal-footer > .btn-default {
+	border-radius: 0;
+}
+
+.imageStyler > img {
+	margin: auto;
+	
+}
+
+
+
+/*
 h1,
 h2,
 h3,
@@ -27,52 +56,54 @@ p {
 
 @keyframes pulse {
 	0% {
-		box-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
+		box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
 	}
 
 	50% {
-		box-shadow: 0 0 200px rgba(255, 0, 0, 0.3);
+		box-shadow: 0px 0px 200px rgba(255, 0, 0, 0.6);
 	}
 
 	100% {
-		box-shadow: 0 0 5px rgba(255 , 0, 0, 0.1);
+		box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
 	}
+
 }
 
 @-webkit-keyframes pulse {
 	0% {
-		box-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
+		box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
 	}
 
 	50% {
-		box-shadow: 0 0 200px rgba(255, 0, 0, 0.3);
+		box-shadow: 0px 0px 200px rgba(255, 0, 0, 0.6);
 	}
 
 	100% {
-		box-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
+		box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
 	}
 }
-.masthead-brand {
+
+h3.masthead-brand {
 	 font-size: 1.625em;
 	 font-weight: inherit;
 }
-.gchriswill-profileImage {
+
+img.gchriswill-profileImage {
 	
 	width: 21.031em;
-	height: 14.906em;
-	border-radius: 50px;
-	-webkit-animation: pulse 2.2s infinite ease-in-out;
-	-ms-animation: pulse 2.2s infinite ease-in-out;
-	-moz-animation: pulse 2.2s infinite ease-in-out;
+	height: 21.031em;
+	border-radius: 10.5em;
+	-webkit-animation: pulse 2.5s infinite ease-in-out;
+	-ms-animation: pulse 2.5s infinite ease-in-out;
+	-moz-animation: pulse 2.5s infinite ease-in-out;
 }
-
 
 h3.gchriswill-intro {
 	font-size: 2em;
 	font-weight: inherit;
 }
 
-.gchriswill-description {
+p.gchriswill-description {
 	font-size: 1.625em;
 	
 }
@@ -90,3 +121,52 @@ ul.masthead-nav > li > a {
 	 font-weight: normal;
 }
 
+*/
+
+
+/*
+
+
+<div class="site-wrapper" >
+	
+	      <div class="site-wrapper-inner" >
+	
+	        <div class="cover-container" >
+				
+	          <div id="navFixed" class="masthead clearfix" >
+	            <div class="inner">
+	              <h3 class="masthead-brand"> < Hello World! /> </h3>
+	              <ul class="nav masthead-nav">
+	              	<li id="clickTest" class="active" ><a href="#">Click Me!</a></li>
+	                <!--
+<li><a href="#">Projects</a></li>
+	                <li><a href="#">Contact?</a></li>
+-->
+	              </ul>
+	            </div>
+	          </div>
+	
+	          <div class="inner cover gchriswill-container-1" itemscope itemtype="http://schema.org/Person">
+	            <!-- <a href="https://twitter.com/gchriswill"> -->
+	            <img class="img-rounded gchriswill-profileImage" src="images/MeSignature.png" alt="Christopher Gonzalez, Christopher, Gonzalez, @gchriswill, gchriswill, GchrisWill">
+	            <h3 class="cover-heading gchriswill-intro">Hello hello! My name is gchriswill</h3><!-- </a> -->
+	            
+	            <p class="lead gchriswill-description" >I'm a undiscovered gifted and talented guy, independently spirited, fiercely unconventional and digitally powered...<br> Nice to meet you!</p>
+	            
+	          </div>
+	
+	          <div class="mastfoot">
+	            <div class="inner">
+	              <p>Made with <a class="footerLinks" href="http://getbootstrap.com">Bootstrap</a> by <a class="footerLinks" href="https://twitter.com/gchriswill">@gchriswill</a></p>
+	            
+	            </div>
+	          </div>
+	
+	        </div>
+	
+	      </div>
+	
+	    </div>
+
+
+*/
