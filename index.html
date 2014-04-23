@@ -1,86 +1,144 @@
 <!doctype html>
-<!--
-	
-	< @gchriswill note="IMPORTANT NOTE!" >
-	
-		This website has been made with Bootstrap. 
-		The HTML5 and CSS structure's origin is from a template provided from http://getbootstrap.com/getting-started/#examples and maintained by @mdo.
-		Customizations updates are been applied in weekly basis by @gchriswill.
-		Licensed under MIT.
-	
-	</ @gchriswill >
-	
--->
-
 
 <html lang="en">
 	
 	<head>
+	
+		<!-- @gchriswill:-> Meta attributes setup --->
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    
+	    <!-- @gchriswill:-> Title setup --->
 	    <title>gchriswill | Developer</title>
-	    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-		<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-		<link rel="stylesheet" href="css/main.css">
+	    
+	    <!-- @gchriswill:-> External sources links --->
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
 		<link rel="stylesheet" href="css/gchriswill_customStyles.css">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700">
+		
 		<script src="scripts/respond.js"></script>
-	
-		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	    <!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	    <![endif]-->
 	    
 	</head>
 	
-	<body class="global_Style">
-
-	    <div class="site-wrapper" >
-	
-	      <div class="site-wrapper-inner" >
-	
-	        <div class="cover-container" >
-				
-	          <div id="navFixed" class="masthead clearfix" >
-	            <div class="inner">
-	              <h3 class="masthead-brand"> < Hello World! /> </h3>
-	              <ul class="nav masthead-nav">
-	              	<li id="clickTest" class="active" ><a href="#">Click Me!</a></li>
-	                <!--
-<li><a href="#">Projects</a></li>
-	                <li><a href="#">Contact?</a></li>
--->
-	              </ul>
-	            </div>
-	          </div>
-	
-	          <div class="inner cover gchriswill-container-1" itemscope itemtype="http://schema.org/Person">
-	            <!-- <a href="https://twitter.com/gchriswill"> -->
-	            <img class="img-rounded gchriswill-profileImage" src="images/MeSignature.png" alt="Christopher Gonzalez, Christopher, Gonzalez, @gchriswill, gchriswill, GchrisWill">
-	            <h3 class="cover-heading gchriswill-intro">Hi, I'm gchriswill</h3><!-- </a> -->
-	            
-	            <p class="lead gchriswill-description" >The undiscovered gifted and talented guy, independently spirited, fiercely unconventional and digitally powered...</p>
-	            
-	          </div>
-	
-	          <div class="mastfoot">
-	            <div class="inner">
-	              <p>Made with <a class="footerLinks" href="http://getbootstrap.com">Bootstrap</a> by <a class="footerLinks" href="https://twitter.com/gchriswill">@gchriswill</a></p>
-	            
-	            </div>
-	          </div>
-	
-	        </div>
-	
-	      </div>
-	
-	    </div>
+	<body >
 		
-		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<script src="scripts/gchriswill_customScripts.js"></script>
+		<!-- @gchriswill:-> Navigation bar setup --->
+		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+			
+			<div class="container-fluid">
+		    
+				<div class="navbar-header">
+			      
+			    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_navbar_collapse">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+					</button>
+			      
+					<a class="navbar-brand" href="#">< Hello World /></a>
+			    
+			    </div>
+		    
+			 	<div class="collapse navbar-collapse navbar-right" id="main_navbar_collapse">
+		      
+		     		<ul class="nav navbar-nav">
+		        
+			 	        <li class="active"><a href="#">Home</a></li>
+			 	        <li><a class="text-warning" href="#">Portfolio</a></li>
+			 	        <li><a href="#">Tutorials</a></li>
+			 	        <li><a href="#">Blog</a></li>
+			 	        
+			 	        <li class="dropdown">
+		        
+			 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Contact? <b class="caret"></b></a>
+			 				<ul class="dropdown-menu">
+			 		        	<li><a class="myEmail" href="mailto:gchriswill-at-me-dot-com"><span class="glyphicon glyphicon-envelope"></span> By email?</a></li>
+			 		            <li><a href="#" data-toggle="modal"data-target=".phone_modal"><span class="glyphicon glyphicon-earphone"></span> By Phone?</a></li>
+			 		            <li class="divider"></li>
+			 		            <li><p class="navbar-text" > No spam allowed! </p></li>
+			 				</ul>
+		          
+			 			</li>
+		      
+			 		</ul>
+		      
+			 	</div>
+		     
+			</div>
+		  
+		 </nav>
+		
+		<!-- @gchriswill :---  Mini modal window for contact -> phone -->
+		<div class="modal fade phone_modal" tabindex="-1" id="myModal" role="dialog" aria-labelledby="small_modal_close_button" aria-hidden="true">
+		  <div class="modal-dialog modal-sm">
+		    <div class="modal-content">
+		    	<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="small_modal_header" >Bummer!</h4>
+				</div>
+				<div class="modal-body">
+					<p>I'm really sorry!<br><br>Due to the spam, black mail and phishing attacks, I had been forced to remove this contact method.<br><br>Please try the email option! <br><br>(d|@,@|b)</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+		    </div>
+		  </div>
+		</div>
+		
+		<!-- @gchriswill :-> Carousel -->
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+		    	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+		
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				
+				<div class="item active imageStyler">
+					<img src="images/MeSignature.png" alt="Christopher Gonzalez, gchriswill">
+					
+						<div class="carousel-caption">
+							<h3></h3>
+							<p></p>
+						</div>
+					
+				</div>
+				
+				<div class="item imageStyler">
+					<img src="images/MeSignature.png" alt="...">
+					
+						<div class="carousel-caption">
+							<h3></h3>
+							<p></p>
+						</div>
+					
+				</div>
+				
+				<div class="item imageStyler">
+					<img src="images/MeSignature.png" alt="">
+					
+						<div class="carousel-caption">
+							<h3></h3>
+							<p></p>
+						</div>
+					
+				</div>
+				
+			</div>
+		
+		</div>
+		
+	    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script>alert("This web site is currently under construction!");</script>
+		<!-- <script src="scripts/gchriswill_customScripts.js"></script> -->
 		
 	</body>
 </html>
