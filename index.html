@@ -10,9 +10,9 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    
 	    <!-- @gchriswill:-> Title setup --->
-	    <title>gchriswill | Developer</title>
+	    <title>gchriswill | Home</title>
 	    
-	    <!-- @gchriswill:-> External sources links --->
+	    <!-- @gchriswill:-> External sources --->
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
 		<link rel="stylesheet" href="css/gchriswill_customStyles.css">
@@ -24,6 +24,7 @@
 	
 	<body >
 		
+		
 		<!-- @gchriswill:-> Navigation bar setup --->
 		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
 			
@@ -32,13 +33,14 @@
 				<div class="navbar-header">
 			      
 			    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_navbar_collapse">
-				        <span class="sr-only">Toggle navigation</span>
+				        <span class="sr-only"></span>
+				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 					</button>
 			      
-					<a class="navbar-brand" href="#">< Hello World /></a>
+					<a class="navbar-brand" href="http://gchriswill.me">gchriswill | Developer</a>
 			    
 			    </div>
 		    
@@ -47,7 +49,7 @@
 		     		<ul class="nav navbar-nav">
 		        
 			 	        <li class="active"><a href="#">Home</a></li>
-			 	        <li><a class="text-warning" href="#">Portfolio</a></li>
+			 	        <li><a class="testing" href="#">Portfolio</a></li>
 			 	        <li><a href="#">Tutorials</a></li>
 			 	        <li><a href="#">Blog</a></li>
 			 	        
@@ -71,7 +73,7 @@
 		  
 		 </nav>
 		
-		<!-- @gchriswill :---  Mini modal window for contact -> phone -->
+		<!-- @gchriswill :-> Mini modal window for contact -> phone -->
 		<div class="modal fade phone_modal" tabindex="-1" id="myModal" role="dialog" aria-labelledby="small_modal_close_button" aria-hidden="true">
 		  <div class="modal-dialog modal-sm">
 		    <div class="modal-content">
@@ -89,43 +91,49 @@
 		  </div>
 		</div>
 		
-		<!-- @gchriswill :-> Carousel -->
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<!-- @gchriswill:-> Carousel -->
+		<div id="carousel_target" class="carousel slide" data-ride="carousel">
+			
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
-		    	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		    	<li data-target="#carousel_target" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel_target" data-slide-to="1"></li>
+				<li data-target="#carousel_target" data-slide-to="2"></li>
 			</ol>
 		
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				
 				<div class="item active imageStyler">
-					<img src="images/MeSignature.png" alt="Christopher Gonzalez, gchriswill">
+					<img src="images/MeSignatureNoName.png" alt="Christopher Gonzalez, gchriswill">
 					
 						<div class="carousel-caption">
-							<h3></h3>
-							<p></p>
+							<h3>Hello hello!</h3>
+							<p class="imgp">My name is Christopher Gonzalez, digitally known as <a href="https://twitter.com/gchriswill"> @gchriswill</a>...<br>I'm a undiscovered gifted and talented guy, independently spirited, fiercely unconventional and digitally powered...</p>
 						</div>
 					
 				</div>
 				
 				<div class="item imageStyler">
-					<img src="images/MeSignature.png" alt="...">
+					<img src="images/captions_Background.png" alt="">
 					
 						<div class="carousel-caption">
-							<h3></h3>
-							<p></p>
+							<h3>Σολετ</h3>
+							<p class="p_caption">
+							Θαλε ινφιδυντ σινγυλις νο ηις, εα νισλ υθροκυε δεσερυισε μελ. Αδ λιβρις ρεπυδιαρε δεφινιεβας εως. Σολετ ηομερω λυπταθυμ ευμ αν, ποσιμ τινσιδυνθ συ σιθ. Εως δωλορε ρεπρεχενδυντ συ, νο ζριλ δεθραξιθ ινφενιρε περ, χινς ελιτ ρεγιονε ετ σεα. Ταντας νοσθρυμ ρεπριμικυε ετ νες, σονγυε δολωρυμ σονσυλατυ μει νε.
+
+
+      
+      <!-- This is my digital hub were I publish my work, share knowledge and run my blog about technology stuff.<br>Currently majoring for <a href="http://www.fullsail.edu/degrees/campus/mobile-development-bachelors">Mobile Development B.S.</a> at <a href="http://www.fullsail.edu">Full Sail University</a>. I've been an indie designer and developer for the web, and now pursuing to develop awesome apps for Apple's iOS, Microsoft's Windows Phone and Google's Android. --></p>
 						</div>
 					
 				</div>
 				
 				<div class="item imageStyler">
-					<img src="images/MeSignature.png" alt="">
+					<img src="images/captions_Background.png" alt="">
 					
 						<div class="carousel-caption">
-							<h3></h3>
+							<h3>Nice to meet you!</h3>
 							<p></p>
 						</div>
 					
@@ -137,7 +145,8 @@
 		
 	    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		<script>alert("This web site is currently under construction!");</script>
+		
+		<!-- <script>alert("This web-app is currently under development! Updates are being released in daily basis.");</script> -->
 		<!-- <script src="scripts/gchriswill_customScripts.js"></script> -->
 		
 	</body>
