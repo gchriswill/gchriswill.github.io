@@ -3,6 +3,7 @@
  *	
  */
  
+ /* @gchriswill:---> test colors */
  .lightDarkColor {
 	 background-color: #727272;
  }
@@ -15,32 +16,115 @@
  }
  
 
+
+
+/* @gchriswill:---> Default body */
 html > body {
 	background-color: #000000;
-	font-family: Lato, "Helvetica Neue";
-	font-weight: 400;
+	font-family: "Ubuntu", "Helvetica Neue";
+	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
 	-webkit-backface-visibility: hidden;
-};
+}
 
- 
-div#main_navbar_collapse > ul > li > a.testing {
-	
+a {
 	color: red;
-} 
+}
 
-.navbar-nav > .dropdown > .dropdown-menu , 
+a.twitter_link:hover {
+	color: red;
+	font-size: 30px;
+}
+/* End of global default */
+
+
+
+
+/* @gchriswill:---> Nav bar customization */
+
+/* Navbar links styling */
+.navbar-inverse .navbar-brand {
+    color: red;
+}
+.navbar-inverse .navbar-brand:hover {
+	color: red;
+	font-size: 24px;
+	
+}
+.navbar-inverse .nav > li > a:hover,
+.navbar-inverse .nav > li > a:focus,
+.navbar-inverse .nav > .active > a,
+.navbar-inverse .nav > .active > a:hover {
+	color: red;
+}
+.navbar-inverse .nav > li > a:hover {
+	border-bottom: 3px solid red;
+	font-size: 18px;
+}
+.navbar-inverse .nav > .active > a {
+	border-bottom: 3px solid black;
+}
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+    color: red;
+}
+.navbar-inverse .navbar-nav > .dropdown > a:hover .caret,
+.navbar-inverse .navbar-nav > .dropdown > a:focus .caret {
+    color: red;
+}
+.navbar-inverse .navbar-nav > .open > a .caret, 
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: red;
+}
+
+
+/* Nav bar ---> Dropdown */
+.navbar-nav > .dropdown > .dropdown-menu ,
+
+
+/* Modal small alertbox */ 
 .modal > .modal-dialog > .modal-content,
 .modal > .modal-dialog > .modal-content > .modal-footer > .btn-default {
 	border-radius: 0;
 }
+/*  End of Nav bar customization */
 
+
+
+
+/* @gchriswill:---> Carousel Customization */
+
+/* Caruosel controls styling */
+.carousel-control{
+	color: red;
+}
+.carousel-control:hover, .carousel-control:focus {
+	color: #999;
+}
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+	top: 90%;
+}
+
+
+/* Assigning red color to carousel indicators */
+.carousel-indicators li {
+	border: 1px solid red;
+}
+.carousel-indicators .active {
+	background-color: red;
+}
+
+
+/* Centering images */
 .imageStyler > img {
-	
 	margin-left: auto;
 	margin-right: auto;
-	
 }
+/* End of Carousel Customization */
+
+
+
+
 
 
 /*
