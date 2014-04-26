@@ -72,7 +72,7 @@
 		     
 			</div>
 		  
-		 </nav>
+		 </nav><!-- End of nav -->
 		
 		<!-- @gchriswill :-> Mini modal window for contact -> phone -->
 		<div class="modal fade phone_modal" tabindex="-1" id="myModal" role="dialog" aria-labelledby="small_modal_close_button" aria-hidden="true">
@@ -90,7 +90,7 @@
 				</div>
 		    </div>
 		  </div>
-		</div>
+		</div><!-- End of mini modal -->
 		
 		<!-- @gchriswill:-> Carousel -->
 		<div id="carousel_setup" class="carousel slide" data-ride="carousel">
@@ -107,8 +107,7 @@
 				
 				<div class="item active imageStyler">
 					
-					<!-- <img src="images/smallScreen/meBrightPortraitSmall.png" alt="Christopher Gonzalez, gchriswill"> -->
-					<img src="images/meOpaqueDesktop.png" alt="Christopher Gonzalez, gchriswill">
+					<img src="images/meOpaqueDesktopBlackAndWhite.png" alt="Christopher Gonzalez, gchriswill">
 					<div class="container">
 					<div class="carousel-caption">
 						<h3 class="hidden-sm hidden-md hidden-lg">Hi<span class="red_punctuation">!</span> I<span class="red_punctuation">'</span>m <a href="https://twitter.com/gchriswill">@gchriswill</a></h3>
@@ -122,7 +121,7 @@
 				</div><!-- End item 1 -->
 				
 				<div class="item imageStyler">
-					<img src="images/captions_Background.png" class="testing123" alt="nothing here yet">
+					<img src="images/meOpaqueDesktop.png" class="testing123" alt="nothing here yet">
 					
 					<div class="carousel-caption">
 						<h1 class="hidden-xs">I design stuff<span class="red_punctuation">!</span></h1>
@@ -156,30 +155,33 @@
 		
 		</div><!-- End of carousel -->
 		
-		
+		<!-- Alert message box for development warning -->
 		<div class="modal fade dev_modal" tabindex="-1" id="devModal" role="dialog" aria-labelledby="small_modal_close_button" aria-hidden="true">
 		  <div class="modal-dialog modal-sm">
 		    <div class="modal-content">
+		    
 		    	<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h4 class="modal-title" id="small_modal_header" >Developer Message:</h4>
 				</div>
+				
 				<div class="modal-body">
 					<p>This web-app is currently under development! Updates with patches like bug fixes and improvements are being pushed to Github on a daily basis. Final version will be released soon...<br><br>Sorry for the inconvenience,<br><br>$ ~/ <a href="https://twitter.com/gchriswill">@gchriswill</a></p>
 				</div>
+				
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				</div>
+				
 		    </div>
 		  </div>
-		  
-		</div>
+		</div><!-- End of warning -->
 		
 	    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-		
-		<!-- <script>$("#devModal").modal("show")</script> -->
 		<script src="scripts/meScripts.js"></script>
+		<script>$("#devModal").modal("show")</script>
+		
 		
 	</body>
 </html>
