@@ -1,0 +1,260 @@
+/* 
+ * CSS by @gchriswill 
+ *	
+ */
+ 
+ /* @gchriswill:---> test colors */
+ .lightDarkColor {
+	 background-color: #727272;
+ }
+ 
+ .NotSoDarkColor {
+	 background-color: #484848;
+ }
+ .darkColor {
+	 background-color: #1d1d1d;
+ }
+ 
+
+
+
+/* @gchriswill:---> Default body */
+html > body {
+	background-color: #000000;
+	font-family: "Ubuntu", "Helvetica Neue";
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	-webkit-backface-visibility: hidden;
+}
+
+a {
+	color: red;
+}
+
+a.twitter_link:hover {
+	color: red;
+	font-size: 30px;
+}
+/* End of global default */
+
+
+
+
+/* @gchriswill:---> Nav bar customization */
+
+/* Navbar links styling */
+.navbar-inverse .navbar-brand {
+    color: red;
+}
+.navbar-inverse .navbar-brand:hover {
+	color: red;
+	font-size: 24px;
+	
+}
+.navbar-inverse .nav > li > a:hover,
+.navbar-inverse .nav > li > a:focus,
+.navbar-inverse .nav > .active > a,
+.navbar-inverse .nav > .active > a:hover {
+	color: red;
+}
+.navbar-inverse .nav > li > a:hover {
+	border-bottom: 3px solid red;
+	font-size: 18px;
+}
+.navbar-inverse .nav > .active > a {
+	border-bottom: 3px solid black;
+}
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+    color: red;
+}
+.navbar-inverse .navbar-nav > .dropdown > a:hover .caret,
+.navbar-inverse .navbar-nav > .dropdown > a:focus .caret {
+    color: red;
+}
+.navbar-inverse .navbar-nav > .open > a .caret, 
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: red;
+}
+
+
+/* Nav bar ---> Dropdown */
+.navbar-nav > .dropdown > .dropdown-menu ,
+
+
+/* Modal small alertbox */ 
+.modal > .modal-dialog > .modal-content,
+.modal > .modal-dialog > .modal-content > .modal-footer > .btn-default {
+	border-radius: 0;
+}
+/*  End of Nav bar customization */
+
+
+
+
+/* @gchriswill:---> Carousel Customization */
+
+/* Caruosel controls styling */
+.carousel-control{
+	color: red;
+}
+.carousel-control:hover, .carousel-control:focus {
+	color: #999;
+}
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+	top: 90%;
+}
+
+
+/* Assigning red color to carousel indicators */
+.carousel-indicators li {
+	border: 1px solid red;
+}
+.carousel-indicators .active {
+	background-color: red;
+}
+
+
+/* End of Carousel Customization */
+
+@media (max-width: 768px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+
+
+
+
+/*
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, 
+a,
+p {
+	font-family: inherit;
+	font-weight: inherit;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+	}
+
+	50% {
+		box-shadow: 0px 0px 200px rgba(255, 0, 0, 0.6);
+	}
+
+	100% {
+		box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+	}
+
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+	}
+
+	50% {
+		box-shadow: 0px 0px 200px rgba(255, 0, 0, 0.6);
+	}
+
+	100% {
+		box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
+	}
+}
+
+h3.masthead-brand {
+	 font-size: 1.625em;
+	 font-weight: inherit;
+}
+
+img.gchriswill-profileImage {
+	
+	width: 21.031em;
+	height: 21.031em;
+	border-radius: 10.5em;
+	-webkit-animation: pulse 2.5s infinite ease-in-out;
+	-ms-animation: pulse 2.5s infinite ease-in-out;
+	-moz-animation: pulse 2.5s infinite ease-in-out;
+}
+
+h3.gchriswill-intro {
+	font-size: 2em;
+	font-weight: inherit;
+}
+
+p.gchriswill-description {
+	font-size: 1.625em;
+	
+}
+
+
+a,
+ul.masthead-nav > li > a {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+.mastfoot > div > p > a.footerLinks {
+	 color: red;
+	 font-weight: normal;
+}
+
+*/
+
+
+/*
+
+
+<div class="site-wrapper" >
+	
+	      <div class="site-wrapper-inner" >
+	
+	        <div class="cover-container" >
+				
+	          <div id="navFixed" class="masthead clearfix" >
+	            <div class="inner">
+	              <h3 class="masthead-brand"> < Hello World! /> </h3>
+	              <ul class="nav masthead-nav">
+	              	<li id="clickTest" class="active" ><a href="#">Click Me!</a></li>
+	                <!--
+<li><a href="#">Projects</a></li>
+	                <li><a href="#">Contact?</a></li>
+-->
+	              </ul>
+	            </div>
+	          </div>
+	
+	          <div class="inner cover gchriswill-container-1" itemscope itemtype="http://schema.org/Person">
+	            <!-- <a href="https://twitter.com/gchriswill"> -->
+	            <img class="img-rounded gchriswill-profileImage" src="images/MeSignature.png" alt="Christopher Gonzalez, Christopher, Gonzalez, @gchriswill, gchriswill, GchrisWill">
+	            <h3 class="cover-heading gchriswill-intro">Hello hello! My name is gchriswill</h3><!-- </a> -->
+	            
+	            <p class="lead gchriswill-description" >I'm a undiscovered gifted and talented guy, independently spirited, fiercely unconventional and digitally powered...<br> Nice to meet you!</p>
+	            
+	          </div>
+	
+	          <div class="mastfoot">
+	            <div class="inner">
+	              <p>Made with <a class="footerLinks" href="http://getbootstrap.com">Bootstrap</a> by <a class="footerLinks" href="https://twitter.com/gchriswill">@gchriswill</a></p>
+	            
+	            </div>
+	          </div>
+	
+	        </div>
+	
+	      </div>
+	
+	    </div>
+
+
+*/
