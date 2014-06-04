@@ -3,8 +3,8 @@ jQuery(document).ready(function(){
 	
 	/* jQuery Plugin  ************************************************************
 		Transforms the basic Twitter Bootstrap Carousel into Fullscreen Mode
-		@author Fabio Mangolini
-		http://www.responsivewebmobile.com
+		Author: Fabio Mangolini - @responsivewm
+		Website: http://www.responsivewebmobile.com
 	******************************************************************************/
 	$(".carousel").carousel({pause: "false",interval: 10000});
 	$(".carousel").css({"margin": 0, "width": $(window).outerWidth(), "height": $(window).outerHeight()});
