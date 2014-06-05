@@ -1,4 +1,4 @@
 markdown: redcarpet
-baseurl: /
-url: http://gchriswill.me
+source: "sources"
+url: "http://gchriswill.me"
 encoding: UTF-8
