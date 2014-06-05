@@ -1,3 +1,4 @@
 markdown: redcarpet
-baseurl: "/MyWebsite"
-exclude: ['README.md', 'LICENSE', 'CNAME' ]
+baseurl:          /
+url: http://gchriswill.me
+encoding: UTF-8
