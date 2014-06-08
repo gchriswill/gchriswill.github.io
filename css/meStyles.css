@@ -35,6 +35,10 @@ a.twitter_link:hover {
 	color: red;
 	font-size: 30px;
 }
+
+li {
+	list-style: none;
+}
 /* End of global default */
 
 
