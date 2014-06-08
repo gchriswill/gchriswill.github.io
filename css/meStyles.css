@@ -39,6 +39,7 @@ a.twitter_link:hover {
 ul > li {
 	list-style: none;
 	border-left: 2px solid red;
+	padding: 20px;
 }
 /* End of global default */
 
