@@ -43,7 +43,8 @@ ul > li.post-list {
 }
 
 ul > li > div.timeline-posts {
-	margin: 0px 0px 0px 20px;
+	margin: 20px 0px 0px 20px;
+	padding: 0px 20px 0px 0px;
 }
 /* End of global default */
 
