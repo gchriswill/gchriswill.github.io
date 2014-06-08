@@ -1,11 +1,26 @@
 ---
 layout: default
 title: Timeline
+meta: gchriswill's Timeline
 ---
 
 <div class="container" >
-	<h1><br><br><br> 
-	<span class="text-muted">Timeline in process<span class="red_punctuation">!</span><br><br>
-	Progress<span class="red_punctuation">:</span> 17<span class="red_punctuation">%</span><br>
-	Stage<span class="red_punctuation">:</span> Researching frameworks documentation</span><br><h1>
+	<br><br><br>
+	
+	<ul>
+		
+		{% for posts in site.posts %}
+			
+			<li>
+				<div>
+					<h1>{{posts.title}}</h1>
+					
+					<p>{{posts.meta}}</p>
+				<div>
+			</li>
+			
+		{% endfor %}
+		
+	</ul>
+	
 </div>
