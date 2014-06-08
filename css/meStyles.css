@@ -43,7 +43,7 @@ ul > li {
 }
 
 ul > li > div.timeline-posts {
-	padding: 20px;
+	margin: 20px;
 }
 /* End of global default */
 
