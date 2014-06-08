@@ -36,14 +36,14 @@ a.twitter_link:hover {
 	font-size: 30px;
 }
 
-ul > li {
+ul > li.post-list {
 	list-style: none;
 	border-left: 2px solid red;
 	
 }
 
 ul > li > div.timeline-posts {
-	margin: 20px;
+	margin: 0px 0px 0px 20px;
 }
 /* End of global default */
 
