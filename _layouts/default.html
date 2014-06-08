@@ -11,8 +11,7 @@
 		<!-- main content --> 
 		{{content}}
 		
-		{% include devAlert.html %}
-		
+		{% if page.url == "" %} {% include devAlert.html %} {% endif %}
 		
 		{% include footer.html %}
 	    		
