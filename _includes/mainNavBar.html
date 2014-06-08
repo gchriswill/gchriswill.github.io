@@ -1,0 +1,76 @@
+<!-- @gchriswill:-> Navigation Bar setup --->
+
+<!-- Navigation Bar with a cuztomized setup. Default source found at: http://getbootstrap.com/components/#navbar -->
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+	
+	<!-- Level 1 -->
+	<div class="container-fluid">
+    	
+    	<!-- Level 2 -->
+		<div class="navbar-header">
+	      
+	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main_navbar_collapse">
+		        <span class="sr-only"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+			</button>
+	      
+			<a class="navbar-brand" href="http://gchriswill.me">gchriswill | Developer</a>
+	    
+	    </div>
+    
+	 	<div class="collapse navbar-collapse navbar-right" id="main_navbar_collapse">
+      
+     		<ul class="nav navbar-nav">
+		 		
+		 		<!-- Level 3 -->
+	 	        <li class="{% if page.url == '/index.html' %} active {% endif %}" ><a href="index">Me</a></li>
+	 	        <li class="{% if page.url == '/portfolio.html' %} active {% endif %}" ><a href="portfolio">Portfolio</a></li>
+	 	        <li class="{% if page.url == '/hacks.html' %} active {% endif %}" ><a href="hacks">Hacks</a></li>
+	 	        <li class="{% if page.url == '/blog.html' %} active {% endif %}" ><a href="blog">Blog</a></li>
+	 	        
+	 	        <li class="dropdown">
+		 			
+		 			<!-- Level 4 -->
+	 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" >Contact? <b class="caret"></b></a>
+	 				<ul class="dropdown-menu">
+	 		        	<li><a class="myEmail" href="mailto:Please-try-again-later-or-tweet-me-at-@gchriswill"><span class="glyphicon glyphicon-envelope"></span> By email?</a></li>
+	 		            <li><a href="#" data-toggle="modal"data-target=".phone_modal"><span class="glyphicon glyphicon-earphone"></span> By Phone?</a></li>
+	 		            <li class="divider"></li>
+	 		            <li><p class="navbar-text" > No spam allowed! </p></li>
+	 				</ul>
+	 				<!-- End of Level 4 -->
+	 				
+	 			</li>
+	 			<!-- End of Level 3 -->
+      
+	 		</ul>
+      
+	 	</div>
+	 	<!-- End of Level 2 -->
+	 	
+	</div>
+	<!-- End of Level 1 -->
+	
+ </nav>
+ <!-- End of navbar -->
+ 
+ <!-- @gchriswill :-> Mini modal window for contact -> phone -->
+<div class="modal fade phone_modal" tabindex="-1" id="myModal" role="dialog" aria-labelledby="small_modal_close_button" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+    	<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title" id="small_modal_header" >Bummer! LMAO!</h4>
+		</div>
+		<div class="modal-body">
+			<p>I'm really sorry!<br><br>Due to the spam, black mail and phishing attacks, I had been forced to remove this contact method.<br><br>Please try the email option! <br><br>(d|@,@|b)</p>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		</div>
+    </div>
+  </div>
+</div>
+<!-- End of mini modal -->
