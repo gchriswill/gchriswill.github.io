@@ -1,11 +1,11 @@
 ---
 layout: default
 title: A New Development Approach<span class="red_punctuation">...</span>
-meta: The World meets gchriswill
+meta: The World Meets @gchriswill
 category: Timeline
 ---
 
-###My First Post: `Hello World`<span class="red_punctuation">!</span>
+###My First Post<span class="red_punctuation">:</span> Hello World<span class="red_punctuation">!</span>
 
 {{ page.date | date_to_long_string }}
 
