@@ -31,7 +31,8 @@ a {
 	color: red;
 }
 
-a.twitter_link:hover {
+a.twitter_link:hover,
+ul > li > div.timeline-posts > p > a:hover {
 	color: red;
 	font-size: 30px;
 }
