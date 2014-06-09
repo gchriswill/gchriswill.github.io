@@ -67,7 +67,7 @@ ul > li > div.timeline-posts > p {
 /* Navbar links styling */
 
 body > nav.navbar-inverse {
-	background-color: rgba(33,33,33,0.60);
+	background-color: rgba(33,33,33,0.75);
 }
 
 .navbar-inverse .navbar-brand {
