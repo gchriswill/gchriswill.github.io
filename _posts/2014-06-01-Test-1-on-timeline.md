@@ -1,13 +1,13 @@
 ---
 layout: default
 title: A New Development Approach<span class="red_punctuation">...</span>
-meta: Jekyll, Liquid, Markdown, Bootstrap and jQuery, it has been a pleasure to meet you!
+meta: The World meets gchriswill
 category: Timeline
 ---
 
-###My First Post
+###My First Post: `Hello World`<span class="red_punctuation">!</span>
 
-{{ site.time | date_to_long_string }}
+{{ page.date | date_to_long_string }}
 
 
 Beginning the first post of my timeline, I have to introduce my self first. My name is Christopher Gonzalez digitally known as
