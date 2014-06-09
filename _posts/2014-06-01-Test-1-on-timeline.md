@@ -7,7 +7,6 @@ category: Timeline
 
 ###Testing timeline's post platform!
 
-<p class="text-muted" >
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
 Aliquam molestie odio ut massa vehicula viverra.  
 Nulla a enim massa. Proin semper, neque vitae laoreet volutpat,  
@@ -24,4 +23,3 @@ rhoncus magna nec elit placerat commodo. Aenean non ipsum sit
 amet dolor lacinia blandit. Nam condimentum odio faucibus  
 tellus vestibulum et convallis enim consectetur. Etiam lacinia  
 ornare orci aliquam pretium.
-</p>
