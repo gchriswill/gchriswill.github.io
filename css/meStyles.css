@@ -36,7 +36,9 @@ ul > li > div.timeline-posts > p > a:hover {
 	color: red;
 	font-size: 30px;
 }
-
+ul > li > div.timeline-posts > p {
+	font-size: 18px;
+}
 ul > li.post-list {
 	list-style: none;
 	border-left: 2px solid red;
@@ -48,7 +50,6 @@ ul > li > div.timeline-posts {
 	margin-top: 40px;
 	margin-left: 20px;
 	margin-bottom: 40px;
-	
 	padding-right: 20px;
 }
 
