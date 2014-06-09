@@ -1,0 +1,27 @@
+---
+layout: default
+title: Timeline
+---
+
+<div class="container-fluid" >
+	<br><br><br>
+	
+	<ul>
+		
+		{% for posts in site.posts %}
+			
+			<li class="post-list">
+				<div class="container timeline-posts">
+				
+					<h1 class="text-muted" >{{posts.title}}</h1>
+					
+					{{posts.content}}
+					
+				<div>
+			</li>
+			
+		{% endfor %}
+		
+	</ul>
+	
+</div>
