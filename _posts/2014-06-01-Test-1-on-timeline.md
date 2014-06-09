@@ -10,7 +10,7 @@ category: Timeline
 {{ site.time | date_to_long_string }}
 
 
-Beginning the first post of my timeline, I have introduce my self first. My name is Christopher Gonzalez digitally known as
+Beginning the first post of my timeline, I have to introduce my self first. My name is Christopher Gonzalez digitally known as
 [gchriswill](https://twitter.com/gchriswill) and I'm a web designer/developer and iOS developer. Currently on my last
 academic year at Full Sail University majoring for Mobile Development B.S. based on Winter Park, FL.
 
@@ -23,10 +23,10 @@ like [Twitter's Bootstrap](http://getbootstrap.com) framework. Honestly it hasn'
 self integrating so many web technologies and frameworks, but anyway its really starting to look awesome!
 
 
-I didn't liked the idea of just make a regular website with the current industry's standards. Instead, I wanted to get rid of
-my old crappy website website and make a new one from scratch based on my own image. This website is just simply me and all
-about me, my goals, my projects and my life as a college student, as a web designer/developer and as an iOS developer. There's
-not going to be any ads here nor promotions and definitely I'm NOT going to sell nothing. This website is for sharing my self
-to the whole world and I hope everyone enjoys it.
+I didn't liked the idea for just to make a regular website to sell, advertise, promote or to collect data. Instead, I wanted
+to get rid of my old crappy website website and make a new one from scratch based on my own image. This website is just simply
+me and all about me, my goals, my projects and my life as a college student. There's not going to be any ads here nor
+promotions and definitely I'm NOT going to sell nothing or collect any data. This timeline is for sharing my self, my thoughts
+and my knowledge to the whole world and I hope everyone enjoys it.
 
 @gchriswill
