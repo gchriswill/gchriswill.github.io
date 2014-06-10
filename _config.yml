@@ -1,4 +1,7 @@
+# Dependencies
 markdown: redcarpet
-source: ""
+highlighter: pygments
+
+# Server
 url: "http://gchriswill.me"
 encoding: UTF-8
