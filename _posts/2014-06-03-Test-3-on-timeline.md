@@ -1,25 +1,26 @@
 ---
 layout: default
-title: Testing with multiples post<span class="red_punctuation">!</span>
-meta: hello 3
+title: Mastering Jekyll<span class="red_punctuation">,</span> Liquid<span class="red_punctuation">,</span> Markdown<span class="red_punctuation">,</span> Bootstrap<span class="red_punctuation">,</span> Less and jQuery<span class="red_punctuation">!</span>
+meta: Testing Jekyll Again
 category: Timeline
+identifier: gchriswill-post-3
 ---
 
-###Testing with multiple posts again!
+###Algorithm For Post Automatization 90% Completed!
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.  
-Aliquam molestie odio ut massa vehicula viverra.  
-Nulla a enim massa. Proin semper, neque vitae laoreet volutpat,  
-dolor elit dapibus urna, id pulvinar lectus dui vitae ligula.  
-Aliquam sed porta diam. Cum sociis natoque penatibus et  
-magnis dis parturient montes, nascetur ridiculus mus.  
-Vestibulum ante ipsum primis in faucibus orci luctus et  
-ultrices posuere cubilia Curae; Cras ullamcorper ipsum sed nunc  
-scelerisque scelerisque. Suspendisse sodales quam eget nulla  
-elementum pretium. Vivamus consectetur luctus dui sit amet  
-ultrices. Sed sed magna porta erat laoreet condimentum.  
-Maecenas sollicitudin commodo massa nec blandit. Aliquam  
-rhoncus magna nec elit placerat commodo. Aenean non ipsum sit  
-amet dolor lacinia blandit. Nam condimentum odio faucibus  
-tellus vestibulum et convallis enim consectetur. Etiam lacinia  
-ornare orci aliquam pretium.
+{{ page.date | date_to_long_string }}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Aliquam molestie odio ut massa vehicula viverra. 
+Nulla a enim massa. Proin semper, neque vitae laoreet volutpat, dolor elit dapibus urna, id pulvinar lectus dui vitae ligula. 
+Aliquam sed porta diam. 
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras ullamcorper ipsum sed nunc scelerisque scelerisque. 
+Suspendisse sodales quam eget nulla elementum pretium. 
+Vivamus consectetur luctus dui sit amet ultrices. 
+Sed sed magna porta erat laoreet condimentum. 
+Maecenas sollicitudin commodo massa nec blandit. 
+Aliquam rhoncus magna nec elit placerat commodo. 
+Aenean non ipsum sit amet dolor lacinia blandit. 
+Nam condimentum odio faucibus tellus vestibulum et convallis enim consectetur. 
+Etiam lacinia ornare orci aliquam pretium.
