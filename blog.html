@@ -3,25 +3,45 @@ layout: default
 title: Timeline
 ---
 
-<div class="container-fluid" >
+<!-- @gchriswill *** Blog Page -->
+<div class="container col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 	<br><br><br>
+
+	<div class="row">
 	
-	<ul>
+		<!-- Blog Posts Sections -->
+		<section id="content" class="col-xs-11 col-sm-8 col-md-8">
 		
 		{% for posts in site.posts %}
 			
-			<li class="post-list">
-				<div class="container timeline-posts">
+				<div id="{{ posts.identifier }}" class="timeline-posts">
 				
-					<h1 class="text-muted" >{{posts.title}}</h1>
+					<h1 class="text-muted" >{{ posts.title }}</h1>
 					
-					{{posts.content}}
+					{{ posts.content }}
 					
-				<div>
-			</li>
+				</div>
 			
 		{% endfor %}
 		
-	</ul>
+		</section><!-- End of Blog Posts Sections -->
+		
+		
+		<!-- Sidebar Navigation -->
+		<div id="affix-nav" class="sidebar col-xs-4 col-sm-4 col-md-4" role="complementary">
+		
+			<ul class="nav sidenav" data-spy="affix">
+				
+				{% for posts in site.posts %}
+					
+					<li><a href="#{{posts.identifier}}" >{{ posts.date | date_to_long_string }} <br> {{ posts.title }}</a></li>
+					
+				{% endfor %}
+				
+			</ul>
+			
+		</div><!-- End of Sidebar Navigation -->
 	
-</div>
+	</div><!-- End of row -->
+	
+</div><!-- End of Blog Page -->
