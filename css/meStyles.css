@@ -1,9 +1,11 @@
 /* 
- * CSS by @gchriswill 
+ * CSS by @gchriswill
+ * 
  *	
  */
  
- /* @gchriswill:---> test colors */
+ 
+ /* Testing colors ----------------------------------------------- */
  .lightDarkColor {
 	 background-color: #727272;
  }
@@ -14,11 +16,10 @@
  .darkColor {
 	 background-color: #1d1d1d;
  }
+/*  End of testing colors ---------------------------------------- */
  
-
-
-
-/* @gchriswill:---> Default body */
+ 
+/* @gchriswill *** Default body Styling -------------------------- */
 html > body {
 	background-color: #000000;
 	font-family: "Ubuntu", "Helvetica Neue";
@@ -30,53 +31,20 @@ html > body {
 a {
 	color: red;
 }
-
-a.twitter_link:hover,
-ul > li > div.timeline-posts > p > a:hover {
-	color: red;
-	font-size: 30px;
-}
-ul > li > div.timeline-posts > p {
-	font-size: 18px;
-}
-ul > li.post-list {
-	list-style: none;
-	border-left: 2px solid red;
-	
-}
-
-ul > li > div.timeline-posts {
-	
-	margin-top: 40px;
-	margin-left: 20px;
-	margin-bottom: 40px;
-	padding-right: 20px;
-}
-
-ul > li > div.timeline-posts > h3,
-ul > li > div.timeline-posts > p {
-	color: #999;
-}
-/* End of global default */
+/* End of Default Body Styling ----------------------------------- */
 
 
-
-
-/* @gchriswill:---> Nav bar customization */
-
-/* Navbar links styling */
-
+/* @gchriswill *** Main Navbar Customization --------------------- */
+/* Navbar links Styling */
 body > nav.navbar-inverse {
 	background-color: rgba(33,33,33,0.85);
 }
-
 .navbar-inverse .navbar-brand {
     color: red;
 }
 .navbar-inverse .navbar-brand:hover {
 	color: red;
 	font-size: 24px;
-	
 }
 .navbar-inverse .nav > li > a:hover,
 .navbar-inverse .nav > li > a:focus,
@@ -102,24 +70,17 @@ body > nav.navbar-inverse {
 .navbar-inverse .navbar-nav > .open > a:focus {
     color: red;
 }
-
-
-/* Nav bar ---> Dropdown */
+/* Navbar Dropdown Styling */
 .navbar-nav > .dropdown > .dropdown-menu ,
-
-
 /* Modal small alertbox */ 
 .modal > .modal-dialog > .modal-content,
 .modal > .modal-dialog > .modal-content > .modal-footer > .btn-default {
 	border-radius: 0;
 }
-/*  End of Nav bar customization */
+/* End of Navbar Customization ----------------------------------- */
 
 
-
-
-/* @gchriswill:---> Carousel Customization */
-
+/* @gchriswill *** Carousel Customization ------------------------ */
 /* Caruosel controls styling */
 .carousel-control{
 	color: red;
@@ -127,12 +88,12 @@ body > nav.navbar-inverse {
 .carousel-control:hover, .carousel-control:focus {
 	color: #999;
 }
-.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev, 
+.carousel-control .icon-next, 
+.carousel-control .glyphicon-chevron-left,
 .carousel-control .glyphicon-chevron-right {
 	top: 90%;
 }
-
-
 /* Assigning red color to carousel indicators */
 .carousel-indicators li {
 	border: 1px solid red;
@@ -140,9 +101,48 @@ body > nav.navbar-inverse {
 .carousel-indicators .active {
 	background-color: red;
 }
+/* End of Carousel Customization --------------------------------- */
+
+/* @gchriswill *** Blog Page Styling ----------------------------- */
+/* Post Styling */
+div.timeline-posts > p {
+	font-size: 18px;
+}
+div.timeline-posts {
+margin-top: 100px;
+margin-bottom: 100px;
+padding-left: 20px;
+}
+div.timeline-posts > h3,
+div.timeline-posts > p {
+	color: #999;
+}
+div.timeline-posts {
+	border-left: 2px solid red;
+}
+/* Sidebar Styling */
+.sidenav > .active > a { 
+	
+	background-color: rgba(255,0,0,0.20);
+}
+div.sidebar > ul.nav > li > a:hover {
+	background-color: transparent;
+	border-right: 2px solid red;
+	border-left: 2px solid red;
+	color: red;
+}
+/* End of Blog Page Styling -------------------------------------- */
 
 
-/* End of Carousel Customization */
+/* --------------------------------------------------------------- */
+/* Waiting to be placed within they're group */
+a.twitter_link:hover,
+div.timeline-posts > p > a:hover {
+	color: red;
+	font-size: 30px;
+	text-decoration: none;
+}
+
 
 @media (max-width: 768px) {
 	body {
@@ -150,24 +150,10 @@ body > nav.navbar-inverse {
 		padding: 0;
 	}
 }
+/* --------------------------------------------------------------- */
 
 
-
-
-
-
-/*
-h1,
-h2,
-h3,
-h4,
-h5,
-h6, 
-a,
-p {
-	font-family: inherit;
-	font-weight: inherit;
-}
+/* Depricated!!!
 
 @keyframes pulse {
 	0% {
@@ -198,11 +184,6 @@ p {
 	}
 }
 
-h3.masthead-brand {
-	 font-size: 1.625em;
-	 font-weight: inherit;
-}
-
 img.gchriswill-profileImage {
 	
 	width: 21.031em;
@@ -212,76 +193,5 @@ img.gchriswill-profileImage {
 	-ms-animation: pulse 2.5s infinite ease-in-out;
 	-moz-animation: pulse 2.5s infinite ease-in-out;
 }
-
-h3.gchriswill-intro {
-	font-size: 2em;
-	font-weight: inherit;
-}
-
-p.gchriswill-description {
-	font-size: 1.625em;
-	
-}
-
-
-a,
-ul.masthead-nav > li > a {
-	text-decoration: none;
-	font-weight: normal;
-}
-
-
-.mastfoot > div > p > a.footerLinks {
-	 color: red;
-	 font-weight: normal;
-}
-
-*/
-
-
-/*
-
-
-<div class="site-wrapper" >
-	
-	      <div class="site-wrapper-inner" >
-	
-	        <div class="cover-container" >
-				
-	          <div id="navFixed" class="masthead clearfix" >
-	            <div class="inner">
-	              <h3 class="masthead-brand"> < Hello World! /> </h3>
-	              <ul class="nav masthead-nav">
-	              	<li id="clickTest" class="active" ><a href="#">Click Me!</a></li>
-	                <!--
-<li><a href="#">Projects</a></li>
-	                <li><a href="#">Contact?</a></li>
--->
-	              </ul>
-	            </div>
-	          </div>
-	
-	          <div class="inner cover gchriswill-container-1" itemscope itemtype="http://schema.org/Person">
-	            <!-- <a href="https://twitter.com/gchriswill"> -->
-	            <img class="img-rounded gchriswill-profileImage" src="images/MeSignature.png" alt="Christopher Gonzalez, Christopher, Gonzalez, @gchriswill, gchriswill, GchrisWill">
-	            <h3 class="cover-heading gchriswill-intro">Hello hello! My name is gchriswill</h3><!-- </a> -->
-	            
-	            <p class="lead gchriswill-description" >I'm a undiscovered gifted and talented guy, independently spirited, fiercely unconventional and digitally powered...<br> Nice to meet you!</p>
-	            
-	          </div>
-	
-	          <div class="mastfoot">
-	            <div class="inner">
-	              <p>Made with <a class="footerLinks" href="http://getbootstrap.com">Bootstrap</a> by <a class="footerLinks" href="https://twitter.com/gchriswill">@gchriswill</a></p>
-	            
-	            </div>
-	          </div>
-	
-	        </div>
-	
-	      </div>
-	
-	    </div>
-
 
 */
