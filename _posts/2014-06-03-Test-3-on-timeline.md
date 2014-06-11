@@ -1,12 +1,13 @@
 ---
-layout: default
-title: Mastering Jekyll<span class="red_punctuation">,</span> Liquid<span class="red_punctuation">,</span> Markdown<span class="red_punctuation">,</span> Bootstrap<span class="red_punctuation">,</span> Less and jQuery<span class="red_punctuation">!</span>
-meta: Testing Jekyll Again
+title: Algorithm For Post Automatization 90<span class="red_punctuation">%</span> Completed<span class="red_punctuation">!</span> 
+meta: Mastering Jekyll, Liquid, Markdown, Bootstrap, Less and jQuery
 category: Timeline
 identifier: gchriswill-post-3
+author: gchriswill
+postmonth: June
 ---
 
-###Algorithm For Post Automatization 90% Completed!
+###{{ page.meta }}
 
 {{ page.date | date_to_long_string }}
 
@@ -24,3 +25,6 @@ Aliquam rhoncus magna nec elit placerat commodo.
 Aenean non ipsum sit amet dolor lacinia blandit. 
 Nam condimentum odio faucibus tellus vestibulum et convallis enim consectetur. 
 Etiam lacinia ornare orci aliquam pretium.
+
+
+gchriswill<span class="red_punctuation">$</span> cd <span class="red_punctuation">~/</span>
