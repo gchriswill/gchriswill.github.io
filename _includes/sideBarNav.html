@@ -1,0 +1,33 @@
+<!-- @gchriswill *** Side Bar Navigation for Timeline page -->
+
+<div class="col-lg-4 col-xs-4 col-sm-4 col-md-4">
+	
+	<div class="gcw-sidebar hidden-print" role="complementary" >
+    	
+    	<!-- Side Navigation Structure -->
+    	<ul class="nav sideNavigation" data-spy="affix" >
+        	
+        	<li class="sideNavList">
+				
+				<a class="monthLinks" href="#june14" >June 2014</a>
+				
+				<!-- Sub Navigation -->
+				<ul class="nav" >
+			    	
+			    	{% for posts in site.posts %}
+					
+						<li><a class="sidePostLinks" href="#{{posts.identifier}}" >{{ posts.date | date_to_long_string }} <br> {{ posts.title }}</a></li>
+					
+					{% endfor %}
+				    
+				</ul><!-- End of Sub Navigation -->
+				
+			</li>
+			
+			<li class="lastLi"><a class="goTop" href="#top" >Back to top</a></li>
+			
+		</ul><!-- End of Side Navigation Structure -->
+		
+	</div>
+	
+</div><!-- End of TimeLine -->
