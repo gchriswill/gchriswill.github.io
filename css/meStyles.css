@@ -109,9 +109,9 @@ div.timeline-posts > p {
 	font-size: 18px;
 }
 div.timeline-posts {
-margin-top: 100px;
-margin-bottom: 100px;
-padding-left: 20px;
+	/* margin-top: 100px; */
+	margin-bottom: 100px;
+	padding-left: 20px;
 }
 div.timeline-posts > h3,
 div.timeline-posts > p {
@@ -120,16 +120,21 @@ div.timeline-posts > p {
 div.timeline-posts {
 	border-left: 2px solid red;
 }
-/* Sidebar Styling */
-.sidenav > .active > a { 
+
+div.pageHeaderTitle {
+	text-align: center;
+	color: #999;
+	padding: 0px 0px 50px 0px;
 	
-	background-color: rgba(255,0,0,0.20);
 }
-div.sidebar > ul.nav > li > a:hover {
-	background-color: transparent;
-	border-right: 2px solid red;
-	border-left: 2px solid red;
-	color: red;
+div.pageHeaderTitle > div > h1 {
+	font-size: 100px;
+}
+div.monthHeader {
+	color: #999;
+	padding-top: 0px;
+	padding-bottom: 50px;
+	border-left: 2px solid black;
 }
 /* End of Blog Page Styling -------------------------------------- */
 
@@ -192,6 +197,17 @@ img.gchriswill-profileImage {
 	-webkit-animation: pulse 2.5s infinite ease-in-out;
 	-ms-animation: pulse 2.5s infinite ease-in-out;
 	-moz-animation: pulse 2.5s infinite ease-in-out;
+}
+
+.sidenav > .active > a { 
+	
+	background-color: rgba(255,0,0,0.20);
+}
+div.sidebar > ul.nav > li > a:hover {
+	background-color: transparent;
+	border-right: 2px solid red;
+	border-left: 2px solid red;
+	color: red;
 }
 
 */
