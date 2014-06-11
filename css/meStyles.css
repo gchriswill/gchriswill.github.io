@@ -128,7 +128,13 @@ div.pageHeaderTitle {
 	
 }
 div.pageHeaderTitle > div > h1 {
-	font-size: 100px;
+	font-size: 90px;
+}
+div.pageHeaderTitle > div > h2 {
+	font-size: 60px;
+}
+div.pageHeaderTitle > div > h4 {
+	font-size: 30px;
 }
 div.monthHeader {
 	color: #999;
