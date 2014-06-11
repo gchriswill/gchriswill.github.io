@@ -1,12 +1,13 @@
 ---
-layout: default
 title: Tweaking Up The Jekyll Engine<span class="red_punctuation">...</span>
-meta: Testing Jekyll 
+meta: Testing Jekyll With Multiple Posts!
 category: Timeline
 identifier: gchriswill-post-2
+author: gchriswill
+postmonth: June
 ---
 
-###Testing Jekyll With Multiple Posts!
+###{{ page.meta }}
 
 {{ page.date | date_to_long_string }}
 
@@ -24,3 +25,6 @@ Aliquam rhoncus magna nec elit placerat commodo.
 Aenean non ipsum sit amet dolor lacinia blandit. 
 Nam condimentum odio faucibus tellus vestibulum et convallis enim consectetur. 
 Etiam lacinia ornare orci aliquam pretium.
+
+
+gchriswill<span class="red_punctuation">$</span> cd <span class="red_punctuation">~/</span>
