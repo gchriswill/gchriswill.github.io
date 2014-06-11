@@ -1,12 +1,13 @@
 ---
-layout: default
-title: <span class="red_punctuation"> >_ </span> Hello World<span class="red_punctuation">!</span>
-meta: My First Post
+title: gchriswill<span class="red_punctuation">$</span> echo <span class="red_punctuation">"</span>Hello World<span class="red_punctuation">!"</span>
+meta: My First Official Timeline Post
 category: Timeline
 identifier: gchriswill-post-1
+author: gchriswill
+postmonth: June
 ---
 
-###My First Official Timeline Post
+###{{ page.meta }}
 
 {{ page.date | date_to_long_string }}
 
@@ -30,4 +31,5 @@ me and all about me, my goals, my projects, my hacks, and my life as a college s
 promotions and definitely I'm NOT going to sell nothing or collect any data. This timeline will be for sharing my self, my thoughts
 and my knowledge to the whole world and I hope everyone enjoys it.
 
--- [@gchriswill](https://twitter.com/gchriswill)
+
+gchriswill<span class="red_punctuation">$</span> cd <span class="red_punctuation">~/</span>
