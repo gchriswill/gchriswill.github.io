@@ -6,14 +6,24 @@ title: Timeline
 <!-- @gchriswill *** Blog Page -->
 <div class="container col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 	<br><br><br>
-
+	
+	<div class="row pageHeaderTitle">
+		<div class="container-fluid col-lg-12">
+			<h1>TimeLine<span class="red_punctuation">: ~ </span>gchriswill<span class="red_punctuation">$ _</span></h1>
+		</div>
+	</div>
+	
 	<div class="row">
 	
 		<!-- Blog Posts Sections -->
 		<section id="content" class="col-xs-11 col-sm-8 col-md-8">
 		
+		<div class="col-lg-12 monthHeader">
+			<h1 id="june14" >Timeline<span class="red_punctuation">: ~</span> gchriswill<span class="red_punctuation">$</span> date <span class="red_punctuation">"+%B-%Y"</span><br><span class="red_punctuation">$ </span>June-2014</h1>
+		</div>
+		
 		{% for posts in site.posts %}
-			
+				
 				<div id="{{ posts.identifier }}" class="timeline-posts">
 				
 					<h1 class="text-muted" >{{ posts.title }}</h1>
@@ -28,19 +38,10 @@ title: Timeline
 		
 		
 		<!-- Sidebar Navigation -->
-		<div id="affix-nav" class="sidebar col-xs-4 col-sm-4 col-md-4" role="complementary">
 		
-			<ul class="nav sidenav" data-spy="affix">
-				
-				{% for posts in site.posts %}
-					
-					<li><a href="#{{posts.identifier}}" >{{ posts.date | date_to_long_string }} <br> {{ posts.title }}</a></li>
-					
-				{% endfor %}
-				
-			</ul>
-			
-		</div><!-- End of Sidebar Navigation -->
+		{% include sideBarNav.html %}
+		
+		<!-- End of Sidebar Navigation -->
 	
 	</div><!-- End of row -->
 	
