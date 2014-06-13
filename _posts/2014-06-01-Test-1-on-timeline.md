@@ -1,5 +1,5 @@
 ---
-title: gchriswill<span class="red_punctuation">$</span> echo <span class="red_punctuation">"</span>Hello World<span class="red_punctuation">!"</span>
+title: gchriswill<span class="red_punctuation">$</span> echo <span class="red_punctuation">"</span>Hello World<span class="red_punctuation">"</span>
 meta: My First Official Timeline Post
 category: Timeline
 identifier: gchriswill-post-1
