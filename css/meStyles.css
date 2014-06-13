@@ -105,20 +105,20 @@ body > nav.navbar-inverse {
 
 /* @gchriswill *** Blog Page Styling ----------------------------- */
 /* Post Styling */
-div.timeline-posts > p {
+div.timeline-posts-container > div.timeline-posts >p {
 	font-size: 18px;
 }
-div.timeline-posts {
-	/* margin-top: 100px; */
-	margin-bottom: 100px;
-	padding-left: 20px;
+div.timeline-posts-container {
+	margin: 50px 0px 50px 0px;
+	padding: 50px 0px 50px 0px;
 }
-div.timeline-posts > h3,
-div.timeline-posts > p {
+div.timeline-posts-container > div.timeline-posts > h3,
+div.timeline-posts-container > div.timeline-posts > p {
 	color: #999;
 }
 div.timeline-posts {
 	border-left: 2px solid red;
+	padding-left: 20px;
 }
 
 div.pageHeaderTitle {
@@ -138,7 +138,6 @@ div.pageHeaderTitle > div > h4 {
 }
 div.monthHeader {
 	color: #999;
-	padding-top: 0px;
 	padding-bottom: 50px;
 	border-left: 2px solid black;
 }
@@ -148,7 +147,7 @@ div.monthHeader {
 /* --------------------------------------------------------------- */
 /* Waiting to be placed within they're group */
 a.twitter_link:hover,
-div.timeline-posts > p > a:hover {
+div.timeline-posts-container > p > a:hover {
 	color: red;
 	font-size: 30px;
 	text-decoration: none;
