@@ -8,30 +8,33 @@ title: Timeline
 	<br><br><br>
 	
 	<div class="row pageHeaderTitle">
-		<div class="container-fluid col-lg-12">
-			<h1 class="hidden-xs hidden-sm hidden-md" >TimeLine<span class="red_punctuation">: ~ </span>gchriswill<span class="red_punctuation">$ _</span></h1>
-			<h2 class="hidden-xs hidden-sm hidden-lg" >TimeLine<span class="red_punctuation">: ~ </span>gchriswill<span class="red_punctuation">$ _</span></h1>
-			<h4 class="hidden-md hidden-lg" >TimeLine<span class="red_punctuation">: ~ </span>gchriswill<span class="red_punctuation">$ _</span></h1>
+		<div class="container-fluid col-lg-11">
+			<h1 class="hidden-xs hidden-sm hidden-md" >TimeLine<span class="red_punctuation">$ </span><img src="images/terminalCursor.gif" /></h1>
+			<h2 class="hidden-xs hidden-sm hidden-lg" >TimeLine<<span class="red_punctuation">$ <img src="images/terminalCursor.gif" width="30px"/></span></h1>
+			<h4 class="hidden-md hidden-lg" >TimeLine<span class="red_punctuation">$ <img src="images/terminalCursor.gif" width="10px"/></span></h1>
 		</div>
 	</div>
 	
-	<div class="row">
+	<div class="row" >
 	
 		<!-- Blog Posts Sections -->
-		<section id="content" class="col-xs-11 col-sm-8 col-md-8">
+		<section id="content" class="col-xs-11 col-sm-8 col-md-8 col-lg-8">
 		
-		<div class="col-lg-12 monthHeader">
-			<h1 id="june14" class="hidden-xs hidden-sm hidden-md">Timeline<span class="red_punctuation">: ~</span> gchriswill<span class="red_punctuation">$</span> date <span class="red_punctuation">"+%B-%Y"</span><br><span class="red_punctuation">$ </span>June-2014</h1>
-			<h1 id="june14" class="hidden-lg"><span class="red_punctuation">$ </span>June-2014</h1>
+		<div class="col-xm-12 col-sm-12 col-md-12 col-lg-12 monthHeader">
+			<h1 id="june14" ><span class="red_punctuation">$</span> date <span class="red_punctuation">"+%B-%Y"</span><br><span class="red_punctuation">$ </span>June-2014</h1>
 		</div>
 		
 		{% for posts in site.posts %}
 				
-				<div id="{{ posts.identifier }}" class="timeline-posts">
-				
-					<h1 class="text-muted" >{{ posts.title }}</h1>
+				<div id="{{ posts.identifier }}" class="timeline-posts-container" >
 					
-					{{ posts.content }}
+					<div class="timeline-posts">
+						
+						<h1 class="text-muted" >{{ posts.title }}</h1>
+						
+						{{ posts.content }}
+						
+					</div>
 					
 				</div>
 			
