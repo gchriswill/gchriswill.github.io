@@ -109,7 +109,6 @@ div.timeline-posts-container > div.timeline-posts >p {
 	font-size: 18px;
 }
 div.timeline-posts-container {
-	margin: 50px 0px 50px 0px;
 	padding: 50px 0px 50px 0px;
 }
 div.timeline-posts-container > div.timeline-posts > h3,
@@ -138,7 +137,6 @@ div.pageHeaderTitle > div > h4 {
 }
 div.monthHeader {
 	color: #999;
-	padding-bottom: 50px;
 	border-left: 2px solid black;
 }
 /* End of Blog Page Styling -------------------------------------- */
