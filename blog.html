@@ -3,32 +3,51 @@ layout: default
 title: Timeline
 ---
 
-<!-- @gchriswill *** Blog Page -->
+
+<!-- * 
+ *
+ * CSS by @gchriswill
+ * Code licensed under MIT, documentation under CC BY-SA 4.0
+ *	
+ * * * -->
+ 
+ 
+<!-- @gchriswill *** Blog Page ------------------------------------------------------->
 <div class="container col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
 	
+	<!-- Blog Page Header Title object -->
 	<div class="row pageHeaderTitle">
 		<div class="container-fluid col-lg-11">
 			<h1 >TimeLine<span class="red_punctuation">$ </span><img src="images/terminalCursor.gif" /></h1>
 		</div>
-	</div>
+	</div><!-- End of Blog Page Header Title object -->
 	
+	<!-- Blog Posts object -->
 	<div class="row" >
 	
 		<!-- Blog Posts Sections -->
 		<section id="content" class="col-xs-11 col-sm-8 col-md-8 col-lg-8">
 		
+		<!-- Looping through _posts folder -->
 		{% for months in site.posts %}
 			
+			<!-- Condition for to extract the Month Headers dynamicaly only, located in the _posts folder -->
 			{% if months.postmonth == months.identifier %}
 				
+				<!-- Month Headers -->
+				<!-- Dynamic file data extraction, and id and title setters -->
 				<div id="{{ months.identifier }}" class="monthHeader">
 					<h1  >{{ months.title }}</h1>
 				</div>
 				
+				<!-- Nested Looping through _posts folder -->
 				{% for posts in site.posts %}
-						
-					{% if months.identifier contains posts.postmonth and posts.postmonth != posts.identifier %}
 					
+					<!-- Nested condition for to extract post dynamicaly and set only the the files in the _posts folder for its respective Month Header -->
+					{% if months.identifier contains posts.postmonth and posts.postmonth != posts.identifier %}
+						
+						<!-- Posts -->
+						<!-- Dynamic file data extraction, and id, title, subtitle and content setters -->
 						<div id="{{ posts.identifier }}" class="timeline-posts-container" >
 							
 							<div class="timeline-posts">
@@ -39,15 +58,15 @@ title: Timeline
 								
 							</div>
 							
-						</div>
+						</div><!-- End of Posts -->
 						
-					{% endif %}
+					{% endif %}<!-- End of Nested Condition -->
 					
-				{% endfor %}
+				{% endfor %}<!-- End of Nested loop -->
 				
-			{% endif %}
+			{% endif %}<!-- End of Condition -->
 			
-		{% endfor %}
+		{% endfor %}<!-- End of loop -->
 		
 		</section><!-- End of Blog Posts Sections -->
 		
@@ -58,6 +77,7 @@ title: Timeline
 		
 		<!-- End of Sidebar Navigation -->
 	
-	</div><!-- End of row -->
-	
-</div><!-- End of Blog Page -->
+	</div><!-- End of row of Post object -->
+
+</div>
+<!-- End of Blog Page ----------------------------------------------------------------^
