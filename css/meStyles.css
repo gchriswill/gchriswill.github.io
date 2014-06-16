@@ -1,21 +1,22 @@
 /* 
  * CSS by @gchriswill
- * 
+ * Code licensed under MIT, documentation under CC BY-SA 4.0
  *	
  */
  
  
- /* Testing colors ----------------------------------------------- */
- .lightDarkColor {
-	 background-color: #727272;
- }
- 
- .NotSoDarkColor {
-	 background-color: #484848;
- }
- .darkColor {
-	 background-color: #1d1d1d;
- }
+/* Testing colors ----------------------------------------------- */
+.lightDarkColor {
+	background-color: #727272;
+}
+
+.NotSoDarkColor {
+	background-color: #484848;
+}
+
+.darkColor {
+	background-color: #1d1d1d;
+}
 /*  End of testing colors ---------------------------------------- */
  
  
@@ -31,45 +32,61 @@ html > body {
 a {
 	color: red;
 }
+
+a.twitter_link:hover {
+	color: red;
+	font-size: 30px;
+	text-decoration: none;
+}
 /* End of Default Body Styling ----------------------------------- */
 
 
 /* @gchriswill *** Main Navbar Customization --------------------- */
+
 /* Navbar links Styling */
 body > nav.navbar-inverse {
 	background-color: rgba(33,33,33,0.85);
 }
+
 .navbar-inverse .navbar-brand {
     color: red;
 }
+
 .navbar-inverse .navbar-brand:hover {
 	color: red;
 	font-size: 24px;
 }
+
 .navbar-inverse .nav > li > a:hover,
 .navbar-inverse .nav > li > a:focus,
 .navbar-inverse .nav > .active > a,
 .navbar-inverse .nav > .active > a:hover {
 	color: red;
 }
+
 .navbar-inverse .nav > li > a:hover {
 	border-bottom: 3px solid red;
 	font-size: 18px;
 }
+
 .navbar-inverse .nav > .active > a {
 	border-bottom: 3px solid black;
 }
+
 .navbar-inverse .navbar-nav > .dropdown > a .caret {
     color: red;
 }
+
 .navbar-inverse .navbar-nav > .dropdown > a:hover .caret,
 .navbar-inverse .navbar-nav > .dropdown > a:focus .caret {
     color: red;
 }
+
 .navbar-inverse .navbar-nav > .open > a .caret, 
 .navbar-inverse .navbar-nav > .open > a:focus {
     color: red;
 }
+
 /* Navbar Dropdown Styling */
 .navbar-nav > .dropdown > .dropdown-menu ,
 /* Modal small alertbox */ 
@@ -85,9 +102,11 @@ body > nav.navbar-inverse {
 .carousel-control{
 	color: red;
 }
+
 .carousel-control:hover, .carousel-control:focus {
 	color: #999;
 }
+
 .carousel-control .icon-prev, 
 .carousel-control .icon-next, 
 .carousel-control .glyphicon-chevron-left,
@@ -98,29 +117,41 @@ body > nav.navbar-inverse {
 .carousel-indicators li {
 	border: 1px solid red;
 }
+
 .carousel-indicators .active {
 	background-color: red;
 }
 /* End of Carousel Customization --------------------------------- */
 
 
-
-
-/* --------------------------------------------------------------- */
-/* Waiting to be placed within they're group */
-a.twitter_link:hover {
-	color: red;
-	font-size: 30px;
-	text-decoration: none;
-}
-
+/* @gchriswill *** Media Queries for Me Page --------------------- */
 @media (max-width: 768px) {
 	body {
 		margin: 0;
 		padding: 0;
 	}
 }
+/* End of Media Queries for Me Page ------------------------------ */
+
+
+
+
+
+
+
 /* --------------------------------------------------------------- */
+
+/* Waiting to be placed within they're group */
+
+/*
+	Nothign here! Yay!
+	Everything is organized...
+*/
+
+/* --------------------------------------------------------------- */
+
+
+
 
 
 /* Depricated!!!
