@@ -2,70 +2,81 @@
 layout: default
 title: Me
 ---
+
+
+<!-- * 
+ *
+ * CSS by @gchriswill
+ * Code licensed under MIT, documentation under CC BY-SA 4.0
+ *	
+ * * * -->
+ 
+ 	
+<!-- @gchriswill *** Carousel Object ------------------------------------------------->
+<div id="carousel_setup" class="carousel slide" data-ride="carousel">
+	
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+    	<li data-target="#carousel_setup" data-slide-to="0" class="active"></li>
+		<li data-target="#carousel_setup" data-slide-to="1"></li>
+		<li data-target="#carousel_setup" data-slide-to="2"></li>
+	</ol>
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" style="">
 		
-		<!-- @gchriswill *** Carousel -->
-		<div id="carousel_setup" class="carousel slide" data-ride="carousel">
+		<!-- Carusel Item 1 -->
+		<div class="item active imageStyler">
 			
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-		    	<li data-target="#carousel_setup" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel_setup" data-slide-to="1"></li>
-				<li data-target="#carousel_setup" data-slide-to="2"></li>
-			</ol>
-		
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner" style="">
-				
-				<!-- Item 1 -->
-				<div class="item active imageStyler">
-					
-					<img src="images/meOpaqueDesktopBlackAndWhiteAnimatedPixelation.gif" alt="Christopher Gonzalez, gchriswill">
-					
-					<div class="carousel-caption">
-						<h3 class="hidden-sm hidden-md hidden-lg textAnimation_1i1">Hi<span class="red_punctuation">!</span> I<span class="red_punctuation">'</span>m <a href="https://twitter.com/gchriswill">@gchriswill</a></h3>
-						<h1 class="hidden-xs textAnimation_1i1">hello hello</h1>
-						<h3 class="hidden-xs textAnimation_1i2">I<span class="red_punctuation">'</span>m <a href="https://twitter.com/gchriswill" class="twitter_link" >@gchriswill</a><br>An undiscovered gifted and talented guy<span class="red_punctuation">,</span> independently spirited<span class="red_punctuation">,</span> fiercely unconventional and<span class="red_punctuation">,</span> <strong>digitally powered<span class="red_punctuation">!</span></strong><br>Nice to meet you<span class="red_punctuation"> ...</span></h3>
-							 
-					</div>
-					
-				</div><!-- End item 1 -->
-				
-				<!-- Item 2 -->
-				<div class="item imageStyler">
-					
-					<img src="images/captions_Background.png" class="testing123" alt="nothing here yet">
-					
-					<div class="carousel-caption">
-						<h1 class="hidden-xs textAnimation_1i1">I design stuff<span class="red_punctuation">!</span></h1>
-						<h2 class="hidden-xs text-muted textAnimation_1i2">Web <span class="red_punctuation">&amp;</span> Mobile Designer</h2>
-						<h3 class="hidden-sm hidden-md hidden-lg textAnimation_1i1">I Design stuff<span class="red_punctuation">!</span><br><br><span class="text-muted">Web <span class="red_punctuation">&amp;</span> Mobile Designer</span></h3>
-							
-					</div>
-					
-				</div><!-- End item 2 -->
-				
-				<!-- Item 1 -->
-				<div class="item imageStyler">
-					<img src="images/captions_Background.png" class="testing123" alt="nothing here yet">
-					
-					<div class="carousel-caption">
-						<h1 class="hidden-xs textAnimation_1i1">I also developed the stuff I designed<span class="red_punctuation">!</span></h1>
-						<h2 class="hidden-xs text-muted textAnimation_1i2">Web <span class="red_punctuation">&amp;</span> Mobile Developer</h2>
-						<h3 class="hidden-sm hidden-md hidden-lg textAnimation_1i1">I also<br>Develop stuff<span class="red_punctuation">!</span><br><br><span class="text-muted">Web</span> <span class="red_punctuation">&amp;</span> <span class="text-muted">Mobile Developer</span></h3>
-						
-					</div>
-					
-				</div><!-- End item 3 -->
-				
-			</div><!-- End inner -->
+			<img src="images/meOpaqueDesktopBlackAndWhiteAnimatedPixelation.gif" alt="Christopher Gonzalez, gchriswill">
 			
-			<a class="left carousel-control" href="#carousel_setup" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left"></span>
-			</a>
-			<a class="right carousel-control" href="#carousel_setup" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-			</a>
+			<div class="carousel-caption">
+				<h3 class="hidden-sm hidden-md hidden-lg textAnimation_1i1">Hi<span class="red_punctuation">!</span> I<span class="red_punctuation">'</span>m <a href="https://twitter.com/gchriswill">@gchriswill</a></h3>
+				<h1 class="hidden-xs textAnimation_1i1">hello hello</h1>
+				<h3 class="hidden-xs textAnimation_1i2">I<span class="red_punctuation">'</span>m <a href="https://twitter.com/gchriswill" class="twitter_link" >@gchriswill</a><br>An undiscovered gifted and talented guy<span class="red_punctuation">,</span> independently spirited<span class="red_punctuation">,</span> fiercely unconventional and<span class="red_punctuation">,</span> <strong>digitally powered<span class="red_punctuation">!</span></strong><br>Nice to meet you<span class="red_punctuation"> ...</span></h3>
+					 
+			</div>
+			
+		</div><!-- End item 1 -->
 		
-		</div><!-- End of carousel -->
+		<!-- Carusel Item 2 -->
+		<div class="item imageStyler">
+			
+			<img src="images/captions_Background.png" class="testing123" alt="nothing here yet">
+			
+			<div class="carousel-caption">
+				<h1 class="hidden-xs textAnimation_1i1">I design stuff<span class="red_punctuation">!</span></h1>
+				<h2 class="hidden-xs text-muted textAnimation_1i2">Web <span class="red_punctuation">&amp;</span> Mobile Designer</h2>
+				<h3 class="hidden-sm hidden-md hidden-lg textAnimation_1i1">I Design stuff<span class="red_punctuation">!</span><br><br><span class="text-muted">Web <span class="red_punctuation">&amp;</span> Mobile Designer</span></h3>
+					
+			</div>
+			
+		</div><!-- End item 2 -->
 		
+		<!-- Carusel Item 3 -->
+		<div class="item imageStyler">
+			<img src="images/captions_Background.png" class="testing123" alt="nothing here yet">
+			
+			<div class="carousel-caption">
+				<h1 class="hidden-xs textAnimation_1i1">I also developed the stuff I designed<span class="red_punctuation">!</span></h1>
+				<h2 class="hidden-xs text-muted textAnimation_1i2">Web <span class="red_punctuation">&amp;</span> Mobile Developer</h2>
+				<h3 class="hidden-sm hidden-md hidden-lg textAnimation_1i1">I also<br>Develop stuff<span class="red_punctuation">!</span><br><br><span class="text-muted">Web</span> <span class="red_punctuation">&amp;</span> <span class="text-muted">Mobile Developer</span></h3>
+				
+			</div>
+			
+		</div><!-- End item 3 -->
 		
+	</div><!-- End inner -->
+	
+	<!-- Carusel Controls -->
+	<a class="left carousel-control" href="#carousel_setup" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#carousel_setup" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+	<!-- End of Carusel Controls -->
+
+</div><!-- End of carousel -->
+		
+<!-- End of Carousel Object -------------------------------------------------------^
