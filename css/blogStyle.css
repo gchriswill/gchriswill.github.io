@@ -124,8 +124,8 @@ iframe.videoFrame {
 @media (max-width:640px){
 	
 	iframe.videoFrame {
-		width: 320px; 
-		height: 180px;
+		width: 260px; 
+		height: 146px;
 	}
 
 }
