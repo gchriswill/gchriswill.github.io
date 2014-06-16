@@ -1,4 +1,12 @@
-<!-- @gchriswill *** Side Bar Navigation for Timeline page -->
+<!-- * 
+ *
+ * CSS by @gchriswill
+ * Code licensed under MIT, documentation under CC BY-SA 4.0
+ *	
+ * * * -->
+ 
+
+<!-- @gchriswill *** Side Bar Navigation Object for Timeline page -->
 
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
 	
@@ -7,32 +15,44 @@
     	<!-- Side Navigation Structure -->
     	<ul class="nav sideNavigation" data-spy="affix" >
         	
+        	<!-- Looping through _posts folder -->
         	{% for sidemain in site.posts %}
 				
 				<li class="sideNavList {{ sidemain.identifier }}main">
+					
+					<!-- Condition for to create the Month Headers links dynamicaly to affix the appropiate object -->
 					{% if sidemain.postmonth == sidemain.identifier %}
+					
+						<!-- Month Headers Links -->
+						<!-- Dynamic link creation, and id and title link setters -->
 						<a class="monthLinks" href="#{{ sidemain.identifier }}" >{{ sidemain.meta }}</a>
 						
 						<!-- Sub Navigation -->
+						<!-- Dynamic link data setter to subnavigation -->
 						<ul class="nav {{ sidemain.identifier }}sub" >
 					    	
-					    	{% for sidesub in site.posts %}
+					    	<!-- Nested Looping through _posts folder -->
+							{% for sidesub in site.posts %}
 								
+								<!-- Nested condition for to create links dynamicaly and set only the post's links for its respective Month Header -->
 								{% if sidemain.identifier contains sidesub.postmonth and sidesub.postmonth != sidesub.identifier %}
 									
+									<!-- Dynamic link creation, and id, href, date and title link setters -->
 									<li><a class="sidePostLinks" href="#{{ sidesub.identifier }}" >{{ sidesub.date | date_to_long_string }} <br> {{ sidesub.title }}</a></li>
 								
-								{% endif %}
+								{% endif %}<!-- End of Nested Condition -->
 								
-							{% endfor %}
+							{% endfor %}<!-- End of Nested loop -->
 						    
 						</ul><!-- End of Sub Navigation -->
 						
-					{% endif %}
+					{% endif %}<!-- End of Condition -->
+					
 				</li>
 			
-			{% endfor %}
-				
+			{% endfor %}<!-- End of loop -->
+			
+			<!-- Static link creation for scrolling to top -->
 			<li class="lastLi"><a class="goTop" href="#top" >Back to top</a></li>
 			
 		</ul><!-- End of Side Navigation Structure -->
