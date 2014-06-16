@@ -1,0 +1,214 @@
+/* @gchriswill *** Blog Page Styling ----------------------------- */
+/* Post Styling */
+div.timeline-posts-container > div.timeline-posts > p {
+	font-size: 18px;
+}
+div.timeline-posts-container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+div.timeline-posts-container > div.timeline-posts > h3,
+div.timeline-posts-container > div.timeline-posts > p {
+	color: #999;
+}
+div.timeline-posts-container > p > a:hover {
+	color: red;
+	font-size: 30px;
+	text-decoration: none;
+}
+div.timeline-posts {
+	border-left: 2px solid red;
+	padding-left: 20px;
+}
+
+div.pageHeaderTitle {
+	text-align: center;
+	color: #999;
+	padding-bottom: 50px;
+	margin-top: 100px;
+	
+}
+
+div.pageHeaderTitle > div > h1 {
+	font-size: 40px;
+}
+
+div.pageHeaderTitle > div > h1 > img {
+	width: 15px;
+}
+
+div.monthHeader {
+	color: #999;
+	padding-top: 50px;
+	margin-bottom: 50px;
+	border-bottom: 2px solid red;
+}
+
+/* End of Blog Page Styling -------------------------------------- */
+
+
+
+/* @gchriswill *** Sidebar Navigation System */
+
+.gcw-sidebar.affix {
+    position: static
+}
+
+.sideNavigation {
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+div.gcw-sidebar > ul.nav > li.sideNavList > a.monthLinks {
+    display: block;
+}
+
+div.gcw-sidebar > ul.nav > li.sideNavList > a:hover {
+	color: red;
+    padding-left: 18px; 
+    background-color: transparent;
+    font-size: 18px;
+}
+
+div.gcw-sidebar > ul.nav > li.active > a.monthLinks {
+	background-color: rgba(255,0,0,0.10);
+}
+ 
+div.gcw-sidebar > ul.nav > li.June14main > ul.June14sub, 
+div.gcw-sidebar > ul.nav > li.July14main > ul.July14sub {
+    display: none;
+    padding-bottom: 10px
+}
+
+div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li > a {
+	margin-left: 30px;
+}
+
+div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li > a.sidePostLinks:hover 
+{
+	color: red;
+ 	background-color: transparent;
+	border-right: 2px solid red;
+    padding-left: 28px
+}
+
+div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li.active > a.sidePostLinks {
+	background-color: rgba(255,0,0,0.20);
+	padding-left: 28px;
+}
+
+div.gcw-sidebar > ul.nav > li.lastLi > a.goTop {
+    display: none;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 4px 10px;
+    font-size: 12px;
+    color: #999
+}
+
+div.gcw-sidebar > ul.nav > li.lastLi > a:hover {
+	font-size: 18px;
+	background-color: transparent;
+    text-decoration: none;
+    color: red;
+}
+
+iframe.videoFrame {
+	width: 440px; 
+	height: 248px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+/* @gchriswill *** Media Queries for Blog "TimeLine" */
+@media (max-width:640px){
+	
+	iframe.videoFrame {
+		width: auto; 
+		height: auto;
+	}
+
+}
+
+@media (min-width:768px){
+	
+	div.pageHeaderTitle > div > h1 {
+		font-size: 60px;
+	}
+	
+	div.pageHeaderTitle > div > h1 > img {
+		width: 30px;
+	}
+	
+	.gcw-sidebar {
+        padding-left: 20px
+    }
+	
+	div.gcw-sidebar > ul.nav > li.lastLi > a.goTop {
+        display: block
+    }
+	
+	div.gcw-sidebar > ul.nav > li.active > ul.July14sub,
+	div.gcw-sidebar > ul.nav > li.active > ul.June14sub {
+        display: block
+    }
+
+    .gcw-sidebar.affix, 
+    .gcw-sidebar.affix-bottom {
+        width: 213px
+    }
+
+    .gcw-sidebar.affix {
+        position: fixed;
+        top: 20px
+    }
+
+    .gcw-sidebar.affix-bottom {
+        position: absolute
+    }
+
+    .gcw-sidebar.affix-bottom .sideNavigation, 
+    .gcw-sidebar.affix .sideNavigation {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+    
+    iframe.videoFrame {
+	    width: 440px; 
+	    height: 248px;
+    }
+    
+}
+
+@media (min-width:992px){
+	
+	iframe.videoFrame {
+	    width: 560px; 
+	    height: 315px;
+    }
+}
+
+@media (min-width:1200px){
+
+	div.pageHeaderTitle > div > h1 {
+		font-size: 90px;
+	}
+	div.pageHeaderTitle > div > h1 > img {
+		width: 50px;
+	}
+	
+	.gcw-sidebar.affix-bottom, 
+	.gcw-sidebar.affix {
+        width: 263px
+    }
+    
+    iframe.videoFrame {
+	    width: 700px; 
+	    height: 394px;
+    }
+}/* End of Media Queries */
+/* End of Sidebar Navigation System */
+
+
+
+

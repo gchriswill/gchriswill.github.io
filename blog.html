@@ -5,13 +5,10 @@ title: Timeline
 
 <!-- @gchriswill *** Blog Page -->
 <div class="container col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-	<br><br><br>
 	
 	<div class="row pageHeaderTitle">
 		<div class="container-fluid col-lg-11">
-			<h1 class="hidden-xs hidden-sm hidden-md" >TimeLine<span class="red_punctuation">$ </span><img src="images/terminalCursor.gif" /></h1>
-			<h2 class="hidden-xs hidden-sm hidden-lg" >TimeLine<<span class="red_punctuation">$ <img src="images/terminalCursor.gif" width="30px"/></span></h1>
-			<h4 class="hidden-md hidden-lg" >TimeLine<span class="red_punctuation">$ <img src="images/terminalCursor.gif" width="10px"/></span></h1>
+			<h1 >TimeLine<span class="red_punctuation">$ </span><img src="images/terminalCursor.gif" /></h1>
 		</div>
 	</div>
 	
@@ -20,23 +17,35 @@ title: Timeline
 		<!-- Blog Posts Sections -->
 		<section id="content" class="col-xs-11 col-sm-8 col-md-8 col-lg-8">
 		
-		<div class="monthHeader">
-			<h1 id="june14" class="hidden-xs" ><span class="red_punctuation">$</span> date <span class="red_punctuation">"+%B-%Y"</span><br><span class="red_punctuation">$ </span>June-2014</h1>
-			<h3 id="june14" class="hidden-sm hidden-md hidden-lg" ><span class="red_punctuation">$ </span>June-2014</h1>		</div>
-		
-		{% for posts in site.posts %}
+		{% for months in site.posts %}
+			
+			{% if months.postmonth == months.identifier %}
 				
-				<div id="{{ posts.identifier }}" class="timeline-posts-container" >
-					
-					<div class="timeline-posts">
-						
-						<h1 class="text-muted" >{{ posts.title }}</h1>
-						
-						{{ posts.content }}
-						
-					</div>
-					
+				<div id="{{ months.identifier }}" class="monthHeader">
+					<h1  >{{ months.title }}</h1>
 				</div>
+				
+				{% for posts in site.posts %}
+						
+					{% if months.identifier contains posts.postmonth and posts.postmonth != posts.identifier %}
+					
+						<div id="{{ posts.identifier }}" class="timeline-posts-container" >
+							
+							<div class="timeline-posts">
+								
+								<h1 class="text-muted" >{{ posts.title }}</h1>
+								
+								{{ posts.content }}
+								
+							</div>
+							
+						</div>
+						
+					{% endif %}
+					
+				{% endfor %}
+				
+			{% endif %}
 			
 		{% endfor %}
 		

@@ -7,23 +7,32 @@
     	<!-- Side Navigation Structure -->
     	<ul class="nav sideNavigation" data-spy="affix" >
         	
-        	<li class="sideNavList">
+        	{% for sidemain in site.posts %}
 				
-				<a class="monthLinks" href="#june14" >June 2014</a>
-				
-				<!-- Sub Navigation -->
-				<ul class="nav" >
-			    	
-			    	{% for posts in site.posts %}
-					
-						<li><a class="sidePostLinks" href="#{{posts.identifier}}" >{{ posts.date | date_to_long_string }} <br> {{ posts.title }}</a></li>
-					
-					{% endfor %}
-				    
-				</ul><!-- End of Sub Navigation -->
-				
-			</li>
+				<li class="sideNavList {{ sidemain.identifier }}main">
+					{% if sidemain.postmonth == sidemain.identifier %}
+						<a class="monthLinks" href="#{{ sidemain.identifier }}" >{{ sidemain.meta }}</a>
+						
+						<!-- Sub Navigation -->
+						<ul class="nav {{ sidemain.identifier }}sub" >
+					    	
+					    	{% for sidesub in site.posts %}
+								
+								{% if sidemain.identifier contains sidesub.postmonth and sidesub.postmonth != sidesub.identifier %}
+									
+									<li><a class="sidePostLinks" href="#{{ sidesub.identifier }}" >{{ sidesub.date | date_to_long_string }} <br> {{ sidesub.title }}</a></li>
+								
+								{% endif %}
+								
+							{% endfor %}
+						    
+						</ul><!-- End of Sub Navigation -->
+						
+					{% endif %}
+				</li>
 			
+			{% endfor %}
+				
 			<li class="lastLi"><a class="goTop" href="#top" >Back to top</a></li>
 			
 		</ul><!-- End of Side Navigation Structure -->

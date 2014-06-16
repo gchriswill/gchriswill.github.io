@@ -2,7 +2,7 @@
 title: Tweaking Up The Jekyll Engine<span class="red_punctuation">...</span>
 meta: Testing Jekyll With Multiple Posts!
 category: Timeline
-identifier: gchriswill-post-2
+identifier: gchriswill-June14-post-2
 author: gchriswill
 postmonth: June
 ---

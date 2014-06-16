@@ -2,7 +2,7 @@
 title: Algorithm For Post Automatization 90<span class="red_punctuation">%</span> Completed<span class="red_punctuation">!</span>
 meta: Mastering Jekyll, Liquid, Markdown, Bootstrap, Less and jQuery
 category: Timeline
-identifier: gchriswill-post-3
+identifier: gchriswill-June14-post-3
 author: gchriswill
 postmonth: June
 ---
