@@ -122,6 +122,10 @@ iframe.videoFrame {
 
 /* @gchriswill *** Media Queries for Blog "TimeLine" */
 @media (max-width:640px){
+
+        div.monthHeader > h1 {
+              font-size: 24px;
+        };
 	
 	iframe.videoFrame {
 		width: 260px; 
