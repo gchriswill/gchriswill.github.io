@@ -22,7 +22,7 @@ div.timeline-posts-container > div.timeline-posts > p {
 	color: #999;
 }
 
-div.timeline-posts-container > p > a:hover {
+div.timeline-posts-container > div.timeline-posts > p > a:hover {
 	color: red;
 	font-size: 30px;
 	text-decoration: none;
