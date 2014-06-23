@@ -38,7 +38,6 @@ div.pageHeaderTitle {
 	color: #999;
 	padding-bottom: 50px;
 	margin-top: 100px;
-	
 }
 
 div.pageHeaderTitle > div > h1 {
@@ -129,7 +128,7 @@ div.gcw-sidebar > ul.nav > li.lastLi > a:hover {
 
 
 /* @gchriswill *** Media Queries for Blog "TimeLine" */
-@media (max-width:640px){
+@media (max-width:640px) {
 
     div.monthHeader > h1 {
     	font-size: 24px;
@@ -142,7 +141,7 @@ div.gcw-sidebar > ul.nav > li.lastLi > a:hover {
 
 }
 
-@media (min-width:768px){
+@media (min-width:768px) {
 	
 	div.pageHeaderTitle > div > h1 {
 		font-size: 60px;
@@ -192,7 +191,7 @@ div.gcw-sidebar > ul.nav > li.lastLi > a:hover {
     
 }
 
-@media (min-width:992px){
+@media (min-width:992px) {
 	
 	iframe.videoFrame {
 		width: 560px; 
@@ -201,11 +200,12 @@ div.gcw-sidebar > ul.nav > li.lastLi > a:hover {
     
 }
 
-@media (min-width:1200px){
+@media (min-width:1200px) {
 
 	div.pageHeaderTitle > div > h1 {
     	font-size: 90px;
 	}
+	
 	div.pageHeaderTitle > div > h1 > img {
 		width: 50px;
 	}

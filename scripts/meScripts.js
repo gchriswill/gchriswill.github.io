@@ -41,5 +41,7 @@ jQuery(document).ready(function(){
 		$(".textAnimation_1i1").animate({opacity: 1}, "slow");
 					
 	});
+	
+	//$(".headerTagTitle")
 
 }); 

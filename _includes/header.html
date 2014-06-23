@@ -10,25 +10,36 @@
 
 <head>
 	
-		<!-- Meta attributes setup --->
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    
-	    <!-- Title setup --->
-	    <title> gchriswill &#124; {{ page.title }}</title>
-	    
-	    <!-- External sources --->
-		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/meStyles.css">
-		{% if page.url == "/blog.html" %} <link rel="stylesheet" href="css/blogStyle.css"> {% endif %}
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,700">
-		
-		<!-- Overwrite class for "span" tags to use it on punctioations -->
-		<style>.red_punctuation{color:red;}</style>
-		
-		<!-- Respond for old EI -->
-		<script src="scripts/respond.js"></script>
+	<!-- Meta attributes setup --->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Title setup --->
+	<title> gchriswill &#124; {{ page.title }}</title>
+	
+	<!-- External sources --->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/meStyles.css">
+	{% if page.url == "/blog.html" %} <link rel="stylesheet" href="css/blogStyle.css"> {% endif %}
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,700">
+	
+	<!-- Overwrite class for "span" tags to use it on punctioations -->
+	<style>.red_punctuation{color:red;}</style>
+	
+	<!-- Respond for old EI -->
+	<script src="scripts/respond.js"></script>
+	
+	<!-- Google Analytics Scripts -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-50384664-1', 'gchriswill.me');
+		ga('require', 'displayfeatures');
+		ga('send', 'pageview');
+	</script><!-- End of Google Analytics Scripts -->
 	    
 </head>
 <!-- End of header -->
