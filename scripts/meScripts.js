@@ -1,5 +1,5 @@
 /* 
- * JavaScript by @gchriswill
+ * Disinged and coded by @gchriswill
  * Code licensed under MIT, documentation under CC BY-SA 4.0
  *	
  */
