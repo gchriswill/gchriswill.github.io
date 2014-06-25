@@ -127,6 +127,15 @@ div.gcw-sidebar > ul.nav > li.lastLi > a:hover {
 }/* End of Sidebar Navigation System */
 
 
+
+
+iframe.videoFrame {
+		border: 0px solid black;
+}
+	
+	
+	
+	
 /* @gchriswill *** Media Queries for Blog "TimeLine" */
 @media (max-width:640px) {
 
@@ -135,6 +144,7 @@ div.gcw-sidebar > ul.nav > li.lastLi > a:hover {
     }
 	
 	iframe.videoFrame {
+		border: 0px solid black;
 	    width: 260px; 
 		height: 146px;
 	}

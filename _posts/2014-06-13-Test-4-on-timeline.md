@@ -11,7 +11,7 @@ postmonth: June
 
 {{ page.date | date_to_long_string }}
 
-<iframe class="videoFrame" src="//www.youtube.com/embed/NQ7kqwbqeiI?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe class="videoFrame" src="//www.youtube.com/embed/NQ7kqwbqeiI?rel=0" allowfullscreen></iframe>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 Aliquam molestie odio ut massa vehicula viverra.
