@@ -18,7 +18,7 @@ title: Timeline
 	<!-- Blog Page Header Title object -->
 	<div class="row pageHeaderTitle">
 		<div class="container-fluid col-lg-11">
-			<h1 class="headerTagTitle" >TimeLine<span class="red_punctuation">$ </span><img src="images/terminalCursor.gif" alt="cursor" /></h1>
+			<h1 class="headerTagTitle" ><span class="red_punctuation">$</span>TimeLine <img src="images/terminalCursor.gif" alt="cursor" /></h1>
 		</div>
 	</div><!-- End of Blog Page Header Title object -->
 	
@@ -37,7 +37,7 @@ title: Timeline
 				<!-- Month Headers -->
 				<!-- Dynamic file data extraction, and id and title setters -->
 				<div id="{{ months.identifier }}" class="monthHeader">
-					<h1  >{{ months.title }}</h1>
+					<h1>{{ months.title }}</h1>
 				</div>
 				
 				<!-- Nested Looping through _posts folder -->
@@ -52,7 +52,7 @@ title: Timeline
 							
 							<div class="timeline-posts">
 								
-								<h1 class="text-muted" >{{ posts.title }}</h1>
+								<h1 >{{ posts.title }}</h1>
 								
 								{{ posts.content }}
 								

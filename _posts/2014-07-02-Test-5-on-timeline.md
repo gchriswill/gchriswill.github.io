@@ -29,4 +29,4 @@ Etiam lacinia ornare orci aliquam pretium.
 
 
 
-gchriswill<span class="red_punctuation">$</span> cd <span class="red_punctuation">~/</span>
+<span class="red_punctuation">$</span> cd <span class="red_punctuation">~/</span>

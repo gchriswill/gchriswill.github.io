@@ -9,12 +9,18 @@
 
 /* @gchriswill *** Post Styling Layout */
 div.timeline-posts-container > div.timeline-posts > p {
-	font-size: 18px;
+	font-size: 24px;
+	color: #999;
 }
-
+div.timeline-posts-container > div.timeline-posts > h3 {
+	font-size: 30px;
+}
+div.timeline-posts-container > div.timeline-posts > h1 {
+	color: #fff;
+}
 div.timeline-posts-container {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 div.timeline-posts-container > div.timeline-posts > h3,
@@ -50,8 +56,8 @@ div.pageHeaderTitle > div > h1 > img {
 
 div.monthHeader {
 	color: #999;
-	padding-top: 50px;
-	margin-bottom: 50px;
+	padding-top: 80px;
+	margin-bottom: 80px;
 	border-bottom: 2px solid red;
 }
 

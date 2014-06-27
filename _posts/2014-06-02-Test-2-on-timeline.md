@@ -27,4 +27,4 @@ Nam condimentum odio faucibus tellus vestibulum et convallis enim consectetur.
 Etiam lacinia ornare orci aliquam pretium.
 
 
-gchriswill<span class="red_punctuation">$</span> cd <span class="red_punctuation">~/</span>
+<span class="red_punctuation">$</span> cd <span class="red_punctuation">~/</span>

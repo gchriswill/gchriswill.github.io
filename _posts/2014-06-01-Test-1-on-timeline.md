@@ -1,5 +1,5 @@
 ---
-title: gchriswill<span class="red_punctuation">$</span> echo <span class="red_punctuation">"</span>Hello World<span class="red_punctuation">"</span>
+title: <span class="red_punctuation">$</span> echo <span class="red_punctuation">"</span>Hello World<span class="red_punctuation">"</span>
 meta: My First Official Timeline Post
 category: Timeline
 identifier: gchriswill-June14-post-1
@@ -12,8 +12,8 @@ postmonth: June
 {{ page.date | date_to_long_string }}
 
 
-Beginning the first post of my timeline, I have to introduce my self first. My name is Christopher Gonzalez digitally known as
-[@gchriswill](https://twitter.com/gchriswill) and I'm a web designer/developer and iOS developer. Currently on my last
+Beginning the first post of my timeline, I have to introduce my self first. My name is [Christopher Gonzalez](https://plus.google.com/u/0/103403313099983008189) digitally known as
+[gchriswill](https://twitter.com/gchriswill) and I'm a web designer/developer and iOS developer. Currently on my last
 academic year at Full Sail University majoring for Mobile Development B.S. based on Winter Park, FL.
 
 
@@ -21,7 +21,7 @@ Today, I started testing and tweaking my blogging platform with some awesome too
 Since I got introduced to [Jekyll](http://jekyllrb.com), the engine powering Github Pages, I felt
 truly in love with it. At first, I didn't know anything about it nor how to used. Then I had to make some research to adquire
 knowledge about this new cool engine. But while researching, I found other cool things that I could integrate to this website,
-like [Twitter's Bootstrap](http://getbootstrap.com) framework. Honestly it hasn't been easy to design and develop alone by my
+like the [Bootstrap](http://getbootstrap.com) framework. Honestly it hasn't been easy to design and develop alone by my
 self integrating so many web technologies and frameworks, but anyway its really starting to look awesome!
 
 
@@ -32,4 +32,4 @@ promotions and definitely I'm NOT going to sell nothing or collect any data. Thi
 and my knowledge to the whole world and I hope everyone enjoys it.
 
 
-gchriswill<span class="red_punctuation">$</span> cd <span class="red_punctuation">~/</span>
+<span class="red_punctuation">$</span> cd <span class="red_punctuation">~/</span>

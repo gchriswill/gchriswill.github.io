@@ -35,7 +35,7 @@ a {
 
 a.twitter_link:hover {
 	color: red;
-	font-size: 30px;
+	font-size: 40px;
 	text-decoration: none;
 }
 /* End of Default Body Styling ----------------------------------- */
@@ -94,6 +94,18 @@ body > nav.navbar-inverse {
 .modal > .modal-dialog > .modal-content > .modal-footer > .btn-default {
 	border-radius: 0;
 }
+
+.modal > .modal-dialog > .modal-content,
+.modal > .modal-dialog > .modal-content > .modal-header,
+.modal > .modal-dialog > .modal-content > .modal-footer,
+.modal > .modal-dialog > .modal-content > .modal-footer > .btn-default {
+	border-color: #000;
+	color: #000;
+}
+
+
+
+
 /* End of Navbar Customization ----------------------------------- */
 
 
@@ -121,6 +133,12 @@ body > nav.navbar-inverse {
 .carousel-indicators .active {
 	background-color: red;
 }
+
+/*
+.carousel-caption {
+	background-color: rgba(0,0,0,0.5);
+}
+*/
 /* End of Carousel Customization --------------------------------- */
 
 

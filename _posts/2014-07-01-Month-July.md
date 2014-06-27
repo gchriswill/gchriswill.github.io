@@ -1,5 +1,5 @@
 ---
-title: <span class="red_punctuation">$</span> date <span class="red_punctuation">"+%B-%Y"</span><br><span class="red_punctuation">$ </span>July-2014
+title: <span class="red_punctuation">$ </span>July-2014
 meta: July 2014
 category: Timeline
 identifier: July14
