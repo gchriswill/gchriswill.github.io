@@ -9,16 +9,55 @@
 <!-- @gchriswill:-> Importing Javascript's frameworks: Twitter's Bootstrap, jQuery and meScripts. Also, here lives the Google Analitics script too... -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-{% if page.url == "/index.html" %} <script src="scripts/meScripts.js"></script> {% endif %}
-<!--
+{% if page.url == "/index.html" %} <script src="scripts/indexScripts.js"></script> {% endif %}
 <script>
-	$(".headerTitleDiv").css({
-			"width": $(window).outerWidth() / 1.1, 
-			"height": $(window).outerHeight() / 1.1
+/*
+	$(".pageHeaderTitle").css({
+		"width": $(window).outerWidth(), 
+		"height": $(window).outerHeight()
+		
+	});
+	
+	$(".sideNavContainer").css({
+		
+		"height": $(window).innerHeight()
+		
+	});
+	
+	$(window).scroll( function() {
+		
+		
+
+		$(".sideNavigation").css({
+			
+			"top": $(window).innerHeight() / 2
 			
 		});
 	
-	$(window).on("resize", function(){
+	});
+	
+*/
+function parallax(){
+	
+	var prlx_lyr_1 = document.getElementsByClassName('sideNavigation');
+	console.log(prlx_lyr_1[0]);
+	
+	prlx_lyr_1[0].style.marginTop = -(window.pageYOffset / 12)+ 'px';
+	
+	//prlx_lyr_1[0].style.marginTop = (window.pageYOffset / 32)+'px';
+}
+
+window.addEventListener("scroll", parallax, false);
+	
+	/*
+$(window).scroll( function() {
+		
+		$("#prlx_lyr_1").style.top =  -(window.pageYOffset / 4) +"px";
+	});
+*/
+
+	/*
+$(window).on("resize", function(){
 		$(".headerTitleDiv").css({
 			"width": $(window).outerWidth() / 1.2, 
 			"height": $(window).outerHeight() / 1.2,
@@ -26,6 +65,6 @@
 			
 		});
 	});
+*/
 </script>
--->
 <!-- End of importing scripts -->

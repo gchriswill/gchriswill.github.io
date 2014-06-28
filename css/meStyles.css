@@ -97,6 +97,7 @@ body > nav.navbar-inverse {
 .modal > .modal-dialog > .modal-content,
 .modal > .modal-dialog > .modal-content > .modal-footer > .btn-default {
 	border-radius: 0;
+	/* background-color: rgba(255, 255, 255, 0.8) */
 }
 
 .modal > .modal-dialog > .modal-content,

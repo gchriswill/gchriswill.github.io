@@ -42,13 +42,8 @@ div.timeline-posts {
 div.headerTitleDiv {
 	text-align: center;
 	color: #999;
-	padding-bottom: 50px;
 	margin-top: 100px;
-	/*
-width: 1000px;
-	height: 900px;
-*/
-	
+	margin-bottom: 100px;
 	
 }
 
@@ -62,10 +57,10 @@ div.headerTitleDiv > h1 > img {
 
 div.monthHeader {
 	color: #999;
-	padding-top: 80px;
-	margin-bottom: 80px;
+	margin-top: 100px;
+	margin-bottom: 100px;
 	border-bottom: 1px solid red;
-	
+	padding-top: 100px;
 }
 
 iframe.videoFrame {
@@ -80,18 +75,22 @@ iframe.videoFrame {
 .gcw-sidebar.affix {
     position: static
 }
-
+.sideNavContainer{
+	
+}
 .sideNavigation {
-    margin-top: 20px;
-    margin-bottom: 20px
+	
+    margin-bottom: 20px;
+    
 }
 
 div.gcw-sidebar > ul.nav > li.sideNavList > a.monthLinks {
     display: block;
+    color: red;
 }
 
 div.gcw-sidebar > ul.nav > li.sideNavList > a:hover {
-	color: red;
+	color: #fff;
     padding-left: 18px; 
     background-color: transparent;
     font-size: 18px;
@@ -99,6 +98,7 @@ div.gcw-sidebar > ul.nav > li.sideNavList > a:hover {
 
 div.gcw-sidebar > ul.nav > li.active > a.monthLinks {
 	background-color: rgba(255,0,0,0.10);
+	color: red;
 }
  
 div.gcw-sidebar > ul.nav > li.June14main > ul.June14sub, 
@@ -109,18 +109,24 @@ div.gcw-sidebar > ul.nav > li.July14main > ul.July14sub {
 
 div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li > a {
 	margin-left: 30px;
+	color: #333;
 }
-
+div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li > a.sidePostLinks:focus,
 div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li > a.sidePostLinks:hover {
-	color: red;
+	color: #fff;
  	background-color: transparent;
 	border-right: 2px solid red;
     padding-left: 28px
 }
 
+div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li > a.sidePostLinks:focus {
+	
+}
+
 div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li.active > a.sidePostLinks {
 	background-color: rgba(255,0,0,0.20);
 	padding-left: 28px;
+	color: red;
 }
 
 div.gcw-sidebar > ul.nav > li.lastLi > a.goTop {
@@ -143,7 +149,7 @@ div.gcw-sidebar > ul.nav > li.lastLi > a:hover {
 
 
 iframe.videoFrame {
-		border: 0px solid black;
+	border: 0px solid black;
 }
 	
 	
@@ -172,6 +178,7 @@ iframe.videoFrame {
 	
 	div.pageHeaderTitle > div > h1 > img {
 		width: 30px;
+		
 	}
 	
 	.gcw-sidebar {
@@ -194,7 +201,7 @@ iframe.videoFrame {
 
     .gcw-sidebar.affix {
     	position: fixed;
-		top: 20px;
+    	top: 20px;
     }
 
     .gcw-sidebar.affix-bottom {
@@ -237,6 +244,14 @@ iframe.videoFrame {
 	.gcw-sidebar.affix {
     	width: 263px;
 	}
+	
+	/*
+.sideNavigation {
+	
+    	margin-top: 115px;
+    
+	}
+*/
     
     iframe.videoFrame {
 		width: 700px; 
