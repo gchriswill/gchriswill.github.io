@@ -75,11 +75,12 @@ iframe.videoFrame {
 .gcw-sidebar.affix {
     position: static
 }
+
 .sideNavContainer{
 	
 }
 .sideNavigation {
-	
+	margin-top: 200px;
     margin-bottom: 20px;
     
 }

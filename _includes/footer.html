@@ -9,7 +9,7 @@
 <!-- @gchriswill:-> Importing Javascript's frameworks: Twitter's Bootstrap, jQuery and meScripts. Also, here lives the Google Analitics script too... -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-{% if page.url == "/index.html" %} <script src="scripts/indexScripts.js"></script> {% endif %}
+{% if page.url == "/index.html" %} <script src="scripts/MeScripts.js"></script> {% endif %}
 <script>
 /*
 	$(".pageHeaderTitle").css({
@@ -42,7 +42,7 @@ function parallax(){
 	var prlx_lyr_1 = document.getElementsByClassName('sideNavigation');
 	console.log(prlx_lyr_1[0]);
 	
-	prlx_lyr_1[0].style.marginTop = -(window.pageYOffset / 12)+ 'px';
+	prlx_lyr_1[0].style.marginTop = -( (window.pageYOffset / 12) - window.height)+ 'px';
 	
 	//prlx_lyr_1[0].style.marginTop = (window.pageYOffset / 32)+'px';
 }
