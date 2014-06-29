@@ -9,7 +9,7 @@
 
 /* @gchriswill *** Post Styling Layout */
 div.timeline-posts-container > div.timeline-posts > p {
-	font-size: 24px;
+	font-size: 20px;
 	color: #999;
 }
 div.timeline-posts-container > div.timeline-posts > h3 {
@@ -19,8 +19,8 @@ div.timeline-posts-container > div.timeline-posts > h1 {
 	color: #fff;
 }
 div.timeline-posts-container {
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 div.timeline-posts-container > div.timeline-posts > h3,
@@ -42,8 +42,8 @@ div.timeline-posts {
 div.headerTitleDiv {
 	text-align: center;
 	color: #999;
-	margin-top: 100px;
-	margin-bottom: 100px;
+	margin-top: 300px;
+	margin-bottom: 300px;
 	
 }
 
@@ -61,6 +61,7 @@ div.monthHeader {
 	margin-bottom: 100px;
 	border-bottom: 1px solid red;
 	padding-top: 100px;
+	padding-bottom: 100px:
 }
 
 iframe.videoFrame {
@@ -82,7 +83,7 @@ iframe.videoFrame {
 .sideNavigation {
 	margin-top: 200px;
     margin-bottom: 20px;
-    
+    opacity: 0.0;
 }
 
 div.gcw-sidebar > ul.nav > li.sideNavList > a.monthLinks {
@@ -110,7 +111,7 @@ div.gcw-sidebar > ul.nav > li.July14main > ul.July14sub {
 
 div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li > a {
 	margin-left: 30px;
-	color: #333;
+	color: #999;
 }
 div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li > a.sidePostLinks:focus,
 div.gcw-sidebar > ul.nav > li.sideNavList > ul.nav > li > a.sidePostLinks:hover {
@@ -136,7 +137,8 @@ div.gcw-sidebar > ul.nav > li.lastLi > a.goTop {
     margin-left: 10px;
     padding: 4px 10px;
     font-size: 12px;
-    color: #999
+    color: #999;
+    
 }
 
 div.gcw-sidebar > ul.nav > li.lastLi > a:hover {
@@ -227,6 +229,12 @@ iframe.videoFrame {
 	iframe.videoFrame {
 		width: 560px; 
 	    height: 315px;
+    }
+    
+    .gcw-sidebar.affix-bottom .sideNavigation, 
+    .gcw-sidebar.affix .sideNavigation {
+    	margin-top: 0;
+		margin-bottom: 0;
     }
     
 }

@@ -1,0 +1,78 @@
+/* 
+ * Disinged and coded by @gchriswill
+ * Code licensed under MIT, documentation under CC BY-SA 4.0
+ *	
+ */
+ 
+ 
+ 
+
+/* @gchriswill *** Folder Navigation Customization --------------------- */
+ul.nav-tabs  > li > a:hover,
+ul.nav-tabs > li > a:focus,
+ul.nav-tabs > .active > a,
+ul.nav-tabs > .active > a:hover {
+	color: red;
+	background-color: transparent;
+	border-color: rgba(255, 0, 0, 0.8);
+	border-radius: 0px 0px 0px 0px;
+	border-width: 2px;
+	border-bottom-width: 0px;
+}
+ul.nav-tabs  > li > a:hover {
+	color: #fff;
+	background: rgba(255, 0, 0, 0.15)
+}
+ul.nav-tabs {
+	border-color: rgba(255, 0, 0, 0.8);
+	border-bottom-width: 1px;
+}
+
+ul.nav-tabs > li > a  {
+	color: #333;
+	border-width: 1px;
+	border-radius: 0px 0px 0px 0px;
+	border-color: rgba(255, 0, 0, 0.4);
+}
+
+ul.nav-tabs > .active > a {
+	border-bottom-width: 1px;
+	border-bottom-color: black;
+}
+
+ul.nav-tabs > li:last-child > a {
+	border-radius: 0px 20px 0px 0px;
+}
+
+ul.nav-tabs > li.active > a:hover {
+	border-bottom-color: black;
+	border-bottom-width: 1px;
+	background: rgba(255, 0, 0, 0.15)
+}
+
+ul.nav-tabs > li > a:hover {
+	-webkit-animation: pulse 2.5s infinite ease-in-out;
+	
+}
+	
+@-webkit-keyframes pulse {
+	
+	0% {
+		box-shadow: inset 0px 0px 0px 0px rgba(255, 0, 0, 0.1);
+	}
+
+	50% {
+		box-shadow: inset 0px 0px 10px 5px rgba(255, 0, 0, 0.4);
+		
+	}
+
+	100% {
+		box-shadow: inset 0px 0px 0px 0px rgba(255, 0, 0, 0.1);
+	}
+}
+/* End of Folder Navigation Customization --------------------- */
+
+
+
+
+
