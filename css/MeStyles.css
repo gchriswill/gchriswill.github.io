@@ -1,0 +1,64 @@
+/* 
+ * Disinged and coded by @gchriswill
+ * Code licensed under MIT, documentation under CC BY-SA 4.0
+ *	
+ */
+ 
+ 
+/* Testing colors ----------------------------------------------- */
+.lightDarkColor {
+	background-color: #727272;
+}
+
+.NotSoDarkColor {
+	background-color: #484848;
+}
+
+.darkColor {
+	background-color: #1d1d1d;
+}
+/*  End of testing colors ---------------------------------------- */
+ 
+
+/* @gchriswill *** Carousel Customization ------------------------ */
+/* Caruosel controls styling */
+.carousel-control{
+	color: red;
+}
+
+.carousel-control:hover, .carousel-control:focus {
+	color: #999;
+}
+
+.carousel-control .icon-prev, 
+.carousel-control .icon-next, 
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+	top: 90%;
+}
+/* Assigning red color to carousel indicators */
+.carousel-indicators li {
+	border: 1px solid red;
+}
+
+.carousel-indicators .active {
+	background-color: red;
+}
+
+/*
+.carousel-caption {
+	background-color: rgba(0,0,0,0.5);
+}
+*/
+/* End of Carousel Customization --------------------------------- */
+
+
+/* @gchriswill *** Media Queries for Me Page --------------------- */
+@media (max-width: 768px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	
+}
+/* End of Media Queries for Me Page ------------------------------ */
