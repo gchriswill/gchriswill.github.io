@@ -1,10 +1,8 @@
 /* 
- * Disinged and coded by @gchriswill
+ * Me's JavaScript - Disinged and coded by @gchriswill
  * Code licensed under MIT, documentation under CC BY-SA 4.0
  *	
  */
-
-
 
 
 jQuery(document).ready(function(){
