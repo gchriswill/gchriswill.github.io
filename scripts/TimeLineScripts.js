@@ -1,24 +1,46 @@
 /* 
- * Disinged and coded by @gchriswill
+ * TimeLine's JavaScript - Disinged and coded by @gchriswill
  * Code licensed under MIT, documentation under CC BY-SA 4.0
  *	
  */
 
 
-(function(){
+jQuery(document).ready(function(){
 	
 	var sideNavItem = $(".sideNavigation"); 
-	
 	var timelineTitle = $(".headerTagTitle");
+	var winYOff, w, h;
 	
-	$(window).scroll( function(){
-	
-		timelineTitle[0].style.opacity = 1 - (window.pageYOffset / 350);
+	/* Testing variables and assets ***************
+		var allPosts = $(".timeline-posts").length;
+		var allMonths = $(".monthHeader").length;
+	*/
+
+	     /* Reusable function that calculates the vertical position of the side navigation and 
+	    // main title object. This function extracts the side navigation object from the DOM, 
+	   // also references the outer height and width of window for futher calculations for 
+	  // seting the results to the marging and opacity of the objects to execute parallax 
+	 // type animations.
+	*/ 
+	function positionCalculatorAndSetter() {
+		
+		winYOff = window.pageYOffset;
+		w = window.outerWidth;
+	 	h = window.outerHeight;
 	 	
-	 	sideNavItem[0].style.opacity = (window.pageYOffset / 2000);
+		timelineTitle[0].style.opacity = 1 - (winYOff / 350);
 		
-		sideNavItem[0].style.marginTop = -( ( window.pageYOffset /  7.2 ) - 100) + "px";
+		if ( /* Level 1 */ winYOff >= 0 && ( /* Level 2 */ winYOff < ( /* Level 3 */ h * ( /* Level 4 */( w / h ) * 2.2  )  )  )  ) /* <- Four Levels formula */ {
+	 	 	
+	 	 	sideNavItem[0].style.opacity = (winYOff / 2000);
+		 	sideNavItem[0].style.marginTop = -( winYOff / 4 )+ "px";
 		
-	});
+		};
+		
+	};
 	
-}).call(this);
+	// $ Window Events
+	$(window).scroll( positionCalculatorAndSetter );
+	$(window).resize( positionCalculatorAndSetter );
+	
+});
