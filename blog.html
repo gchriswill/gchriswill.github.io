@@ -6,28 +6,27 @@ title: TimeLine
 
 <!-- * 
  *
- * Disinged and coded by @gchriswill
+ * Jekyll Powered - Blog Post Engine Markup Object - Disinged and coded by @gchriswill
  * Code licensed under MIT, documentation under CC BY-SA 4.0
  *	
  * * * -->
  
-<!--
- Blog Page Header Title object -->
-	<div class="row pageHeaderTitle">
-		<div class="container headerTitleDiv">
-			<h1 class="headerTagTitle" ><span class="red_punctuation">$</span>TimeLine <img src="images/terminalCursor.gif" alt="cursor" /></h1>
-		</div>
-	</div><!-- End of Blog Page Header Title object
-	
--->
-<!-- @gchriswill *** Blog Page ********************************************** -->
-<div class="container col-xs-offset-0 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+<!-- @gchriswill *** Blog Page Header Title Markup Object ********************************************** -->
+<div class="row pageHeaderTitle">
+	<div class="container headerTitleDiv">
+		<h1 class="headerTagTitle" ><span class="red_punctuation">$</span>TimeLine <img src="images/terminalCursor.gif" alt="cursor" /></h1>
+	</div>
+</div><!-- End of Blog Page Header Title Markup Object ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+
+
+<!-- @gchriswill *** Blog Post Engine Markup Object ********************************************** -->
+<div class="container col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0">
 	
 	<!-- Blog Posts object -->
 	<div class="row" >
 	
 		<!-- Blog Posts Sections -->
-		<section id="content" class="col-xs-11 col-sm-8 col-md-8 col-lg-8">
+		<section id="content" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 		
 		<!-- Looping through _posts folder -->
 		{% for months in site.posts %}
@@ -81,6 +80,4 @@ title: TimeLine
 	</div><!-- End of row of Post object -->
 
 </div>
-<!-- End of Blog Page ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
-
-
+<!-- End of Blog Post Engine Page Markup Object ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
