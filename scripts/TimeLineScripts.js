@@ -45,7 +45,7 @@ jQuery(document).ready(function(){
 	};
 	
 	// $ Window Events ...
-	$(window).scroll( positionCalculatorAndSetter );
+	$(window).on("scroll", positionCalculatorAndSetter );
 	$(window).resize( positionCalculatorAndSetter );
 	
 });
