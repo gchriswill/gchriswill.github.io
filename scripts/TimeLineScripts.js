@@ -27,13 +27,18 @@ jQuery(document).ready(function(){
 		winYOff = window.pageYOffset;
 		w = window.outerWidth;
 	 	h = window.outerHeight;
-	 	
-		timelineTitle[0].style.opacity = 1 - (winYOff / 350);
+	 	op1 = 1 - (winYOff / 350);
+	 	formula = /* Level 1 */ winYOff >= 0 && ( /* Level 2 */ winYOff < ( /* Level 3 */ h * ( /* Level 4 */( w / h ) * 2.2  )  )  );  /* <- Four Levels formula */
 		
-		if ( /* Level 1 */ winYOff >= 0 && ( /* Level 2 */ winYOff < ( /* Level 3 */ h * ( /* Level 4 */( w / h ) * 2.2  )  )  )  ) /* <- Four Levels formula */ {
+		timelineTitle[0].style.opacity = op1.toFixed(2);
+		
+		if ( formula ){
 	 	 	
-	 	 	sideNavItem[0].style.opacity = (winYOff / 2000);
-		 	sideNavItem[0].style.marginTop = -( winYOff / 4 )+ "px";
+	 	 	var mTop = -( winYOff / 4 );
+	 	 	var op = (winYOff / 2000);
+	 	 	
+	 	 	sideNavItem[0].style.opacity = op.toFixed(2);
+		 	sideNavItem[0].style.marginTop = mTop.toFixed(2) + "px";
 		
 		};
 		
