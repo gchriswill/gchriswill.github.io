@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
 	
 	var sideNavItem = $(".sideNavigation"); 
 	var timelineTitle = $(".headerTagTitle");
-	var winYOff, w, h, op1, formula, mTop, op;
+	var winYOff, w, h, op1, formula, mTop, op2;
 	
 	/* Testing variables and assets ***************
 		var allPosts = $(".timeline-posts").length;
@@ -24,26 +24,24 @@ jQuery(document).ready(function(){
 	*/ 
 	function positionCalculatorAndSetter() {
 		
-		winYOff = window.pageYOffset;
 		w = window.outerWidth;
 	 	h = window.outerHeight;
 	 	op1 = 1 - (winYOff / 350);
+	 	winYOff = window.pageYOffset;
 	 	formula = /* Level 1 */ winYOff >= 0 && ( /* Level 2 */ winYOff < ( /* Level 3 */ h * ( /* Level 4 */( w / h ) * 2.2  )  )  );  /* <- Four Levels formula */
 		
-		window.requestAnimationFrame(function() {
-			
-			timelineTitle[0].style.opacity = op1.toFixed(2);
+		timelineTitle[0].style.opacity = op1.toFixed(2);
 
-			if ( formula ){
-		 	 	
-		 	 	mTop = -( winYOff / 4 );
-		 	 	op = (winYOff / 2000);
-		 	 	
-		 	 	sideNavItem[0].style.opacity = op.toFixed(2);
-			 	sideNavItem[0].style.marginTop = mTop.toFixed(2) + "px";
-			
-			};
-		});
+		if ( formula ){
+	 	 	
+	 	 	mTop = -( winYOff / 4 );
+	 	 	op2 = (winYOff / 2000);
+	 	 	
+	 	 	sideNavItem[0].style.opacity = op2.toFixed(2);
+		 	sideNavItem[0].style.marginTop = mTop.toFixed(2) + "px";
+		
+		};
+	
 	};
 	
 	// $ Window Events ...
