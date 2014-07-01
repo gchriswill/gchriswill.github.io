@@ -39,7 +39,7 @@ jQuery(document).ready(function(){
 		
 	};
 	
-	// $ Window Events
+	// $ Window Events ...
 	$(window).scroll( positionCalculatorAndSetter );
 	$(window).resize( positionCalculatorAndSetter );
 	
