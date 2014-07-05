@@ -8,7 +8,7 @@
 /* @gchriswill *** Default body Styling -------------------------- */
 html > body {
 	background-color: #000000;
-	font-family: "Ubuntu", sans-serif;
+	font-family: "monospace", sans-serif;
 	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
 	-webkit-backface-visibility: hidden;
@@ -48,6 +48,30 @@ body > nav.navbar-inverse {
 .navbar-inverse .nav > .active > a,
 .navbar-inverse .nav > .active > a:hover {
 	color: red;
+}
+.navbar-inverse .nav > li:hover {
+	/*
+-webkit-animation: slide 0.5s ease-in;
+	top: -100px;
+*/
+}
+
+.navbar-inverse .nav > li > a {
+	/* color: #000; */
+}
+.navbar-inverse .nav > li {
+	background-color: #333;
+}
+.navbar-inverse .nav > li.active {
+	
+	/* z-index: 2; */
+	
+}
+
+.navbar-inverse .nav > li:first-child {
+	
+	/* z-index: 1; */
+	/* background-color: aqua; */
 }
 
 .navbar-inverse .nav > li > a:hover {
@@ -106,6 +130,23 @@ body > nav.navbar-inverse {
 	Everything is organized...
 */
 
+/*
+
+@-webkit-keyframes slide {
+	0% {
+		top: 0px;
+	}
+
+	50% {
+		top: -50px;
+	}
+
+	100% {
+		top: -100px;
+	}
+}
+*/
+
 /* --------------------------------------------------------------- */
 
 
@@ -128,26 +169,14 @@ body > nav.navbar-inverse {
 
 }
 
-@-webkit-keyframes pulse {
-	0% {
-		box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
-	}
 
-	50% {
-		box-shadow: 0px 0px 200px rgba(255, 0, 0, 0.6);
-	}
-
-	100% {
-		box-shadow: 0 0 20px rgba(255, 0, 0, 0.1);
-	}
-}
 
 img.gchriswill-profileImage {
 	
 	width: 21.031em;
 	height: 21.031em;
 	border-radius: 10.5em;
-	-webkit-animation: pulse 2.5s infinite ease-in-out;
+	
 	-ms-animation: pulse 2.5s infinite ease-in-out;
 	-moz-animation: pulse 2.5s infinite ease-in-out;
 }

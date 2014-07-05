@@ -12,7 +12,7 @@ title: TimeLine
  * * * -->
  
 <!-- @gchriswill *** Blog Page Header Title Markup Object ********************************************** -->
-<div class="row pageHeaderTitle">
+<div id="pageTop" class="row pageHeaderTitle">
 	<div class="container headerTitleDiv">
 		<h1 class="headerTagTitle" ><span class="red_punctuation">$</span>TimeLine <img src="images/terminalCursor.gif" alt="cursor" /></h1>
 	</div>
@@ -28,10 +28,8 @@ title: TimeLine
 		<!-- Blog Posts Sections -->
 		<section id="content" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
 		
-		<!-- Looping through _posts folder -->
 		{% for months in site.posts %}
 			
-			<!-- Condition for to extract the Month Headers dynamicaly only, located in the _posts folder -->
 			{% if months.postmonth == months.identifier %}
 				
 				<!-- Month Headers -->
@@ -40,12 +38,10 @@ title: TimeLine
 					<h1>{{ months.title }}</h1>
 				</div>
 				
-				<!-- Nested Looping through _posts folder -->
 				{% for posts in site.posts %}
 					
-					<!-- Nested condition for to extract post dynamicaly and set only the the files in the _posts folder for its respective Month Header -->
 					{% if months.identifier contains posts.postmonth and posts.postmonth != posts.identifier %}
-						
+											
 						<!-- Posts -->
 						<!-- Dynamic file data extraction, and id, title, subtitle and content setters -->
 						<div id="{{ posts.identifier }}" class="timeline-posts-container" >
@@ -60,13 +56,13 @@ title: TimeLine
 							
 						</div><!-- End of Posts -->
 						
-					{% endif %}<!-- End of Nested Condition -->
+					{% endif %}
 					
-				{% endfor %}<!-- End of Nested loop -->
+				{% endfor %}
 				
-			{% endif %}<!-- End of Condition -->
+			{% endif %}
 			
-		{% endfor %}<!-- End of loop -->
+		{% endfor %}
 		
 		</section><!-- End of Blog Posts Sections -->
 		

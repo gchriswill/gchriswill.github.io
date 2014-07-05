@@ -52,7 +52,7 @@ jQuery(document).ready(function(){
 	
 	
 	
-	/* @gchriswill :---> Me code! *************************************************/
+	/* @gchriswill *** Me code! *************************************************/
 	window.requestAnimationFrame(function(){
 	
 		$("#devModal").modal("show");
