@@ -28,7 +28,10 @@ jQuery(document).ready(function(){
 	
 	
 	
-	/* Testing variables IMPORTANT! ***************
+	/* 
+		
+		
+		Testing variables IMPORTANT! ***************
 		var allPosts = $(".timeline-posts").length;
 		var allMonths = $(".monthHeader").length;
 	*/
