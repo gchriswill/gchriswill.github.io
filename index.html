@@ -1,103 +1,137 @@
----
-layout: default
-title: Me
----
-
-
-<!-- * 
- *
- * 
- 
- 
- Me's Page Markup Object -  Disinged and coded by @gchriswill
- * Code licensed under MIT, documentation under CC BY-SA 4.0
- *	
- * * * -->
- 	
-<!-- @gchriswill *** Carousel Markup Object ********************************************** -->
-<div id="carousel_setup" class="carousel slide" data-ride="carousel" >
+<!DOCTYPE html>
+<html lang="en">
 	
-	<!-- Indicators -->
-	<ol class="carousel-indicators">
-    	<li data-target="#carousel_setup" data-slide-to="0" class="active"></li>
-		<li data-target="#carousel_setup" data-slide-to="1"></li>
-		<li data-target="#carousel_setup" data-slide-to="2"></li>
-	</ol>
+<!--
+HTML5 markup Implementation By Christopher Gonzalez D.K.A "gchriswill"
+Copyright (c) 2015 Christopher Gonzalez. All rights reserved.
+-->
 
-	<!-- Wrapper for slides -->
-	<div class="carousel-inner" style="">
+	<head>
 		
-		<!-- Carusel - My Face Slide: Slide 1 -->
-		<div class="item active imageStyler" itemscope itemtype="http://schema.org/Person">
-			
-			<img src="images/meOpaqueDesktopBlackAndWhiteAnimatedPixelation.gif" alt="Christopher Gonzalez, gchriswill" >
-			
-			<div class="carousel-caption">
-				
-				<h1 class="hidden-xs textAnimation_1i1">
-					I<span class="red_punctuation">'</span>m 
-					<a class="twitter_link" itemprop="name" href="https://plus.google.com/u/0/103403313099983008189?rel=author" >Christopher González</a>
-				</h1>
-				
-				<h2 class="hidden-xs text-muted textAnimation_1i2">
-					D<span class="red_punctuation">.</span>K<span class="red_punctuation">.</span>A<span class="red_punctuation">.</span>
-					<a class="twitter_link" itemprop="alternateName" href="https://twitter.com/gchriswill"> gchriswill</a>
-				</h2>
-				
-				<h3 class="hidden-sm hidden-md hidden-lg textAnimation_1i1">
-					Hi<span class="red_punctuation">!</span> 
-					I<span class="red_punctuation">'</span>m
-					<a class="twitter_link" href="https://twitter.com/gchriswill"> gchriswill</a>
-				</h3>
-					 
-			</div>
-			
-		</div><!-- End My Face Slide -->
+		<meta charset="utf-8">
+		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="I'm an undiscovered gifted and talented guy, independently spirited, fiercely unconventional and digitally powered...">
+		<meta name="keywords" content="gchriswill, christopher gonzalez, developer, designer">
+		<meta name="author" content="Christopher Gonzalez">		
 		
-		<!-- Carusel - My Desing Slide: Slide 2 -->
-		<div class="item imageStyler">
-			
-			<img src="images/captions_Background.png" class="testing123" alt="nothing here yet">
-			
-			<div class="carousel-caption">
-				<h1 class="hidden-xs textAnimation_1i1">I design stuff<span class="red_punctuation">!</span></h1>
-				<h2 class="hidden-xs text-muted textAnimation_1i2">Web <span class="red_punctuation">&amp;</span> Mobile Designer</h2>
-				<h3 class="hidden-sm hidden-md hidden-lg textAnimation_1i1">
-					I Design stuff<span class="red_punctuation">!</span><br><br>
-					<span class="text-muted">Web <span class="red_punctuation">&amp;</span> Mobile Designer</span>
-				</h3>
-					
-			</div>
-			
-		</div><!-- End My Desing Slide -->
+		<title>gchriswill</title>
+		<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 		
-		<!-- Carusel - My Developments Slide: Slide 2 -->
-		<div class="item imageStyler">
-			<img src="images/captions_Background.png" class="testing123" alt="nothing here yet">
+		<style type=text/css>
 			
-			<div class="carousel-caption">
-				<h1 class="hidden-xs textAnimation_1i1">I also developed the stuff I designed<span class="red_punctuation">!</span></h1>
-				<h2 class="hidden-xs text-muted textAnimation_1i2">Web <span class="red_punctuation">&amp;</span> Mobile Developer</h2>
-				<h3 class="hidden-sm hidden-md hidden-lg textAnimation_1i1">
-					I also<br>Develop stuff<span class="red_punctuation">!</span><br><br>
-					<span class="text-muted">Web </span><span class="red_punctuation">&amp;</span>
-					<span class="text-muted"> Mobile Developer</span>
-				</h3>
+			body, div {
 				
-			</div>
+				margin: 0px;
+				padding: 0px;
+				font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+				-webkit-font-smoothing: antialiased;
+				-webkit-backface-visibility: hidden;
+				
+			}
 			
-		</div><!-- End My Developments Slide -->
+			body {
+				
+				width: 100%;
+				height: 100%;
+				background-color: black;
+				position: absolute;
+	  			display: table;
+	  			
+			}
+			
+			div#root-container {
+				margin: 0px;
+				padding: 0px;
+				width: 100%;
+				height: 100%;
+				display: table-cell;
+	  			vertical-align: middle;
+				
+			}
+			
+			div#image-container {
+				
+				background-color: transparent;
+				text-align: center;
+				
+			}
+			
+			#userImage {
+				
+				margin: auto;
+				padding: 0px;
+				width: 128px;
+				height: 128px;
+				border: 2px solid black;
+				border-radius: 66px;
+				display: block;
+				-webkit-animation: pulseImage 2.2s infinite ease-in-out;
+			
+			}
+			
+			h3 {
+				
+				color: rgba(0,0,0,0.9);
+				text-shadow: 0px 0px 25px red;
+				-webkit-animation: pulseText 2.2s infinite ease-in-out;
+				
+			}
+			
+			a#username {
+				
+				color: black;
+				text-decoration: none;
+				background-color: transparent;
+				
+			}
+			
+			@-webkit-keyframes pulseImage {
+				
+				0% {
+					box-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
+				}
+			
+				50% {
+					box-shadow: 0 0 128px rgba(255, 0, 0, 1);
+				}
+			
+				100% {
+					box-shadow: 0 0 5px rgba(255, 0, 0, 0.1);
+				}
+				
+			}
+			
+			@-webkit-keyframes pulseText {
+				
+				0% {
+					text-shadow: 0 0 0px rgba(255, 0, 0, 0.1);
+				}
+			
+				50% {
+					text-shadow: 0 0 25px rgba(255, 0, 0, 1);
+				}
+			
+				100% {
+					text-shadow: 0 0 0px rgba(255, 0, 0, 0.1);
+				}
+				
+			}
+			
+		</style>
 		
-	</div><!-- End inner -->
+	</head>
 	
-	<!-- Carusel Controls -->
-	<a class="left carousel-control" href="#carousel_setup" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left"></span>
-	</a>
-	<a class="right carousel-control" href="#carousel_setup" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right"></span>
-	</a>
-	<!-- End of Carusel Controls -->
-
-</div><!-- End of carousel -->
-<!-- End of Carousel Object Markup Object ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->	
+	<body>
+		<div id="root-container">
+			
+			<div id="image-container">
+				<img id="userImage" src="images/gchriswillCircleOriginal.png" alt="christopher gonzalez, gchriswill" />
+				<h3><a id="username" href="https://twitter.com/gchriswill">@gchriswill</a></h3>
+			</div>
+			
+		</div>
+		
+	</body>
+	
+</html>
