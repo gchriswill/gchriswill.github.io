@@ -1,8 +1,13 @@
 
 #######################################################
-# Created By Christopher Gonzalez D.K.A. "gchriswill" #
-# Source: https://gist.github.com/octocat/9257657     #
+#
+#	Created By Christopher Gonzalez D.K.A. "gchriswill" 
+# 
 #######################################################
+
+
+# Default files
+###########
 
 .DS_Store
 .DS_Store?
@@ -12,3 +17,8 @@
 ehthumbs.db
 Thumbs.db
 
+
+# Custom Files
+############
+
+local.css
