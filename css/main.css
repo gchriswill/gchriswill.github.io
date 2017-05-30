@@ -51,9 +51,6 @@ div#center-container {
 	padding: 0px;
 	width: 0px;
 	height: 0px;
-	border-radius: 64px;
-	background-color: black;
-	border: 1px solid black;
 	opacity: 0;
 	-webkit-animation: sizeit 1.5s 3.5s forwards ease-in;
 
