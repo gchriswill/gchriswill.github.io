@@ -1,51 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-	
 <!--
-HTML5 markup Implementation By Christopher Gonzalez D.K.A "gchriswill"
-Copyright (c) 2015 Christopher Gonzalez. All rights reserved.
+@Author: Christopher Gonzalez <gchriswill>
+@Date:   2017-01-07T19:04:58-06:00
+@Email:  gchriswill@me.com
+@Filename: index.html
+@Last modified by:   gchriswill
+@Last modified time: 2018-08-12T04:56:59-05:00
 -->
+<html lang="en">
 
 	<head>
-		
+
+	    <!-- Default Meta-Supported -->
 		<meta charset="utf-8">
-		<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="I'm an undiscovered gifted and talented guy, independently spirited, fiercely unconventional and digitally powered...">
-		<meta name="keywords" content="gchriswill, christopher gonzalez, developer, designer">
-		<meta name="author" content="Christopher Gonzalez">		
-		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="false">
+		<meta name="description" content="Architecting fantasies,
+        designing dreams and developing realities... This is what I do for living.">
+		<meta name="keywords" content="gchriswill, Christopher, Gonzalez, Christopher Gonzalez,
+        Christopher Gonzalez Melendez, Christopher W, Christopher W Gonzalez, Christopher W Gonzalez Melendez">
+
+        <!-- For Humans -->
+        <meta name="author" content="Christopher Gonzalez">
+        <meta name="Copyright" content="Copyright 2018, Christopher W Gonzalez Melendez. All Rights Reserved."/>
+
+        <!-- For Robots -->
+		<meta name="robots" content="all"/>
+		<meta name="robots" content="index, follow"/>
+		<meta name="st:robots" content="follow, index"/>
+
+		<!-- Favicon -->
+		<!-- <link rel="icon" type="image/png" href="favicon.ico"/> -->
+
+        <!-- Material Icons via Google Web Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="css/index.css" media="screen"/>
+
 		<title>gchriswill</title>
-		<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-		<link rel="stylesheet" href="css/main.css" media="screen"/>
-		<link rel="stylesheet" href="css/local.css" media="screen"/>
-		<style type="text/css" media="screen">
-		</style>
-	</head>
-	<body>
-		<div id="root-container">
-			<div id="center-container">
-				<img id="userImage" src="images/gchriswill.png" alt="christopher gonzalez, gchriswill" />
-				<div id="gnav">
-					<ul class="gnavlist">
-						<li>
-							<a class="navanimate3" href="#">
-								<img src="images/Briefcase.svg" alt="briefcase, portfolio"/>
-							</a>
-						</li>
-						<li>
-							<a class="navanimate2" href="https://github.com/gchriswill">
-								<img src="images/Github.svg" alt="gchriswill's github profile"/>
-							</a>
-						</li>
-						<li>
-							<a class="navanimate1" href="https://twitter.com/gchriswill">
-								<img src="images/Twitter.svg" alt="gchriswill's twitter profile"/>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</body>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50384664-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-50384664-1');
+        </script>
+
+    </head>
+
+    <body>
+        <nav>
+            <!-- <h1>gchriswill</h1> -->
+            <a id="action-link-button" href="javascript:void(0);" onclick="toogleShareAction(event)">
+                <i id="action-link-button-icon" class="material-icons">menu</i>
+            </a>
+            <a id="github-link-button" href="https://github.com/gchriswill"></a>
+			<a id="twitter-link-button" href="https://twitter.com/gchriswill"></a>
+			<a id="linkedin-link-button" href="https://linkedin.com/in/gchriswill"></a>
+			<a id="tumblr-link-button" href="http://tumblr.gchriswill.me"></a>
+
+        </nav>
+
+        <main>
+            <div id="logo-container"></div>
+        </main>
+
+        <footer>
+
+			<p id="copyr">
+
+				<b>Copyright</b>
+				<span id="copys">©️</span>
+				<b>2018 Christopher W Gonzalez Melendez. All Rights Reserved</b>
+				<br>
+				<b>
+					Designed and built with ❤️ by
+					<a href="https://www.twitter.com/gchriswill">@gchriswill</a>
+					from
+					<a href="https://twitter.com/verizon">@verizon</a>
+				</b>
+
+			</p>
+
+		</footer>
+
+        <script type="text/javascript" src="scripts/index.js" async="false"></script>
+
+    </body>
+
 </html>
