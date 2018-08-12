@@ -1,0 +1,32 @@
+
+
+PRODUCT
+
+Name: www.gchriswill.me
+Description: Christopher W Gonzalez Melendez's Personal Brand Website
+Url: http://www.gchriswill.me
+
+--
+
+TEAM MEMBER
+
+Name: Christopher W Gonzalez Melendez
+DKA: gchriswill
+Nickname: gchriswill
+Role: all/*
+Email: gchriswill@me.com
+Site: http://www.gchriswill.me
+Github: gchriswill
+Medium: @gchriswill
+Twitter: @gchriswill
+Tumblr: tumblr.gchriswill.me | gchriswill.tumblr.com
+LinkedIn: www.linkedin.com/in/gchriswill
+Google+: plus.google.com/+gchriswill
+Facebook: www.facebook.com/christophergonzalezmelendez
+
+--
+
+LICENSE
+
+www.gchriswill.me Website By Christopher W. Gonzalez D.K.A "gchriswill".
+Copyright (c) 2018 Christopher W Gonzalez Melendez. All rights reserved.
