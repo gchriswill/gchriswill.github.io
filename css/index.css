@@ -12,6 +12,24 @@ body{
     -webkit-font-smoothing : antialiased;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    
+    /* Optimize for mobile performance */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/* Optimize animations for better performance */
+* {
+    box-sizing: border-box;
+}
+
+/* Enable hardware acceleration for animated elements */
+#action-link-button,
+#github-link-button,
+#linkedin-link-button,
+.hamburger-line {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 body, main {
@@ -95,10 +113,11 @@ nav {
 #action-link-button{
     position: fixed;
     z-index: 101;
-    opacity: 1;
-    color: white;
-
-    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+    padding: 8px;
     margin: 0;
     width: 48px;
     height: 48px;
@@ -107,16 +126,67 @@ nav {
     right: 20px;
     left: auto;
     bottom: auto;
-    text-shadow: 1px 1px 3px rgba(0,0,0, 0.4);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Touch-friendly sizing for mobile */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
-#action-link-button i{
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    width: 48px;
-    height: 48px;
-    font-size: 48px;
+#hamburger-menu {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 2px;
+    
+    /* High-performance animations using transform and opacity */
+    transform-origin: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity;
+}
+
+/* Active state when menu is open */
+#action-link-button.active .hamburger-line:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+#action-link-button.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+#action-link-button.active .hamburger-line:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* Hover effects for desktop */
+@media (hover: hover) {
+    #action-link-button:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease;
+    }
+    
+    #action-link-button:hover .hamburger-line {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+}
+
+/* Active/pressed state for touch devices */
+#action-link-button:active {
+    transform: scale(0.95);
 }
 
 /* #help-link-button:hover{
@@ -158,7 +228,67 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     text-decoration: none;
+    
+    /* High-performance transitions */
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, opacity, visibility;
+    
+    /* Touch-friendly for mobile */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
 
+/* Enhanced hover effects for desktop */
+@media (hover: hover) {
+    #github-link-button:hover, #linkedin-link-button:hover {
+        filter: brightness(1.1) contrast(1.1);
+        transition: all 0.2s ease;
+    }
+}
+
+/* Active/pressed state for touch devices */
+#github-link-button:active, #linkedin-link-button:active {
+    transform: scale(0.9) !important;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+    #action-link-button {
+        top: 15px;
+        right: 15px;
+    }
+    
+    #github-link-button, #linkedin-link-button {
+        right: 15px;
+    }
+    
+    /* Adjust animation distances for smaller screens */
+    #action-link-button.active ~ #github-link-button {
+        transform: translateX(-100px) scale(0.5) !important;
+    }
+    
+    #action-link-button.active ~ #linkedin-link-button {
+        transform: translateX(-50px) scale(0.5) !important;
+    }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hamburger-line {
+        height: 2px;
+    }
+    
+    #hamburger-menu {
+        height: 16px;
+    }
+    
+    #action-link-button.active .hamburger-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    #action-link-button.active .hamburger-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
 }
 
 #github-link-button{
