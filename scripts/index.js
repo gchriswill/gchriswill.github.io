@@ -43,9 +43,7 @@ function toogleShareAction(ev){
     var actionButton = document.getElementById("action-link-button");
     var actionIcon = document.getElementById("action-link-button-icon");
     var githubButton = document.getElementById("github-link-button");
-    var twitterButton = document.getElementById("twitter-link-button");
     var linkedinButton = document.getElementById("linkedin-link-button");
-    var tumblrButton = document.getElementById("tumblr-link-button");
 
     if (actionIcon.innerHTML !== "close"){
         actionIcon.transition = "0.3s";
@@ -58,22 +56,12 @@ function toogleShareAction(ev){
         githubButton.style.transition = "0.3s";
         githubButton.style.opacity = "0.5";
         githubButton.style.visibility = "visible";
-        githubButton.style.transform = "translateX(-240px) scale(0.5)";
-
-        twitterButton.style.transition = "0.3s";
-        twitterButton.style.opacity = "0.5";
-        twitterButton.style.visibility = "visible";
-        twitterButton.style.transform = "translateX(-120px) scale(0.5)";
+        githubButton.style.transform = "translateX(-120px) scale(0.5)";
 
         linkedinButton.style.transition = "0.3s";
         linkedinButton.style.opacity = "0.5";
         linkedinButton.style.visibility = "visible";
-        linkedinButton.style.transform = "translateX(-180px) scale(0.5)";
-
-        tumblrButton.style.transition = "0.3s";
-        tumblrButton.style.opacity = "0.5";
-        tumblrButton.style.visibility = "visible";
-        tumblrButton.style.transform = "translateX(-60px) scale(0.5)";
+        linkedinButton.style.transform = "translateX(-60px) scale(0.5)";
 
     }else{
         actionIcon.transition = "0.3s";
@@ -88,69 +76,35 @@ function toogleShareAction(ev){
         githubButton.style.visibility = "hidden";
         githubButton.style.transform = "translateY(0) scale(1)";
 
-        twitterButton.style.transition = "0.3s";
-        twitterButton.style.opacity = "0";
-        twitterButton.style.visibility = "hidden";
-        twitterButton.style.transform = "translateY(0px) scale(1)";
-
         linkedinButton.style.transition = "0.3s";
         linkedinButton.style.opacity = "0";
         linkedinButton.style.visibility = "hidden";
         linkedinButton.style.transform = "translateX(0px) scale(1)";
-
-        tumblrButton.style.transition = "0.3s";
-        tumblrButton.style.opacity = "0";
-        tumblrButton.style.visibility = "hidden";
-        tumblrButton.style.transform = "translateX(0px) scale(1)";
 
     }
 
     githubButton.addEventListener("mouseover", function(){
         githubButton.style.transition = "0.3s";
         githubButton.style.opacity = "0.25";
-        githubButton.style.transform = "translateX(-240px) scale(0.4)";
+        githubButton.style.transform = "translateX(-120px) scale(0.4)";
     });
 
     githubButton.addEventListener("mouseout", function(){
         githubButton.style.transition = "0.3s";
         githubButton.style.opacity = "0.5";
-        githubButton.style.transform = "translateX(-240px) scale(0.5)";
-    });
-
-    twitterButton.addEventListener("mouseover", function(){
-        twitterButton.style.transition = "0.3s";
-        twitterButton.style.opacity = "0.25";
-        twitterButton.style.transform = "translateX(-120px) scale(0.4)";
-    });
-
-    twitterButton.addEventListener("mouseout", function(){
-        twitterButton.style.transition = "0.3s";
-        twitterButton.style.opacity = "0.5";
-        twitterButton.style.transform = "translateX(-120px) scale(0.5)";
+        githubButton.style.transform = "translateX(-120px) scale(0.5)";
     });
 
     linkedinButton.addEventListener("mouseover", function(){
         linkedinButton.style.transition = "0.3s";
         linkedinButton.style.opacity = "0.25";
-        linkedinButton.style.transform = "translateX(-180px) scale(0.4)";
+        linkedinButton.style.transform = "translateX(-60px) scale(0.4)";
     });
 
     linkedinButton.addEventListener("mouseout", function(){
         linkedinButton.style.transition = "0.3s";
         linkedinButton.style.opacity = "0.5";
-        linkedinButton.style.transform = "translateX(-180px) scale(0.5)";
-    });
-
-    tumblrButton.addEventListener("mouseover", function(){
-        tumblrButton.style.transition = "0.3s";
-        tumblrButton.style.opacity = "0.25";
-        tumblrButton.style.transform = "translateX(-60px) scale(0.4)";
-    });
-
-    tumblrButton.addEventListener("mouseout", function(){
-        tumblrButton.style.transition = "0.3s";
-        tumblrButton.style.opacity = "0.5";
-        tumblrButton.style.transform = "translateX(-60px) scale(0.5)";
+        linkedinButton.style.transform = "translateX(-60px) scale(0.5)";
     });
 
     ev.preventDefault();
