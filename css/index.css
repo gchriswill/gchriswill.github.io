@@ -160,9 +160,9 @@ nav {
     /* No transform needed - keep them in place */
     transform: translateX(0) scale(1);
     
-    /* Simplified transitions - only for active states */
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
-    will-change: transform, box-shadow;
+    /* Simplified transitions - for hover, active, and focus states */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    will-change: transform, box-shadow, opacity;
     
     /* Touch-friendly for mobile */
     -webkit-tap-highlight-color: transparent;
@@ -180,6 +180,13 @@ nav {
 #linkedin-link-button {
     background-image: url("../assets/linkedin.png");
     right: 25px;
+}
+
+/* Hover animations with opacity and scale effects */
+#github-link-button:hover, #linkedin-link-button:hover {
+    transform: scale(1.1) translateZ(0);
+    opacity: 0.85;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Active/pressed state for touch devices */
