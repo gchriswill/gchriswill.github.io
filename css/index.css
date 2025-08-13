@@ -243,6 +243,7 @@ footer {
 p#copyr{
 	line-height: 2;
 	padding: 0;
+    padding-bottom: 16px;
 	margin: 0;
 	font-size  : 0.75em;
 	color      : rgba(0, 0, 0, 0.75);
