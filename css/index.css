@@ -259,11 +259,15 @@ p#copyr{
 p#copyr a{
 	color: #f44336;
 	text-decoration : none;
+	
+	/* Add smooth transitions like nav buttons */
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	will-change: transform, opacity;
+	display: inline-block; /* Required for transform to work on inline elements */
 }
 
-p#copyr a:hover{
-    line-height: 1.5;
-	font-size       : 1.25em;
-	text-decoration : underline;
-	text-shadow     : none;
+/* Same hover animation as nav buttons - scale and opacity */
+p#copyr a:hover {
+	transform: scale(1.1);
+	opacity: 0.85;
 }
