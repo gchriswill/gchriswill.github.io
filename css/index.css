@@ -85,12 +85,14 @@ h1#nav-title {
     color: rgba(0, 0, 0, 0.70);
 }
 
-nav > h1#nav-title > span {
-    
-     height: 32px;
+/* iOS-compatible selector - avoid child combinator issues */
+#nav-title span {
+
+    height: 32px;
     font-size: 32px;
-    font-weight: light;
+    font-weight: 300; /* Use numeric value instead of 'light' */
     color: #f44336;
+    display: inline-block; /* Ensure proper rendering on iOS */
 }
 
 #github-link-button, #linkedin-link-button {
