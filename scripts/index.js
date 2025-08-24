@@ -234,7 +234,7 @@ function createPermissionButton() {
         background: rgba(255, 255, 255, 0.9);
         border: 2px solid #f44336;
         border-radius: 8px;
-        color: #f44336;
+        color: #000;
         font-size: 14px;
         font-weight: 600;
         padding: 12px 16px;
