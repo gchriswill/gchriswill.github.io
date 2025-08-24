@@ -162,8 +162,29 @@ window.addEventListener("load", function() {
  */
 function requestIOSMotionPermission() {
     
-    // Check if this is an iOS device
-    var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    // Check if this is an iOS device (comprehensive detection for all iPad Pro models)
+    var isIOS = (function() {
+        // Standard iOS devices (old iPad Pro, iPhone, iPod)
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+            return true;
+        }
+        
+        // Modern iPad Pro (2018+) - reports as "Macintosh" but has touch capabilities
+        if (navigator.userAgent.includes('Macintosh') && !window.MSStream) {
+            // Multiple touch detection methods for reliability
+            return 'ontouchend' in document || 
+                   'ontouchstart' in document || 
+                   navigator.maxTouchPoints > 0 ||
+                   navigator.msMaxTouchPoints > 0;
+        }
+        
+        // Additional check for iPadOS 13+ (may report as desktop)
+        if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) {
+            return true;
+        }
+        
+        return false;
+    })();
     
     if (!isIOS) {
         console.log('Not an iOS device, skipping motion permission request');
@@ -207,12 +228,13 @@ function createPermissionButton() {
     button.innerHTML = 'Enable Motion Effects';
     button.style.cssText = `
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background: rgba(255, 255, 255, 0.9);
-        border: 2px solid #007AFF;
+        border: 2px solid #f44336;
         border-radius: 8px;
-        color: #007AFF;
+        color: #f44336;
         font-size: 14px;
         font-weight: 600;
         padding: 12px 16px;
@@ -222,6 +244,7 @@ function createPermissionButton() {
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         transition: all 0.3s ease;
+        white-space: nowrap;
     `;
     
     button.addEventListener('click', function() {
