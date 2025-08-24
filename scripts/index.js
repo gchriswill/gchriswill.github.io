@@ -90,7 +90,7 @@ document.addEventListener("readystatechange", function(ev) {
 window.addEventListener("load", function() {
 
     var isIOS = (function() {
-        
+
         // Standard iOS devices (old iPad Pro, iPhone, iPod)
         if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
             return true;
@@ -178,20 +178,24 @@ function createPermissionButton() {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.95);
         border: 2px solid #f44336;
-        border-radius: 8px;
+        border-radius: 12px;
         color: #000;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 600;
-        padding: 12px 16px;
+        padding: 16px 24px;
         cursor: pointer;
-        z-index: 1000;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        z-index: 9999;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), 0 4px 16px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         transition: all 0.3s ease;
         white-space: nowrap;
+        pointer-events: auto;
+        will-change: transform, opacity;
+        min-width: 200px;
+        text-align: center;
     `;
     
     button.addEventListener('click', function() {
