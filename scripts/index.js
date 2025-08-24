@@ -169,7 +169,9 @@ function createPermissionButton() {
     if (document.getElementById('ios-permission-btn')) {
         return;
     }
-    
+
+    var main = document.getElementById('footer');
+
     var button = document.createElement('button');
     button.id = 'ios-permission-btn';
     button.innerHTML = 'Enable Motion Effects';
@@ -204,16 +206,18 @@ function createPermissionButton() {
     
     // Add hover effects
     button.addEventListener('mouseenter', function() {
-        this.style.background = '#007AFF';
+        this.style.background = '#f44336';
+        this.style.border = '2px solid #ffffffff';
         this.style.color = 'white';
     });
     
     button.addEventListener('mouseleave', function() {
-        this.style.background = 'rgba(255, 255, 255, 0.9)';
-        this.style.color = '#007AFF';
+        this.style.background = 'rgba(255, 255, 255, 0.95)';
+        this.style.border = '2px solid #f44336';
+        this.style.color = '#000000';
     });
     
-    document.body.appendChild(button);
+    main.appendChild(button);
     console.log('Permission button created');
 }
 
@@ -297,7 +301,6 @@ function startGhostParallax() {
     console.log('Window loaded, Starting Ghost Parallax initialization');
 
     // Immediate test
-    var main = document.getElementsByTagName('main');
     var scene = document.getElementById('scene');
     var logoContainer1 = document.getElementById('logo-container1');
     var logoContainer2 = document.getElementById('logo-container2');

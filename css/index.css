@@ -207,10 +207,10 @@ h1#nav-title {
 #scene {
 
     position: fixed;
-    width: 105%;
-    height: 105%;
+    width: 100%;
+    height: 100%;
 
-    transform: translate(-50.25%, -50.25%);
+    /* transform: translate(-50%, -50%); */
 
      /* --- IGNORE --- */
     overflow: hidden;
