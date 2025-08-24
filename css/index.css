@@ -85,6 +85,10 @@ h1#nav-title {
     color: rgba(0, 0, 0, 0.70);
 }
 
+h1#nav-title span {
+    color: #f44336;
+}
+
 #github-link-button, #linkedin-link-button {
 
     z-index: 100;
