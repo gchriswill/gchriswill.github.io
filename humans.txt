@@ -10,21 +10,17 @@ Url: http://www.gchriswill.me
 
 TEAM MEMBER
 
-Name: Christopher W Gonzalez Melendez
-DKA: gchriswill
+Name: Christopher W. Gonzalez Melendez
+AKA: gchriswill
 Nickname: gchriswill
 Role: all/*
-Email: gchriswill@me.com
 Site: http://www.gchriswill.me
 Github: gchriswill
-Medium: @gchriswill
 LinkedIn: www.linkedin.com/in/gchriswill
-Google+: plus.google.com/+gchriswill
-Facebook: www.facebook.com/christophergonzalezmelendez
 
 --
 
 LICENSE
 
-www.gchriswill.me Website By Christopher W. Gonzalez D.K.A "gchriswill".
+www.gchriswill.me Website By Christopher W. Gonzalez Melendez A.K.A "gchriswill".
 Copyright (c) 2018 Christopher W Gonzalez Melendez. All rights reserved.

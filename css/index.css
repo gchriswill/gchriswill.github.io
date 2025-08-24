@@ -7,7 +7,13 @@
  * @Last modified time: 2018-08-12T04:57:11-05:00
  */
 
-body{
+ /* Optimize animations for better performance */
+* {
+    box-sizing: border-box;
+}
+
+body {
+
     font-family : sans-serif;
     -webkit-font-smoothing : antialiased;
     -webkit-backface-visibility: hidden;
@@ -21,14 +27,9 @@ body{
     transform: translateZ(0);
 }
 
-/* Optimize animations for better performance */
-* {
-    box-sizing: border-box;
-}
-
 /* Enable hardware acceleration for animated elements */
-#github-link-button,
-#linkedin-link-button {
+#github-link-button, #linkedin-link-button {
+
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
 }
@@ -37,7 +38,8 @@ body, main {
     position: fixed;
 }
 
-body, main, #logo-container{
+body, main, #logo-container, #logo-container1, #logo-container2, #logo-container3 {
+
     top: auto;
     left: auto;
     right: auto;
@@ -54,82 +56,37 @@ body, main, #logo-container{
 
 nav {
 
-	top               : 0px;
-	width             : 100%;
-	height            : 80px;
-	position          : fixed;
-	z-index           : 200;
+	top: 0px;
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	z-index: 200;
 
-	/* display           : flex;
-	align-items       : center;
-	flex-direction    : column;
-	justify-content   : center; */
+	/* display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center; */
 
-	background-color  : rgba(255, 255, 255, 0.75);
+	background-color: rgba(255, 255, 255, 0.75);
 	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .10), 0 4px 8px rgba(0, 0, 0, .20);
-	box-shadow        : 0 0 4px rgba(0, 0, 0, .10), 0 4px 8px rgba(0, 0, 0, .20);
+	box-shadow: 0 0 4px rgba(0, 0, 0, .10), 0 4px 8px rgba(0, 0, 0, .20);
 }
 
-/* h1 {
+h1#nav-title {
+
     margin: 0;
-    color: rgba(0, 0, 0, 0.35);
-    font-size: 32px;
-    font-weight: bold;
-    font-family: cursive, sans-serif
-} */
-
-#logo-container{
-    z-index: 100;
-    opacity: 0;
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../assets/gchriswill.png");
-}
-
-/* #help-link-button{
-    opacity: 0.75;
-    right: 5%;
-    left: auto;
-}
-
-#menu-link-button{
-    right: auto;
-    right: 5%;
-}
-
-#help-link-button, #menu-link-button{
-    position: absolute;
-    z-index: 101;
-    opacity: 0.75;
-    color: white;
-    top: 84px;
-    bottom: auto;
-    text-decoration: none;
-    text-shadow: 1px 1px 3px rgba(0,0,0, 0.3);
-} */
-
-/* Social media buttons styling */
-
-/* #help-link-button:hover{
-    opacity: 0.5;
-    cursor: help;
-    transition: 0.3s;
-    transform: scale(0.9);
-    text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);
-} */
-
-/* #help-link-button, #menu-link-button,
-#help-link-button i, #menu-link-button i, #action-link-button i{
     padding: 0;
-    margin: 0;
-    width: 48px;
-    height: 48px;
-    font-size: 48px;
-} */
+    top: 28px;
+    left: 24px;
+    display: inline-block;
+    position: fixed;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.70);
+}
 
 #github-link-button, #linkedin-link-button {
+
     z-index: 100;
     position: fixed;
     visibility: visible;
@@ -173,17 +130,20 @@ nav {
 }
 
 #github-link-button {
+
     background-image: url("../assets/github.png");
-    right: 75px;
+    right: 72px;
 }
 
 #linkedin-link-button {
+
     background-image: url("../assets/linkedin.png");
-    right: 25px;
+    right: 24px;
 }
 
 /* Hover animations with opacity and scale effects */
 #github-link-button:hover, #linkedin-link-button:hover {
+
     transform: scale(1.1) translateZ(0);
     opacity: 0.85;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -191,6 +151,7 @@ nav {
 
 /* Active/pressed state for touch devices */
 #github-link-button:active, #linkedin-link-button:active {
+
     transform: scale(0.95) translateY(1px) !important;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
     transition: all 0.1s ease !important;
@@ -198,6 +159,7 @@ nav {
 
 /* Focus states for accessibility */
 #github-link-button:focus, #linkedin-link-button:focus {
+
     outline: 2px solid #4285f4;
     outline-offset: 2px;
 }
@@ -206,6 +168,7 @@ nav {
 
 /* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
+
     * {
         transition-duration: 0.01ms !important;
     }
@@ -217,6 +180,7 @@ nav {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 480px) {
+
     #github-link-button, #linkedin-link-button {
         top: 24px;
     }
@@ -230,24 +194,175 @@ nav {
     }
 }
 
-footer {
-	text-align        : center;
-	bottom            : 0px;
-	width             : 100%;
-	height            : 80px;
-	z-index           : 200;
-	position          : fixed;
-	background-color  : rgba(255, 255, 255, 0.75);
-	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .10), 0 -4px 8px rgba(0, 0, 0, .20);
-	box-shadow        : 0 0 2px rgba(0, 0, 0, .10), 0 -4px 8px rgba(0, 0, 0, .20);
-	
-	/* Flexbox for vertical centering */
-	display           : flex;
-	align-items       : center;
-	justify-content   : center;
+#scene {
+
+    position: fixed;
+    width: 105%;
+    height: 105%;
+
+    transform: translate(-50.25%, -50.25%);
+
+     /* --- IGNORE --- */
+    overflow: hidden;
 }
 
-p#copyr{
+#logo-container {
+
+    z-index: 100;
+    opacity: 0;
+    position: fixed;
+
+    /* Logo dimensions */
+    width: 100%;
+    height: 100%;
+    /* transform: translate(-50%, -50%); */
+    /* box-shadow: inset 25px 25px 25px 25px rgba(128, 128, 128, 0.5); */
+    background-origin: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to top, transparent 80%, white), 
+        linear-gradient(to bottom, transparent 70%, white), 
+        linear-gradient(to left, transparent 70%, white), 
+        linear-gradient(to right, transparent 70%, white),
+        url("../assets/gchriswill.png");
+}
+
+#logo-container1 {
+
+    z-index: 100;
+    opacity: 0;
+    position: relative;
+
+    /* Logo dimensions */
+    width: 100%;
+    height: 100%;
+
+    /* transform: translate(-52.5%, -52.5%); */
+    /* background-blend-mode: multiply; */
+    background-origin: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+        background-image: linear-gradient(to top, transparent 85%, white), 
+        linear-gradient(to bottom, transparent 75%, white), 
+        linear-gradient(to left, transparent 75%, white), 
+        linear-gradient(to right, transparent 75%, white),
+        url("../assets/gchriswill.png");
+}
+
+#logo-container2 {
+
+    z-index: 100;
+    opacity: 0;
+    position: relative;
+    
+    /* Logo dimensions */
+    width: 100%;
+    height: 100%;
+
+    /* transform: translate(-50%, -50%); */
+    /* background-blend-mode: multiply; */
+    /* background-blend-mode: multiply; */
+    background-origin: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+        background-image: linear-gradient(to top, transparent 90%, white), 
+        linear-gradient(to bottom, transparent 80%, white), 
+        linear-gradient(to left, transparent 80%, white), 
+        linear-gradient(to right, transparent 80%, white),
+        url("../assets/gchriswill.png");
+}
+
+#logo-container3 {
+
+    z-index: 100;
+    opacity: 0;
+    position: relative;
+    
+    /* Logo dimensions */
+    width: 100%;
+    height: 100%;
+
+    /* transform: translate(-47.5%, -47.5%); */
+    /* background-blend-mode: multiply; */
+    /* background-blend-mode: multiply; */
+    background-origin: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+        background-image: linear-gradient(to top, transparent 95%, white), 
+        linear-gradient(to bottom, transparent 85%, white), 
+        linear-gradient(to left, transparent 85%, white), 
+        linear-gradient(to right, transparent 85%, white),
+        url("../assets/gchriswill.png");
+}
+
+/* #help-link-button{
+    opacity: 0.75;
+    right: 5%;
+    left: auto;
+}
+
+#menu-link-button{
+    right: auto;
+    right: 5%;
+}
+
+#help-link-button, #menu-link-button{
+    position: absolute;
+    z-index: 101;
+    opacity: 0.75;
+    color: white;
+    top: 84px;
+    bottom: auto;
+    text-decoration: none;
+    text-shadow: 1px 1px 3px rgba(0,0,0, 0.3);
+} */
+
+/* Social media buttons styling */
+
+/* #help-link-button:hover{
+    opacity: 0.5;
+    cursor: help;
+    transition: 0.3s;
+    transform: scale(0.9);
+    text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);
+} */
+
+/* #help-link-button, #menu-link-button,
+#help-link-button i, #menu-link-button i, #action-link-button i{
+    padding: 0;
+    margin: 0;
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
+} */
+
+
+footer {
+
+	text-align: center;
+	bottom: 0px;
+	width: 100%;
+	height: 80px;
+	z-index: 200;
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0.75);
+	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .10), 0 -4px 8px rgba(0, 0, 0, .20);
+	box-shadow: 0 0 2px rgba(0, 0, 0, .10), 0 -4px 8px rgba(0, 0, 0, .20);
+
+	/* Flexbox for vertical centering */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+p#copyr {
+
 	line-height: 2;
 	padding: 0;
     padding-bottom: 16px;
@@ -256,7 +371,8 @@ p#copyr{
 	color      : rgba(0, 0, 0, 0.75);
 }
 
-p#copyr a{
+p#copyr a {
+
 	color: #f44336;
 	text-decoration : none;
 	
@@ -268,6 +384,7 @@ p#copyr a{
 
 /* Same hover animation as nav buttons - scale and opacity */
 p#copyr a:hover {
+
 	transform: scale(1.1);
 	opacity: 0.85;
 }
