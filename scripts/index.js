@@ -152,7 +152,3 @@ window.addEventListener("load", function() {
         console.error('Scene not found or Parallax not loaded');
     }
 });
-
-// function alertUser(ev){
-//     alert("⚠️ Hi there!\n\nThank you for any interest that you might have in me. As for now, my website is currently being built.\n\nTo get in touch or connect with me, please take a look at the social media buttons at the top-right corner of this page, I'll ❤️ to hear from you.\n\nHope to see you again soon...");
-// }

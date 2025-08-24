@@ -208,9 +208,9 @@ h1#nav-title {
 
 #logo-container {
 
-    z-index: 100;
+    z-index: 95;
     opacity: 0;
-    position: fixed;
+    position: relative;
 
     /* Logo dimensions */
     width: 100%;
@@ -230,7 +230,7 @@ h1#nav-title {
 
 #logo-container1 {
 
-    z-index: 100;
+    z-index: 96;
     opacity: 0;
     position: relative;
 
@@ -253,7 +253,7 @@ h1#nav-title {
 
 #logo-container2 {
 
-    z-index: 100;
+    z-index: 97;
     opacity: 0;
     position: relative;
     
@@ -278,7 +278,7 @@ h1#nav-title {
 
 #logo-container3 {
 
-    z-index: 100;
+    z-index: 98;
     opacity: 0;
     position: relative;
     
