@@ -88,82 +88,9 @@ document.addEventListener("readystatechange", function(ev) {
 
 // Initialize Parallax.js when the page loads
 window.addEventListener("load", function() {
-    
-    console.log('Window loaded, starting parallax initialization');
-    
-    // Immediate test
-    var main = document.getElementsByTagName('main');
-    var scene = document.getElementById('scene');
-    var logoContainer1 = document.getElementById('logo-container1');
-    var logoContainer2 = document.getElementById('logo-container2');
-    var logoContainer3 = document.getElementById('logo-container3');
 
-    console.log('Scene element:', scene);
-    console.log('Logo container 1:', logoContainer1);
-    console.log('Logo container 2:', logoContainer2);
-    console.log('Logo container 3:', logoContainer3);
-    console.log('Logo container 1 opacity:', logoContainer1 ? logoContainer1.style.opacity : 'not found');
-    console.log('Logo container 2 opacity:', logoContainer2 ? logoContainer2.style.opacity : 'not found');
-    console.log('Logo container 3 opacity:', logoContainer3 ? logoContainer3.style.opacity : 'not found');
-    console.log('Parallax library loaded:', typeof Parallax !== 'undefined');
-    
-    // Try initializing immediately first
-    if (scene && typeof Parallax !== 'undefined') {
-        
-        try {
-            
-            var parallaxInstance = new Parallax(scene, {
-                relativeInput: true,
-                clipRelativeInput: true,
-                hoverOnly: false,
-                // inputElement: document, // Remove this - let it use default (scene)
-                calibrateX: false,
-                calibrateY: false,
-                invertX: false,
-                invertY: false,
-                limitX: 150,  // Increase movement limit for more visibility
-                limitY: 150,  // Increase movement limit for more visibility
-                scalarX: 12,  // Increase responsiveness 
-                scalarY: 12,  // Increase responsiveness
-                frictionX: 0.1, // Faster response
-                frictionY: 0.1, // Faster response
-                originX: 0.5,   // Center origin
-                originY: 0.5    // Center origin
-            });
-
-
-            console.log('Parallax initialized immediately:', parallaxInstance);
-            
-            // Test if it's working by manually triggering mouse move
-            // setTimeout(function() {
-            //     console.log('Testing parallax with simulated mouse move...');
-            //     var evt = new MouseEvent('mousemove', {
-            //         clientX: 100,
-            //         clientY: 100,
-            //         bubbles: true
-            //     });
-            //     document.dispatchEvent(evt);
-            // }, 1000);
-            
-        } catch (error) {
-            console.error('Parallax initialization error:', error);
-        }
-    } else {
-        console.error('Scene not found or Parallax not loaded');
-    }
-    
-    // iOS DeviceOrientation permission handling
-    requestIOSMotionPermission();
-});
-
-/**
- * Request DeviceOrientationEvent permission on iOS devices
- * This enables enhanced parallax effects using device motion
- */
-function requestIOSMotionPermission() {
-    
-    // Check if this is an iOS device (comprehensive detection for all iPad Pro models)
     var isIOS = (function() {
+        
         // Standard iOS devices (old iPad Pro, iPhone, iPod)
         if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
             return true;
@@ -186,12 +113,31 @@ function requestIOSMotionPermission() {
         return false;
     })();
     
-    if (!isIOS) {
-        console.log('Not an iOS device, skipping motion permission request');
-        return;
-    }
+    if (isIOS) {
+        
+        // iOS DeviceOrientation permission handling
+         console.log('iOS device detected, checking motion permission...');
+        requestMotionPermission();
     
-    console.log('iOS device detected, checking motion permission...');
+    } else {
+
+        console.log('Not an iOS device, skipping motion permission request');
+        startGhostParallax();
+    }
+
+});
+
+
+
+
+
+/**
+ * Request DeviceOrientationEvent permission on iOS devices
+ * This enables enhanced parallax effects using device motion
+ */
+function requestMotionPermission() {
+    
+    // Check if this is an iOS device (comprehensive detection for all iPad Pro models)
     
     // Check if DeviceOrientationEvent.requestPermission exists (iOS 13+)
     if (typeof DeviceOrientationEvent !== 'undefined' && 
@@ -206,7 +152,8 @@ function requestIOSMotionPermission() {
         
         // iOS < 13 or permission already granted
         console.log('DeviceOrientationEvent available without permission request');
-        enableDeviceOrientationParallax();
+        // enableDeviceOrientationParallax();
+         startGhostParallax();
         
     } else {
         console.log('DeviceOrientationEvent not supported');
@@ -292,9 +239,9 @@ function requestDeviceOrientationPermission(button) {
                     }, 300);
                 }
                 
-                // Enable device orientation parallax
-                enableDeviceOrientationParallax();
-                
+                // // Enable device orientation parallax
+                // enableDeviceOrientationParallax();
+                startGhostParallax();
             } else {
                 
                 console.log('DeviceOrientation permission denied');
@@ -341,56 +288,122 @@ function requestDeviceOrientationPermission(button) {
         });
 }
 
+function startGhostParallax() {
+
+    console.log('Window loaded, Starting Ghost Parallax initialization');
+
+    // Immediate test
+    var main = document.getElementsByTagName('main');
+    var scene = document.getElementById('scene');
+    var logoContainer1 = document.getElementById('logo-container1');
+    var logoContainer2 = document.getElementById('logo-container2');
+    var logoContainer3 = document.getElementById('logo-container3');
+
+    console.log('Scene element:', scene);
+    console.log('Logo container 1:', logoContainer1);
+    console.log('Logo container 2:', logoContainer2);
+    console.log('Logo container 3:', logoContainer3);
+    console.log('Logo container 1 opacity:', logoContainer1 ? logoContainer1.style.opacity : 'not found');
+    console.log('Logo container 2 opacity:', logoContainer2 ? logoContainer2.style.opacity : 'not found');
+    console.log('Logo container 3 opacity:', logoContainer3 ? logoContainer3.style.opacity : 'not found');
+    console.log('Parallax library loaded:', typeof Parallax !== 'undefined');
+    
+    // Try initializing immediately first
+    if (scene && typeof Parallax !== 'undefined') {
+        
+        try {
+            
+            var parallaxInstance = new Parallax(scene, {
+                relativeInput: true,
+                clipRelativeInput: true,
+                hoverOnly: false,
+                // inputElement: document, // Remove this - let it use default (scene)
+                calibrateX: false,
+                calibrateY: false,
+                invertX: false,
+                invertY: false,
+                limitX: 150,  // Increase movement limit for more visibility
+                limitY: 150,  // Increase movement limit for more visibility
+                scalarX: 12,  // Increase responsiveness 
+                scalarY: 12,  // Increase responsiveness
+                frictionX: 0.1, // Faster response
+                frictionY: 0.1, // Faster response
+                originX: 0.5,   // Center origin
+                originY: 0.5    // Center origin
+            });
+
+
+            console.log('Parallax initialized immediately:', parallaxInstance);
+            
+            // Test if it's working by manually triggering mouse move
+            // setTimeout(function() {
+            //     console.log('Testing parallax with simulated mouse move...');
+            //     var evt = new MouseEvent('mousemove', {
+            //         clientX: 100,
+            //         clientY: 100,
+            //         bubbles: true
+            //     });
+            //     document.dispatchEvent(evt);
+            // }, 1000);
+            
+        } catch (error) {
+            console.error('Parallax initialization error:', error);
+        }
+    } else {
+        console.error('Scene not found or Parallax not loaded');
+    }
+}
+
 /**
  * Enable device orientation based parallax effects for mobile
  */
-function enableDeviceOrientationParallax() {
+// function enableDeviceOrientationParallax() {
     
-    console.log('Enabling device orientation parallax...');
+//     console.log('Enabling device orientation parallax...');
     
-    var scene = document.getElementById('scene');
+//     var scene = document.getElementById('scene');
     
-    if (!scene) {
-        console.error('Scene element not found for device orientation');
-        return;
-    }
+//     if (!scene) {
+//         console.error('Scene element not found for device orientation');
+//         return;
+//     }
     
-    // Add device orientation event listener
-    window.addEventListener('deviceorientation', function(event) {
+//     // Add device orientation event listener
+//     window.addEventListener('deviceorientation', function(event) {
         
-        // Get orientation values
-        var gamma = event.gamma; // Left to right tilt (-90 to 90)
-        var beta = event.beta;   // Front to back tilt (-180 to 180)
+//         // Get orientation values
+//         var gamma = event.gamma; // Left to right tilt (-90 to 90)
+//         var beta = event.beta;   // Front to back tilt (-180 to 180)
         
-        if (gamma !== null && beta !== null) {
+//         if (gamma !== null && beta !== null) {
             
-            // Normalize the values for parallax
-            var normalizedX = Math.max(-45, Math.min(45, gamma)) / 45; // -1 to 1
-            var normalizedY = Math.max(-45, Math.min(45, beta - 45)) / 45; // -1 to 1, offset for natural hold
+//             // Normalize the values for parallax
+//             var normalizedX = Math.max(-45, Math.min(45, gamma)) / 45; // -1 to 1
+//             var normalizedY = Math.max(-45, Math.min(45, beta - 45)) / 45; // -1 to 1, offset for natural hold
             
-            // Apply to parallax layers
-            var logoContainers = [
-                document.getElementById('logo-container'),
-                document.getElementById('logo-container1'),
-                document.getElementById('logo-container2'),
-                document.getElementById('logo-container3')
-            ];
+//             // Apply to parallax layers
+//             var logoContainers = [
+//                 document.getElementById('logo-container'),
+//                 document.getElementById('logo-container1'),
+//                 document.getElementById('logo-container2'),
+//                 document.getElementById('logo-container3')
+//             ];
             
-            var depths = [0.05, 0.1, 0.3, 0.5];
+//             var depths = [0.05, 0.1, 0.3, 0.5];
             
-            logoContainers.forEach(function(container, index) {
-                if (container && depths[index]) {
+//             logoContainers.forEach(function(container, index) {
+//                 if (container && depths[index]) {
                     
-                    var moveX = normalizedX * depths[index] * 30; // Scale movement
-                    var moveY = normalizedY * depths[index] * 30;
+//                     var moveX = normalizedX * depths[index] * 30; // Scale movement
+//                     var moveY = normalizedY * depths[index] * 30;
                     
-                    // Apply transform
-                    container.style.transform = 'translate3d(' + moveX + 'px, ' + moveY + 'px, 0)';
-                }
-            });
-        }
+//                     // Apply transform
+//                     container.style.transform = 'translate3d(' + moveX + 'px, ' + moveY + 'px, 0)';
+//                 }
+//             });
+//         }
         
-    }, true);
+//     }, true);
     
-    console.log('Device orientation parallax enabled');
-}
+//     console.log('Device orientation parallax enabled');
+// }
