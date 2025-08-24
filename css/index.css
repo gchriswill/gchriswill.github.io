@@ -86,7 +86,8 @@ h1#nav-title {
 }
 
 nav > h1#nav-title > span {
-
+    
+     height: 32px;
     font-size: 32px;
     font-weight: light;
     color: #f44336;
