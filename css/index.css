@@ -120,12 +120,11 @@ h1#nav-title {
     /* Modern button styling */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15), 0 1px 4px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+ 
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
     
-    /* No transform needed - keep them in place */
-    transform: translateX(0) scale(1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     
     /* Simplified transitions - for hover, active, and focus states */
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
@@ -137,6 +136,9 @@ h1#nav-title {
     
     /* Hardware acceleration */
     -webkit-transform: translateZ(0);
+
+    /* No transform needed - keep them in place */
+    transform: translateX(0) scale(1);
 }
 
 #github-link-button {
