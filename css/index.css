@@ -204,6 +204,14 @@ h1#nav-title {
     #linkedin-link-button {
         right: 16px;
     }
+
+    h1#nav-title {
+        font-size: 18px;
+    }
+
+    #nav-title span {
+        font-size: 28px;
+    }
 }
 
 #scene {
