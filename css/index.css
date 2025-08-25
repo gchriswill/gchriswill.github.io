@@ -206,6 +206,7 @@ h1#nav-title {
     }
 
     h1#nav-title {
+        left: 16px;
         font-size: 18px;
     }
 
