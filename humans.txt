@@ -1,26 +1,19 @@
-
-
-PRODUCT
-
+/* SITE */
 Name: www.gchriswill.me
-Description: Christopher W Gonzalez Melendez's Personal Brand Website
-Url: http://www.gchriswill.me
+Description: Christopher's personal brand website
+Url: https://www.gchriswill.me/
 
---
 
-TEAM MEMBER
-
+/* TEAM */
 Name: Christopher W. Gonzalez Melendez
-AKA: gchriswill
-Nickname: gchriswill
+Username: gchriswill
 Role: all/*
-Site: http://www.gchriswill.me
-Github: gchriswill
-LinkedIn: www.linkedin.com/in/gchriswill
+Location: Orlando, FL
+Site: https://www.gchriswill.me/
+Github: https://github.com/gchriswill
+LinkedIn: https://www.linkedin.com/in/gchriswill/
 
---
 
-LICENSE
-
-www.gchriswill.me Website By Christopher W. Gonzalez Melendez A.K.A "gchriswill".
-Copyright (c) 2018 Christopher W Gonzalez Melendez. All rights reserved.
+/* LICENSE */
+Description: www.gchriswill.me website by Christopher W. Gonzalez Melendez A.K.A "gchriswill".
+Copyright: Copyright (c) 2018-2025 Christopher W Gonzalez Melendez. All rights reserved.

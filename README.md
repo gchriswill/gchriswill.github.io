@@ -3,13 +3,11 @@
 [![pages-build-deployment](https://github.com/gchriswill/gchriswill.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/gchriswill/gchriswill.github.io/actions/workflows/pages/pages-build-deployment)
 
 ---
-
 #### About:
-Christopher Gonzalez's Personal Brand Website
+Christopher Gonzalez's personal brand Website.
 
 ---
 #### Team:
-
 | | |
 | ---- | ----- |
 | **Name** | Christopher Gonzalez |
@@ -19,5 +17,4 @@ Christopher Gonzalez's Personal Brand Website
 
 ---
 #### NO LICENSE
-
-Copyright 2018. Christopher W Gonzalez Melendez. All Rights Reserved.
+This website was made by @gchriswill. Copyright (c) 2018-2025 Christopher W Gonzalez Melendez. All Rights Reserved.
