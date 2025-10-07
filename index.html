@@ -36,6 +36,10 @@
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="assets/favicon.ico"/>
 
+        <!-- Preload Brand Images for Fast Switching -->
+        <link rel="preload" href="assets/chris3xg_mwmdai.png" as="image">
+        <link rel="preload" href="assets/gchriswill_mwmdai.png" as="image">
+
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/index.css" media="screen"/>
 
@@ -120,7 +124,17 @@
     <body>
         
         <nav>
-            <h1 id="nav-title">Chris 3xG <span>||</span> gchriswill</h1>
+            <div id="nav-title">
+                <form id="brand-selector">
+                    <input type="radio" id="chris3xg" name="brand" value="chris3xg">
+                    <label for="chris3xg">Chris 3xG</label>
+                    
+                    <span class="separator">||</span>
+                    
+                    <input type="radio" id="gchriswill" name="brand" value="gchriswill" checked>
+                    <label for="gchriswill">gchriswill</label>
+                </form>
+            </div>
             <a id="github-link-button" href="https://github.com/gchriswill" aria-label="Visit GitHub profile"></a>
 			<a id="linkedin-link-button" href="https://linkedin.com/in/gchriswill" aria-label="Visit LinkedIn profile"></a>
 

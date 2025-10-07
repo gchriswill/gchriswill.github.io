@@ -19,6 +19,45 @@ document.addEventListener("readystatechange", function(ev) {
         var logo2 = document.getElementById("logo-container2");
         var logo3 = document.getElementById("logo-container3");
 
+        // Preload and cache brand images for instant switching
+        var imageCache = {};
+        var imagesToPreload = [
+            { key: 'chris3xg', src: 'assets/chris3xg_mwmdai.png' },
+            { key: 'gchriswill', src: 'assets/gchriswill_mwmdai.png' }
+        ];
+
+        function preloadImages() {
+            imagesToPreload.forEach(function(imageInfo) {
+                var img = new Image();
+                img.onload = function() {
+                    imageCache[imageInfo.key] = {
+                        loaded: true,
+                        src: imageInfo.src,
+                        image: img
+                    };
+                };
+                img.onerror = function() {
+                    console.warn('Failed to preload image:', imageInfo.src);
+                    imageCache[imageInfo.key] = {
+                        loaded: false,
+                        src: imageInfo.src,
+                        image: null
+                    };
+                };
+                img.src = imageInfo.src;
+                
+                // Initialize cache entry
+                imageCache[imageInfo.key] = {
+                    loaded: false,
+                    src: imageInfo.src,
+                    image: img
+                };
+            });
+        }
+
+        // Start preloading images immediately
+        preloadImages();
+
         if(typeof(Storage) !== "undefined") {
 
             if(!sessionStorage.initialLand){
@@ -82,6 +121,94 @@ document.addEventListener("readystatechange", function(ev) {
             }
 
         }, 3200);
+
+        // Brand Selection Functionality
+        function updateLogoImages(selectedBrand) {
+            // Check if image is preloaded and ready
+            var cachedImage = imageCache[selectedBrand];
+            var imagePath = cachedImage ? cachedImage.src : (selectedBrand === 'chris3xg' ? 'assets/chris3xg_mwmdai.png' : 'assets/gchriswill_mwmdai.png');
+            
+            // Update all logo containers with fade animation
+            var logoContainers = [logo, logo1, logo2, logo3];
+            
+            // Optimized transition timing based on image loading status
+            var fadeOutTime = cachedImage && cachedImage.loaded ? 250 : 300; // Faster if image is preloaded
+            var imageChangeDelay = cachedImage && cachedImage.loaded ? 0 : 50; // No delay if preloaded
+            
+            // First, fade out all containers
+            logoContainers.forEach(function(container) {
+                if (container) {
+                    // Enable transitions for smooth fade effect
+                    container.style.transition = 'opacity ' + (fadeOutTime / 1000) + 's ease-in-out';
+                    container.style.opacity = '0';
+                }
+            });
+            
+            // After fade out completes, change images and fade back in
+            setTimeout(function() {
+                logoContainers.forEach(function(container, index) {
+                    if (container) {
+                        // Get current background-image style and replace the image URL
+                        var currentStyle = window.getComputedStyle(container).backgroundImage;
+                        if (currentStyle && currentStyle !== 'none') {
+                            // Replace the URL in the existing background-image property
+                            var newStyle = currentStyle.replace(/url\("[^"]*"\)(?=\s*\)?\s*$)/, 'url("' + imagePath + '")');
+                            container.style.backgroundImage = newStyle;
+                        }
+                        
+                        // Fade back in with original opacity values
+                        setTimeout(function() {
+                            // Set transition for fade-in
+                            container.style.transition = 'opacity ' + (fadeOutTime / 1000) + 's ease-in-out';
+                            
+                            if (index === 0) { // logo-container
+                                container.style.opacity = '1';
+                            } else if (index === 1) { // logo-container1
+                                container.style.opacity = '0.75';
+                            } else if (index === 2) { // logo-container2
+                                container.style.opacity = '0.5';
+                            } else if (index === 3) { // logo-container3
+                                container.style.opacity = '0.25';
+                            }
+                        }, imageChangeDelay);
+                    }
+                });
+                
+                // Remove transitions after animation completes to avoid interfering with parallax
+                setTimeout(function() {
+                    logoContainers.forEach(function(container) {
+                        if (container) {
+                            container.style.transition = 'none';
+                        }
+                    });
+                }, fadeOutTime + 50); // After fade-in completes
+                
+            }, fadeOutTime); // Wait for fade-out to complete
+        }
+
+        // Add event listeners to radio buttons
+        var chris3xgRadio = document.getElementById('chris3xg');
+        var gchriswillRadio = document.getElementById('gchriswill');
+
+        if (chris3xgRadio && gchriswillRadio) {
+            chris3xgRadio.addEventListener('change', function() {
+                if (this.checked) {
+                    updateLogoImages('chris3xg');
+                }
+            });
+
+            gchriswillRadio.addEventListener('change', function() {
+                if (this.checked) {
+                    updateLogoImages('gchriswill');
+                }
+            });
+
+            // Set initial image based on default selection
+            var checkedRadio = document.querySelector('input[name="brand"]:checked');
+            if (checkedRadio) {
+                updateLogoImages(checkedRadio.value);
+            }
+        }
     }
 
 }, false);

@@ -72,8 +72,7 @@ nav {
 	box-shadow: 0 0 4px rgba(0, 0, 0, .10), 0 4px 8px rgba(0, 0, 0, .20);
 }
 
-h1#nav-title {
-
+#nav-title {
     margin: 0;
     padding: 0;
     top: 24px;
@@ -82,17 +81,62 @@ h1#nav-title {
     position: fixed;
     font-size: 24px;
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.70);
 }
 
-/* iOS-compatible selector - avoid child combinator issues */
-#nav-title span {
+#brand-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
+/* Hide default radio buttons */
+#brand-selector input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Style labels to look like the original text */
+#brand-selector label {
+    color: rgba(0, 0, 0, 0.70);
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+/* Selected state styling */
+#brand-selector input[type="radio"]:checked + label {
+    color: rgba(0, 0, 0, 0.90);
+}
+
+/* Custom underline indicator */
+#brand-selector label::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f44336;
+    transition: width 0.3s ease;
+}
+
+/* Show underline when selected */
+#brand-selector input[type="radio"]:checked + label::after {
+    width: 100%;
+}
+
+/* Separator styling */
+#brand-selector .separator {
     height: 32px;
     font-size: 32px;
-    font-weight: 300; /* Use numeric value instead of 'light' */
+    font-weight: 300;
     color: #f44336;
-    display: inline-block; /* Ensure proper rendering on iOS */
+    display: inline-block;
+    margin: 0 4px;
 }
 
 #github-link-button, #linkedin-link-button {
@@ -205,12 +249,12 @@ h1#nav-title {
         right: 16px;
     }
 
-    h1#nav-title {
+    #nav-title {
         left: 16px;
         font-size: 18px;
     }
 
-    #nav-title span {
+    #brand-selector .separator {
         font-size: 28px;
     }
 }
