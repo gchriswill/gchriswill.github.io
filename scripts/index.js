@@ -104,6 +104,7 @@ document.addEventListener("readystatechange", function(ev) {
             'chris3xg': {
                 title: 'Chris 3xG',
                 description: "Christopher's video-gaming brand website. Join me in battle to conquer the arena, make it ours for few hours and become the ultimate champions",
+                favicon: 'assets/chris3xg-favicon.ico',
                 socialButtons: [
                     { id: 'facebook-link-button', href: 'https://www.facebook.com/chris3xg', ariaLabel: 'Visit Facebook profile', visible: true },
                     { id: 'youtube-link-button', href: 'https://www.youtube.com/@chris3xg', ariaLabel: 'Visit YouTube channel', visible: true },
@@ -116,6 +117,7 @@ document.addEventListener("readystatechange", function(ev) {
             'gchriswill': {
                 title: 'gchriswill',
                 description: "Christopher's personal brand website. Architecting fantasies, designing dreams and developing realities... This is what I do for living.",
+                favicon: 'assets/gchriswill-favicon.ico',
                 socialButtons: [
                     { id: 'facebook-link-button', visible: false },
                     { id: 'youtube-link-button', visible: false },
@@ -144,6 +146,28 @@ document.addEventListener("readystatechange", function(ev) {
             var alternateLink = document.querySelector('link[rel="alternate"]');
             if (alternateLink) {
                 alternateLink.setAttribute('href', config.alternateUrl);
+            }
+
+            // Update favicon
+            function updateFavicon(faviconPath) {
+                // Remove existing favicon links
+                var existingFavicons = document.querySelectorAll('link[rel*="icon"]');
+                existingFavicons.forEach(function(link) {
+                    link.parentNode.removeChild(link);
+                });
+                
+                // Create new favicon link
+                var newFavicon = document.createElement('link');
+                newFavicon.rel = 'icon';
+                newFavicon.type = 'image/x-icon';
+                newFavicon.href = faviconPath + '?v=' + Date.now(); // Add cache buster
+                document.getElementsByTagName('head')[0].appendChild(newFavicon);
+                
+                console.log('Updated favicon to:', faviconPath);
+            }
+            
+            if (config.favicon) {
+                updateFavicon(config.favicon);
             }
 
             // Update social media buttons visibility and links
