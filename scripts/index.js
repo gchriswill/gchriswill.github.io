@@ -194,16 +194,20 @@ document.addEventListener("readystatechange", function(ev) {
             chris3xgRadio.addEventListener('change', function() {
                 if (this.checked) {
                     updateLogoImages('chris3xg');
-                    // Navigate to Chris 3xG website without reloading
-                    window.location.href = 'https://www.chris3xg.com';
+                    // Wait for the logo animation to complete before navigating
+                    setTimeout(function() {
+                        window.location.href = 'https://www.chris3xg.com';
+                    }, 700); // Allow time for fade-out + image change + fade-in
                 }
             });
 
             gchriswillRadio.addEventListener('change', function() {
                 if (this.checked) {
                     updateLogoImages('gchriswill');
-                    // Navigate to gchriswill website without reloading
-                    window.location.href = 'https://www.gchriswill.me';
+                    // Wait for the logo animation to complete before navigating
+                    setTimeout(function() {
+                        window.location.href = 'https://www.gchriswill.me';
+                    }, 700); // Allow time for fade-out + image change + fade-in
                 }
             });
 
