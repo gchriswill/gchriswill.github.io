@@ -151,7 +151,7 @@ document.addEventListener("readystatechange", function(ev) {
                 var element = document.getElementById(button.id);
                 if (element) {
                     if (button.visible) {
-                        element.style.display = '';
+                        element.style.display = 'block';
                         if (button.href) {
                             element.setAttribute('href', button.href);
                         }
