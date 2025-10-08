@@ -26,7 +26,16 @@ document.addEventListener("readystatechange", function(ev) {
             { key: 'gchriswill', src: 'assets/gchriswill_mwmdai.png' }
         ];
 
+        // Cross-website image preloading for smoother transitions
+        var crossSiteImages = [
+            { key: 'chris3xg-remote', src: 'https://www.chris3xg.com/assets/chris3xg_mwmdai.png' },
+            { key: 'chris3xg-remote-favicon', src: 'https://www.chris3xg.com/assets/favicon.ico' },
+            { key: 'gchriswill-remote', src: 'https://www.gchriswill.me/assets/gchriswill_mwmdai.png' },
+            { key: 'gchriswill-remote-favicon', src: 'https://www.gchriswill.me/assets/favicon.ico' }
+        ];
+
         function preloadImages() {
+            // Preload local images first (high priority)
             imagesToPreload.forEach(function(imageInfo) {
                 var img = new Image();
                 img.onload = function() {
@@ -37,7 +46,7 @@ document.addEventListener("readystatechange", function(ev) {
                     };
                 };
                 img.onerror = function() {
-                    console.warn('Failed to preload image:', imageInfo.src);
+                    console.warn('Failed to preload local image:', imageInfo.src);
                     imageCache[imageInfo.key] = {
                         loaded: false,
                         src: imageInfo.src,
@@ -53,6 +62,38 @@ document.addEventListener("readystatechange", function(ev) {
                     image: img
                 };
             });
+
+            // Preload cross-site images (lower priority, after a small delay)
+            setTimeout(function() {
+                crossSiteImages.forEach(function(imageInfo) {
+                    var img = new Image();
+                    img.crossOrigin = 'anonymous'; // Enable CORS for cross-origin images
+                    img.onload = function() {
+                        imageCache[imageInfo.key] = {
+                            loaded: true,
+                            src: imageInfo.src,
+                            image: img
+                        };
+                        console.log('Cross-site image preloaded:', imageInfo.src);
+                    };
+                    img.onerror = function() {
+                        console.log('Cross-site image preload failed (expected):', imageInfo.src);
+                        imageCache[imageInfo.key] = {
+                            loaded: false,
+                            src: imageInfo.src,
+                            image: null
+                        };
+                    };
+                    img.src = imageInfo.src;
+                    
+                    // Initialize cache entry
+                    imageCache[imageInfo.key] = {
+                        loaded: false,
+                        src: imageInfo.src,
+                        image: img
+                    };
+                });
+            }, 500); // Delay cross-site preloading to prioritize local resources
         }
 
         // Start preloading images immediately
