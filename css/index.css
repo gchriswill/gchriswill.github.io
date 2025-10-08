@@ -189,12 +189,14 @@ nav {
 
     background-image: url("../assets/github.png");
     right: 72px;
+    filter: grayscale(100%);
 }
 
 #linkedin-link-button {
 
     background-image: url("../assets/linkedin.png");
     right: 24px;
+    filter: grayscale(100%);
 }
 
 /* Hover animations with opacity and scale effects */
