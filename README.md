@@ -4,7 +4,7 @@
 
 ---
 #### About:
-Christopher Gonzalez's software/systems engineering brand Website.
+Christopher Gonzalez's software/systems engineering brand website.
 
 ---
 #### Team:
