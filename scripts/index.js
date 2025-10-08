@@ -99,6 +99,81 @@ document.addEventListener("readystatechange", function(ev) {
         // Start preloading images immediately
         preloadImages();
 
+        // Dynamic content switching system for SPA behavior
+        var siteConfigs = {
+            'chris3xg': {
+                title: 'Chris 3xG',
+                description: "Christopher's video-gaming brand website. Join me in battle to conquer the arena, make it ours for few hours and become the ultimate champions",
+                socialButtons: [
+                    { id: 'facebook-link-button', href: 'https://www.facebook.com/chris3xg', ariaLabel: 'Visit Facebook profile', visible: true },
+                    { id: 'youtube-link-button', href: 'https://www.youtube.com/@chris3xg', ariaLabel: 'Visit YouTube channel', visible: true },
+                    { id: 'github-link-button', visible: false },
+                    { id: 'linkedin-link-button', visible: false }
+                ],
+                alternateUrl: 'https://www.chris3xg.com',
+                currentBrand: 'chris3xg'
+            },
+            'gchriswill': {
+                title: 'Chris 3xG || gchriswill',
+                description: "Christopher's personal brand website. Architecting fantasies, designing dreams and developing realities... This is what I do for living.",
+                socialButtons: [
+                    { id: 'facebook-link-button', visible: false },
+                    { id: 'youtube-link-button', visible: false },
+                    { id: 'github-link-button', href: 'https://github.com/gchriswill', ariaLabel: 'Visit GitHub profile', visible: true },
+                    { id: 'linkedin-link-button', href: 'https://linkedin.com/in/gchriswill', ariaLabel: 'Visit LinkedIn profile', visible: true }
+                ],
+                alternateUrl: 'https://www.gchriswill.me',
+                currentBrand: 'gchriswill'
+            }
+        };
+
+        function updateSiteContent(brandKey) {
+            var config = siteConfigs[brandKey];
+            if (!config) return;
+
+            // Update page title
+            document.title = config.title;
+            
+            // Update meta description
+            var metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute('content', config.description);
+            }
+            
+            // Update alternate URL
+            var alternateLink = document.querySelector('link[rel="alternate"]');
+            if (alternateLink) {
+                alternateLink.setAttribute('href', config.alternateUrl);
+            }
+
+            // Update social media buttons visibility and links
+            config.socialButtons.forEach(function(button) {
+                var element = document.getElementById(button.id);
+                if (element) {
+                    if (button.visible) {
+                        element.style.display = '';
+                        if (button.href) {
+                            element.setAttribute('href', button.href);
+                        }
+                        if (button.ariaLabel) {
+                            element.setAttribute('aria-label', button.ariaLabel);
+                        }
+                    } else {
+                        element.style.display = 'none';
+                    }
+                }
+            });
+
+            // Update URL without reload using History API
+            var newUrl = config.alternateUrl.replace('https://', '').replace('www.', '');
+            var currentUrl = window.location.hostname + window.location.pathname;
+            
+            // Only update history if we're actually changing to a different brand
+            if (!currentUrl.includes(newUrl.split('/')[0])) {
+                window.history.pushState({brand: brandKey}, config.title, '/');
+            }
+        }
+
         if(typeof(Storage) !== "undefined") {
 
             if(!sessionStorage.initialLand){
@@ -235,9 +310,9 @@ document.addEventListener("readystatechange", function(ev) {
             chris3xgRadio.addEventListener('change', function() {
                 if (this.checked) {
                     updateLogoImages('chris3xg');
-                    // Wait for the logo animation to complete before navigating
+                    // Wait for the logo animation to complete before updating content
                     setTimeout(function() {
-                        window.location.href = 'https://www.chris3xg.com';
+                        updateSiteContent('chris3xg');
                     }, 700); // Allow time for fade-out + image change + fade-in
                 }
             });
@@ -245,19 +320,32 @@ document.addEventListener("readystatechange", function(ev) {
             gchriswillRadio.addEventListener('change', function() {
                 if (this.checked) {
                     updateLogoImages('gchriswill');
-                    // Wait for the logo animation to complete before navigating
+                    // Wait for the logo animation to complete before updating content
                     setTimeout(function() {
-                        window.location.href = 'https://www.gchriswill.me';
+                        updateSiteContent('gchriswill');
                     }, 700); // Allow time for fade-out + image change + fade-in
                 }
             });
 
-            // Set initial image based on default selection
+            // Set initial image and content based on default selection
             var checkedRadio = document.querySelector('input[name="brand"]:checked');
             if (checkedRadio) {
                 updateLogoImages(checkedRadio.value);
+                updateSiteContent(checkedRadio.value);
             }
         }
+
+        // Handle browser back/forward navigation
+        window.addEventListener('popstate', function(event) {
+            if (event.state && event.state.brand) {
+                var targetRadio = document.getElementById(event.state.brand);
+                if (targetRadio) {
+                    targetRadio.checked = true;
+                    updateLogoImages(event.state.brand);
+                    updateSiteContent(event.state.brand);
+                }
+            }
+        });
     }
 
 }, false);

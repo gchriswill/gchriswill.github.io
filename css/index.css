@@ -199,8 +199,22 @@ nav {
     filter: grayscale(100%);
 }
 
+#facebook-link-button {
+
+    background-image: url("../assets/facebook.png");
+    right: 72px;
+    filter: grayscale(100%);
+}
+
+#youtube-link-button {
+
+    background-image: url("../assets/youtube.png");
+    right: 24px;
+    filter: grayscale(100%);
+}
+
 /* Hover animations with opacity and scale effects */
-#github-link-button:hover, #linkedin-link-button:hover {
+#github-link-button:hover, #linkedin-link-button:hover, #facebook-link-button:hover, #youtube-link-button:hover {
 
     transform: scale(1.1) translateZ(0);
     opacity: 0.85;
@@ -208,7 +222,7 @@ nav {
 }
 
 /* Active/pressed state for touch devices */
-#github-link-button:active, #linkedin-link-button:active {
+#github-link-button:active, #linkedin-link-button:active, #facebook-link-button:active, #youtube-link-button:active {
 
     transform: scale(0.95) translateY(1px) !important;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
@@ -216,7 +230,7 @@ nav {
 }
 
 /* Focus states for accessibility */
-#github-link-button:focus, #linkedin-link-button:focus {
+#github-link-button:focus, #linkedin-link-button:focus, #facebook-link-button:focus, #youtube-link-button:focus {
 
     outline: 2px solid #4285f4;
     outline-offset: 2px;
