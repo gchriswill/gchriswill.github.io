@@ -139,7 +139,7 @@ nav {
     margin: 0 4px;
 }
 
-#github-link-button, #linkedin-link-button {
+#github-link-button, #linkedin-link-button, #facebook-link-button, #youtube-link-button {
 
     z-index: 100;
     position: fixed;

@@ -114,7 +114,7 @@ document.addEventListener("readystatechange", function(ev) {
                 currentBrand: 'chris3xg'
             },
             'gchriswill': {
-                title: 'Chris 3xG || gchriswill',
+                title: 'gchriswill',
                 description: "Christopher's personal brand website. Architecting fantasies, designing dreams and developing realities... This is what I do for living.",
                 socialButtons: [
                     { id: 'facebook-link-button', visible: false },
@@ -150,8 +150,10 @@ document.addEventListener("readystatechange", function(ev) {
             config.socialButtons.forEach(function(button) {
                 var element = document.getElementById(button.id);
                 if (element) {
+                    console.log('Updating button:', button.id, 'visible:', button.visible);
                     if (button.visible) {
                         element.style.display = 'block';
+                        element.style.visibility = 'visible';
                         if (button.href) {
                             element.setAttribute('href', button.href);
                         }
@@ -160,7 +162,9 @@ document.addEventListener("readystatechange", function(ev) {
                         }
                     } else {
                         element.style.display = 'none';
+                        element.style.visibility = 'hidden';
                     }
+                    console.log('Button', button.id, 'final display:', element.style.display, 'visibility:', element.style.visibility);
                 }
             });
 
