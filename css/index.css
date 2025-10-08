@@ -189,28 +189,24 @@ nav {
 
     background-image: url("../assets/github.png");
     right: 72px;
-    filter: grayscale(100%);
 }
 
 #linkedin-link-button {
 
     background-image: url("../assets/linkedin.png");
     right: 24px;
-    filter: grayscale(100%);
 }
 
 #facebook-link-button {
 
     background-image: url("../assets/facebook.png");
     right: 72px;
-    filter: grayscale(100%);
 }
 
 #youtube-link-button {
 
     background-image: url("../assets/youtube.png");
     right: 24px;
-    filter: grayscale(100%);
 }
 
 /* Hover animations with opacity and scale effects */
