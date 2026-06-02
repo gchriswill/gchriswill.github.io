@@ -1,1 +1,6 @@
 *.Identifier
+*.DS_Store
+*.log
+*.tmp
+*.bak
+.gitignore
