@@ -22,14 +22,11 @@ document.addEventListener("readystatechange", function(ev) {
         // Preload and cache brand images for instant switching
         var imageCache = {};
         var imagesToPreload = [
-            { key: 'chris3xg', src: 'assets/chris3xg_mwmdai.png' },
             { key: 'gchriswill', src: 'assets/gchriswill_mwmdai.png' }
         ];
 
         // Cross-website image preloading for smoother transitions
         var crossSiteImages = [
-            { key: 'chris3xg-remote', src: 'https://www.chris3xg.com/assets/chris3xg_mwmdai.png' },
-            { key: 'chris3xg-remote-favicon', src: 'https://www.chris3xg.com/assets/favicon.ico' },
             { key: 'gchriswill-remote', src: 'https://www.gchriswill.me/assets/gchriswill_mwmdai.png' },
             { key: 'gchriswill-remote-favicon', src: 'https://www.gchriswill.me/assets/favicon.ico' }
         ];
@@ -99,33 +96,17 @@ document.addEventListener("readystatechange", function(ev) {
         // Start preloading images immediately
         preloadImages();
 
-        // Dynamic content switching system for SPA behavior
+        // Dynamic content settings for the single-brand experience
         var siteConfigs = {
-            'chris3xg': {
-                title: 'Chris 3xG',
-                description: "Christopher's video-gaming brand website. Join me in battle to conquer the arena, make it ours for few hours and become the ultimate champions",
-                favicon: 'assets/chris3xg-favicon.ico',
-                socialButtons: [
-                    { id: 'facebook-link-button', href: 'https://www.facebook.com/chris3xg', ariaLabel: 'Visit Facebook profile', visible: true },
-                    { id: 'youtube-link-button', href: 'https://www.youtube.com/@chris3xg', ariaLabel: 'Visit YouTube channel', visible: true },
-                    { id: 'github-link-button', visible: false },
-                    { id: 'linkedin-link-button', visible: false }
-                ],
-                alternateUrl: 'https://www.chris3xg.com',
-                currentBrand: 'chris3xg'
-            },
             'gchriswill': {
                 title: 'gchriswill',
                 description: "Christopher's personal brand website. Architecting fantasies, designing dreams and developing realities... This is what I do for living.",
                 favicon: 'assets/gchriswill-favicon.ico',
                 socialButtons: [
-                    { id: 'facebook-link-button', visible: false },
-                    { id: 'youtube-link-button', visible: false },
                     { id: 'github-link-button', href: 'https://github.com/gchriswill', ariaLabel: 'Visit GitHub profile', visible: true },
                     { id: 'linkedin-link-button', href: 'https://linkedin.com/in/gchriswill', ariaLabel: 'Visit LinkedIn profile', visible: true }
                 ],
-                alternateUrl: 'https://www.gchriswill.me',
-                currentBrand: 'gchriswill'
+                alternateUrl: 'https://www.gchriswill.me'
             }
         };
 
@@ -192,14 +173,6 @@ document.addEventListener("readystatechange", function(ev) {
                 }
             });
 
-            // Update URL without reload using History API
-            var newUrl = config.alternateUrl.replace('https://', '').replace('www.', '');
-            var currentUrl = window.location.hostname + window.location.pathname;
-            
-            // Only update history if we're actually changing to a different brand
-            if (!currentUrl.includes(newUrl.split('/')[0])) {
-                window.history.pushState({brand: brandKey}, config.title, '/');
-            }
         }
 
         if(typeof(Storage) !== "undefined") {
@@ -270,7 +243,7 @@ document.addEventListener("readystatechange", function(ev) {
         function updateLogoImages(selectedBrand) {
             // Check if image is preloaded and ready
             var cachedImage = imageCache[selectedBrand];
-            var imagePath = cachedImage ? cachedImage.src : (selectedBrand === 'chris3xg' ? 'assets/chris3xg_mwmdai.png' : 'assets/gchriswill_mwmdai.png');
+            var imagePath = cachedImage ? cachedImage.src : 'assets/gchriswill_mwmdai.png';
             
             // Update all logo containers with fade animation
             var logoContainers = [logo, logo1, logo2, logo3];
@@ -330,50 +303,8 @@ document.addEventListener("readystatechange", function(ev) {
             }, fadeOutTime); // Wait for fade-out to complete
         }
 
-        // Add event listeners to radio buttons
-        var chris3xgRadio = document.getElementById('chris3xg');
-        var gchriswillRadio = document.getElementById('gchriswill');
-
-        if (chris3xgRadio && gchriswillRadio) {
-            chris3xgRadio.addEventListener('change', function() {
-                if (this.checked) {
-                    updateLogoImages('chris3xg');
-                    // Wait for the logo animation to complete before updating content
-                    setTimeout(function() {
-                        updateSiteContent('chris3xg');
-                    }, 700); // Allow time for fade-out + image change + fade-in
-                }
-            });
-
-            gchriswillRadio.addEventListener('change', function() {
-                if (this.checked) {
-                    updateLogoImages('gchriswill');
-                    // Wait for the logo animation to complete before updating content
-                    setTimeout(function() {
-                        updateSiteContent('gchriswill');
-                    }, 700); // Allow time for fade-out + image change + fade-in
-                }
-            });
-
-            // Set initial image and content based on default selection
-            var checkedRadio = document.querySelector('input[name="brand"]:checked');
-            if (checkedRadio) {
-                updateLogoImages(checkedRadio.value);
-                updateSiteContent(checkedRadio.value);
-            }
-        }
-
-        // Handle browser back/forward navigation
-        window.addEventListener('popstate', function(event) {
-            if (event.state && event.state.brand) {
-                var targetRadio = document.getElementById(event.state.brand);
-                if (targetRadio) {
-                    targetRadio.checked = true;
-                    updateLogoImages(event.state.brand);
-                    updateSiteContent(event.state.brand);
-                }
-            }
-        });
+        updateLogoImages('gchriswill');
+        updateSiteContent('gchriswill');
     }
 
 }, false);

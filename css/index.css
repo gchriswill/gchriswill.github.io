@@ -81,65 +81,10 @@ nav {
     position: fixed;
     font-size: 24px;
     font-weight: bold;
-}
-
-#brand-selector {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-/* Hide default radio buttons */
-#brand-selector input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-/* Style labels to look like the original text */
-#brand-selector label {
     color: rgba(0, 0, 0, 0.70);
-    cursor: pointer;
-    position: relative;
-    padding-bottom: 4px;
-    transition: color 0.3s ease;
 }
 
-/* Selected state styling */
-#brand-selector input[type="radio"]:checked + label {
-    color: rgba(0, 0, 0, 0.90);
-}
-
-/* Custom underline indicator */
-#brand-selector label::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #f44336;
-    transition: width 0.3s ease;
-}
-
-/* Show underline when selected */
-#brand-selector input[type="radio"]:checked + label::after {
-    width: 100%;
-}
-
-/* Separator styling */
-#brand-selector .separator {
-    height: 32px;
-    font-size: 32px;
-    font-weight: 300;
-    color: #f44336;
-    display: inline-block;
-    margin: 0 4px;
-}
-
-#github-link-button, #linkedin-link-button, #facebook-link-button, #youtube-link-button {
+#github-link-button, #linkedin-link-button {
 
     z-index: 100;
     position: fixed;
@@ -197,20 +142,8 @@ nav {
     right: 24px;
 }
 
-#facebook-link-button {
-
-    background-image: url("../assets/facebook.png");
-    right: 72px;
-}
-
-#youtube-link-button {
-
-    background-image: url("../assets/youtube.png");
-    right: 24px;
-}
-
 /* Hover animations with opacity and scale effects */
-#github-link-button:hover, #linkedin-link-button:hover, #facebook-link-button:hover, #youtube-link-button:hover {
+#github-link-button:hover, #linkedin-link-button:hover {
 
     transform: scale(1.1) translateZ(0);
     opacity: 0.85;
@@ -218,7 +151,7 @@ nav {
 }
 
 /* Active/pressed state for touch devices */
-#github-link-button:active, #linkedin-link-button:active, #facebook-link-button:active, #youtube-link-button:active {
+#github-link-button:active, #linkedin-link-button:active {
 
     transform: scale(0.95) translateY(1px) !important;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
@@ -226,7 +159,7 @@ nav {
 }
 
 /* Focus states for accessibility */
-#github-link-button:focus, #linkedin-link-button:focus, #facebook-link-button:focus, #youtube-link-button:focus {
+#github-link-button:focus, #linkedin-link-button:focus {
 
     outline: 2px solid #4285f4;
     outline-offset: 2px;
@@ -264,10 +197,6 @@ nav {
     #nav-title {
         left: 16px;
         font-size: 18px;
-    }
-
-    #brand-selector .separator {
-        font-size: 28px;
     }
 }
 
