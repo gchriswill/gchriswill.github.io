@@ -281,7 +281,6 @@ nav {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-repeat: no-repeat;
     background-image: 
         linear-gradient(to top, transparent 70%, white), 
         linear-gradient(to bottom, transparent 70%, white), 
@@ -306,7 +305,6 @@ nav {
     background-origin: border-box;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-repeat: no-repeat;
     background-image: 
         linear-gradient(to top, transparent 70%, white), 
