@@ -92,6 +92,9 @@ window.addEventListener("load", function() {
 
     var isIOS = (function() {
 
+        console.log(navigator.platform);
+        console.log(navigator.userAgent);
+        
         // Standard iOS devices (old iPad Pro, iPhone, iPod)
         if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
             console.log('Standard iOS devices (old iPad Pro, iPhone, iPod) detected...');
@@ -125,7 +128,7 @@ window.addEventListener("load", function() {
     if (isIOS) {
         
         // iOS DeviceOrientation permission handling
-         console.log('iOS device detected, checking motion permission...');
+        console.log('iOS device detected, checking motion permission...');
         requestMotionPermission();
     
     } else {
