@@ -94,22 +94,30 @@ window.addEventListener("load", function() {
 
         // Standard iOS devices (old iPad Pro, iPhone, iPod)
         if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+            console.log('Standard iOS devices (old iPad Pro, iPhone, iPod) detected...');
             return true;
         }
         
         // Modern iPad Pro (2018+) - reports as "Macintosh" but has touch capabilities
         if (navigator.userAgent.includes('Macintosh') && !window.MSStream) {
+
             // Multiple touch detection methods for reliability
-            return 'ontouchend' in document || 
-                   'ontouchstart' in document || 
-                   navigator.maxTouchPoints > 0 ||
-                   navigator.msMaxTouchPoints > 0;
+            var isTouchCapable = 'ontouchend' in document ||  'ontouchstart' in document ||  navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+            
+            if (isTouchCapable) {
+                console.log('Modern iPad Pro (2018+) detected...');
+            }
+
+            return isTouchCapable;
         }
         
         // Additional check for iPadOS 13+ (may report as desktop)
         if (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) {
+            console.log('iPadOS 13+ detected...');
             return true;
         }
+
+        console.log('No iOS/iPadOS device detected...');
         
         return false;
     })();
