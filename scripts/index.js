@@ -487,18 +487,6 @@ function startGhostParallax() {
 
     // Immediate test
     var scene = document.getElementById('scene');
-    var logoContainer1 = document.getElementById('logo-container1');
-    var logoContainer2 = document.getElementById('logo-container2');
-    var logoContainer3 = document.getElementById('logo-container3');
-
-    console.log('Scene element:', scene);
-    console.log('Logo container 1:', logoContainer1);
-    console.log('Logo container 2:', logoContainer2);
-    console.log('Logo container 3:', logoContainer3);
-    console.log('Logo container 1 opacity:', logoContainer1 ? logoContainer1.style.opacity : 'not found');
-    console.log('Logo container 2 opacity:', logoContainer2 ? logoContainer2.style.opacity : 'not found');
-    console.log('Logo container 3 opacity:', logoContainer3 ? logoContainer3.style.opacity : 'not found');
-    console.log('Parallax library loaded:', typeof Parallax !== 'undefined');
     
     // Try initializing immediately first
     if (scene && typeof Parallax !== 'undefined') {

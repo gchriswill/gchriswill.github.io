@@ -202,14 +202,16 @@ nav {
 
 #scene {
 
+    margin: auto;
+    padding: auto;
+    top: 25%;
+    left: 25%;
     position: fixed;
-    width: 100%;
-    height: 100%;
-
-    /* transform: translate(-50%, -50%); */
-
-     /* --- IGNORE --- */
+    width: 50%;
+    height: 50%;
     overflow: hidden;
+    background-color: white;
+    border: 5px solid white;
 }
 
 #logo-container {
@@ -217,17 +219,20 @@ nav {
     z-index: 95;
     opacity: 0;
     position: relative;
-
-    /* Logo dimensions */
+    margin: auto;
+    padding: auto;
+    top: auto;
+    left: auto;
     width: 100%;
     height: 100%;
-    /* transform: translate(-50%, -50%); */
-    /* box-shadow: inset 25px 25px 25px 25px rgba(128, 128, 128, 0.5); */
+    border: 5px solid white;
+    background-color: white;
     background-origin: border-box;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(to top, transparent 80%, white), 
+    background-image: 
+        linear-gradient(to top, transparent 70%, white), 
         linear-gradient(to bottom, transparent 70%, white), 
         linear-gradient(to left, transparent 70%, white), 
         linear-gradient(to right, transparent 70%, white),
@@ -239,21 +244,23 @@ nav {
     z-index: 96;
     opacity: 0;
     position: relative;
-
-    /* Logo dimensions */
+    margin: auto;
+    padding: auto;
+    top: auto;
+    left: auto;
     width: 100%;
     height: 100%;
-
-    /* transform: translate(-52.5%, -52.5%); */
-    /* background-blend-mode: multiply; */
+    border: 5px solid white;
+    background-color: white;
     background-origin: border-box;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-        background-image: linear-gradient(to top, transparent 85%, white), 
-        linear-gradient(to bottom, transparent 75%, white), 
-        linear-gradient(to left, transparent 75%, white), 
-        linear-gradient(to right, transparent 75%, white),
+    background-image: 
+        linear-gradient(to top, transparent 70%, white), 
+        linear-gradient(to bottom, transparent 70%, white), 
+        linear-gradient(to left, transparent 70%, white), 
+        linear-gradient(to right, transparent 70%, white),
         url("../assets/gchriswill_mwmdai.png");
 }
 
@@ -262,23 +269,24 @@ nav {
     z-index: 97;
     opacity: 0;
     position: relative;
-    
-    /* Logo dimensions */
+    margin: auto;
+    padding: auto;
+    top: auto;
+    left: auto;
     width: 100%;
     height: 100%;
-
-    /* transform: translate(-50%, -50%); */
-    /* background-blend-mode: multiply; */
-    /* background-blend-mode: multiply; */
+    border: 5px solid white;
+    background-color: white;
     background-origin: border-box;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-repeat: no-repeat;
-        background-image: linear-gradient(to top, transparent 90%, white), 
-        linear-gradient(to bottom, transparent 80%, white), 
-        linear-gradient(to left, transparent 80%, white), 
-        linear-gradient(to right, transparent 80%, white),
+    background-image: 
+        linear-gradient(to top, transparent 70%, white), 
+        linear-gradient(to bottom, transparent 70%, white), 
+        linear-gradient(to left, transparent 70%, white), 
+        linear-gradient(to right, transparent 70%, white),
         url("../assets/gchriswill_mwmdai.png");
 }
 
@@ -287,23 +295,24 @@ nav {
     z-index: 98;
     opacity: 0;
     position: relative;
-    
-    /* Logo dimensions */
+    margin: auto;
+    padding: auto;
+    top: auto;
+    left: auto;
     width: 100%;
     height: 100%;
-
-    /* transform: translate(-47.5%, -47.5%); */
-    /* background-blend-mode: multiply; */
-    /* background-blend-mode: multiply; */
+    border: 5px solid white;
+    background-color: white;
     background-origin: border-box;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-repeat: no-repeat;
-        background-image: linear-gradient(to top, transparent 95%, white), 
-        linear-gradient(to bottom, transparent 85%, white), 
-        linear-gradient(to left, transparent 85%, white), 
-        linear-gradient(to right, transparent 85%, white),
+    background-image: 
+        linear-gradient(to top, transparent 70%, white), 
+        linear-gradient(to bottom, transparent 70%, white), 
+        linear-gradient(to left, transparent 70%, white), 
+        linear-gradient(to right, transparent 70%, white),
         url("../assets/gchriswill_mwmdai.png");
 }
 
