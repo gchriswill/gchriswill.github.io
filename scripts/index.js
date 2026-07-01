@@ -1,7 +1,6 @@
 /**
  * @Author: Christopher Gonzalez <gchriswill>
  * @Date:   2018-08-11T23:59:03-05:00
- * @Email:  gchriswill@me.com
  * @Filename: index.js
  * @Last modified by:   gchriswill
  * @Last modified time: 2018-08-11T23:59:25-05:00
