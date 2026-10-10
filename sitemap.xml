@@ -4,13 +4,19 @@
 
     <url>
 
-      <loc>http://www.gchriswill.me</loc>
+      <loc>https://www.gchriswill.me/index.html</loc>
+      <lastmod>2024-06-05</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
 
-      <lastmod>2017-01-04</lastmod>
+   </url>
 
-      <changefreq>daily</changefreq>
+    <url>
 
-      <priority>1.0</priority>
+      <loc>https://github.com/gchriswill/gchriswill/blob/main/RESUME.txt</loc>
+      <lastmod>2024-06-05</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.4</priority>
 
    </url>
 
