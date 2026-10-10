@@ -34,5 +34,11 @@
     "git.inputValidationLength": 64,
     "github.gitProtocol": "ssh",
     "github.copilot.chat.agent.autoFix": true,
-    "github.copilot.completions.chat.enabled": true
+    "github.copilot.completions.chat.enabled": true,
+    "chat.agent.sandbox.enabled": "on",
+    "chat.agent.sandbox.network.allowLocalNetwork": true,
+    "chat.defaultConfiguration": {
+        "mode": "autopilot",
+        "approvals": "assisted"
+    }
 }
