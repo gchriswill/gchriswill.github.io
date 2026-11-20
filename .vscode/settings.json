@@ -1,10 +1,10 @@
 {
     "git.alwaysSignOff": true,
     "git.enableCommitSigning": true,
-    "workbench.colorTheme": "Dark 2026",
+    "workbench.colorTheme": "GitHub Dark Default",
     "window.autoDetectColorScheme": true,
-    "workbench.preferredLightColorTheme": "Light 2026",
-    "workbench.preferredDarkColorTheme": "Dark 2026",
+    "workbench.preferredLightColorTheme": "GitHub Light",
+    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
@@ -40,5 +40,8 @@
     "chat.defaultConfiguration": {
         "mode": "autopilot",
         "approvals": "assisted"
-    }
+    },
+    "workbench.iconTheme": "vscode-modern-icons",
+    "workbench.preferredHighContrastColorTheme": "GitHub Dark High Contrast",
+    "workbench.preferredHighContrastLightColorTheme": "GitHub Light High Contrast"
 }
