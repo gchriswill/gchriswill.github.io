@@ -12,7 +12,19 @@
 }
 
 body {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background: url("../assets/tc_bg.svg");
     font-family : sans-serif;
     -webkit-font-smoothing : antialiased;
     -webkit-backface-visibility: hidden;
@@ -37,7 +49,7 @@ body, main {
     position: fixed;
 }
 
-body, main, #logo-container, #logo-container1, #logo-container2, #logo-container3 {
+main, #logo-container, #logo-container1, #logo-container2, #logo-container3 {
 
     top: auto;
     left: auto;
@@ -66,7 +78,7 @@ nav {
 	flex-direction: column;
 	justify-content: center; */
 
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(240, 240, 240, 0.99);
 	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .10), 0 4px 8px rgba(0, 0, 0, .20);
 	box-shadow: 0 0 4px rgba(0, 0, 0, .10), 0 4px 8px rgba(0, 0, 0, .20);
 }
@@ -82,6 +94,77 @@ nav {
     font-weight: bold;
     color: rgba(0, 0, 0, 0.70);
 }
+
+#nav-menu {
+
+	font-family: sans-serif;
+	position: fixed;
+	display: inline-block;
+	top: 10px;  
+	right: 24px;
+    color: rgba(0, 0, 0, 0.70);
+    font-size: 48px;
+    text-shadow: -1px 1px 2px rgba(0,0,0, 0.50);
+    cursor: pointer;
+    user-select: none;
+
+}
+
+#side-nav {
+	visibility: hidden;
+	transform: translateX(100px);
+	height: auto;
+	width: auto;
+	position: fixed;
+	z-index: 101;
+	top: 30%;
+	right: 0;
+	background-color: rgba(211, 211, 211, 0.1);
+	overflow: hidden;
+	/* padding-top: 30%; */
+    /* padding-bottom: auto; */
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	/* -webkit-box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75), 1px 0 8px rgba(0, 0, 0, .25);
+	box-shadow: 0 0px 4px rgba(0, 0, 0, 0.75), 1px 0 8px rgba(0, 0, 0, .25); */
+}
+
+#side-nav div {
+    display: block;
+    font-size: 24px;
+	margin: 0;
+	padding: 18px;
+	text-decoration: none;
+	text-shadow: -1px 1px 2px rgba(0,0,0, 0.75);
+	color: #fefefe;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*.sidenav a i:nth-child(2) {
+	/*font-size: 60px;*/
+	/*top: auto;
+	bottom: auto;
+}*/
+
+#side-nav div:hover, #side-nav div:focus {
+	transition: 0.3s;
+    transition-delay: 0.2s;
+	/* background-color: rgba(244,67,54,0.5); */
+	text-shadow: -2px 2px 4px rgba(0,0,0, 0.80);
+    font-size: 36px;
+    background-color: rgba(211, 211, 211, 0.25);
+}
+
+/* #side-nav div:nth-child(1){
+	background: rgba(244,67,54,0.75);
+} */
 
 #github-link-button, #linkedin-link-button {
 
@@ -129,40 +212,40 @@ nav {
     transform: translateX(0) scale(1);
 }
 
-#github-link-button {
+/* #github-link-button {
 
     background-image: url("../assets/github.png");
     right: 72px;
-}
+} */
 
-#linkedin-link-button {
+/* #linkedin-link-button {
 
     background-image: url("../assets/linkedin.png");
     right: 24px;
-}
+} */
 
 /* Hover animations with opacity and scale effects */
-#github-link-button:hover, #linkedin-link-button:hover {
+/* #github-link-button:hover, #linkedin-link-button:hover {
 
     transform: scale(1.1) translateZ(0);
     opacity: 0.85;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.15);
-}
+} */
 
 /* Active/pressed state for touch devices */
-#github-link-button:active, #linkedin-link-button:active {
+/* #github-link-button:active, #linkedin-link-button:active {
 
     transform: scale(0.95) translateY(1px) !important;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2) !important;
     transition: all 0.1s ease !important;
-}
+} */
 
 /* Focus states for accessibility */
-#github-link-button:focus, #linkedin-link-button:focus {
+/* #github-link-button:focus, #linkedin-link-button:focus {
 
     outline: 2px solid #4285f4;
     outline-offset: 2px;
-}
+} */
 
 /* Simplified animations for always-visible buttons */
 
@@ -173,12 +256,21 @@ nav {
         transition-duration: 0.01ms !important;
     }
     
-    #github-link-button, #linkedin-link-button {
+    /* #github-link-button, #linkedin-link-button {
         animation: none !important;
-    }
+    } */
 }
 
 /* Responsive adjustments for smaller screens */
+
+@media (max-width: 600px) {
+    
+    /* div.logo-containers {
+    mask-image: radial-gradient(circle at center, white -40%, transparent 40%);
+    } */
+    
+}
+
 @media (max-width: 480px) {
 
     #github-link-button, #linkedin-link-button {
@@ -194,8 +286,51 @@ nav {
     }
 
     #nav-title {
+        transition: 00.3s;
         left: 16px;
         font-size: 18px;
+    }
+
+    #nav-menu {
+        transition: 00.3s;
+        right: 16px;
+        font-size: 36px;
+    }
+
+    #side-nav .nav-menu-items {
+        transition: 00.3s;
+        font-size: 18px;
+    }
+
+    div.logo-containers {
+        
+        mask-image: radial-gradient(circle at center, white -40%, transparent 40%);
+        -webkit-mask-image: radial-gradient(circle at center, white -40%, transparent 40%);
+    }
+
+    footer > p#copyr {
+	    font-size: 0.55em;
+    }
+}
+
+@media (max-height: 525px) {
+
+    div.logo-containers {
+        
+        mask-image: radial-gradient(circle at center, white -40%, transparent 40%);
+        -webkit-mask-image: radial-gradient(circle at center, white -40%, transparent 40%);
+    }
+
+    #side-nav div {
+        display: inline-block;
+    }
+
+    #side-nav div:hover, #side-nav div:focus {
+        font-size: 28px;
+    }
+
+    #side-nav {
+        width: 150px;
     }
 }
 
@@ -208,109 +343,62 @@ nav {
     position: fixed;
     width: 50%;
     height: 50%;
-    overflow: hidden;
+    /* min-height: 100px; */
+    /* min-width: 100px; */
+    overflow: visible;
     background-color: white;
-    border: 5px solid white;
+    border: none;
+    stroke: none;
 }
 
-#logo-container {
-
-    z-index: 95;
-    opacity: 0;
-    position: relative;
+.logo-containers {
+    border: none;
+    stroke: none;
+    position: absolute;
     margin: auto;
     padding: auto;
     top: auto;
     left: auto;
     width: 100%;
     height: 100%;
-    border: 5px solid white;
+    
     background-color: white;
     background-origin: border-box;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-image: 
-        linear-gradient(to top, transparent 70%, white), 
-        linear-gradient(to bottom, transparent 70%, white), 
-        linear-gradient(to left, transparent 70%, white), 
-        linear-gradient(to right, transparent 70%, white),
+        /* radial-gradient(circle at center, transparent 20%, white 70%),  */
         url("../assets/gchriswill-copilot_20260804_144759_highres.png");
+
+    mask-image: radial-gradient(circle at center, white -50%, transparent 50%);
+    -webkit-mask-image: radial-gradient(circle at center, white -50%, transparent 50%);
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+#logo-container0 {
+    visibility: visible;
+    z-index: 95;
+    opacity: 1;
 }
 
 #logo-container1 {
-
+    visibility: visible;
     z-index: 96;
-    opacity: 0;
-    position: relative;
-    margin: auto;
-    padding: auto;
-    top: auto;
-    left: auto;
-    width: 100%;
-    height: 100%;
-    border: 5px solid white;
-    background-color: white;
-    background-origin: border-box;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: 
-        linear-gradient(to top, transparent 70%, white), 
-        linear-gradient(to bottom, transparent 70%, white), 
-        linear-gradient(to left, transparent 70%, white), 
-        linear-gradient(to right, transparent 70%, white),
-        url("../assets/gchriswill-copilot_20260804_144759_highres.png");
+    opacity: 1;
 }
 
 #logo-container2 {
-
+    visibility: visible;
     z-index: 97;
-    opacity: 0;
-    position: relative;
-    margin: auto;
-    padding: auto;
-    top: auto;
-    left: auto;
-    width: 100%;
-    height: 100%;
-    border: 5px solid white;
-    background-color: white;
-    background-origin: border-box;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: 
-        linear-gradient(to top, transparent 70%, white), 
-        linear-gradient(to bottom, transparent 70%, white), 
-        linear-gradient(to left, transparent 70%, white), 
-        linear-gradient(to right, transparent 70%, white),
-        url("../assets/gchriswill-copilot_20260804_144759_highres.png");
+    opacity: 1;
 }
 
 #logo-container3 {
-
+    visibility: visible;
     z-index: 98;
-    opacity: 0;
-    position: relative;
-    margin: auto;
-    padding: auto;
-    top: auto;
-    left: auto;
-    width: 100%;
-    height: 100%;
-    border: 5px solid white;
-    background-color: white;
-    background-origin: border-box;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: 
-        linear-gradient(to top, transparent 70%, white), 
-        linear-gradient(to bottom, transparent 70%, white), 
-        linear-gradient(to left, transparent 70%, white), 
-        linear-gradient(to right, transparent 70%, white),
-        url("../assets/gchriswill-copilot_20260804_144759_highres.png");
+    opacity: 1;
 }
 
 /* #help-link-button{
@@ -363,7 +451,7 @@ footer {
 	height: 80px;
 	z-index: 200;
 	position: fixed;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(240, 240, 240, 0.99);
 	-webkit-box-shadow: 0 0 2px rgba(0, 0, 0, .10), 0 -4px 8px rgba(0, 0, 0, .20);
 	box-shadow: 0 0 2px rgba(0, 0, 0, .10), 0 -4px 8px rgba(0, 0, 0, .20);
 

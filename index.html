@@ -53,6 +53,9 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/index.css" media="screen"/>
 
+		<!-- Material Icons via Google Web Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-76C6GD19RC"></script>
         <script>
@@ -137,17 +140,20 @@
         
         <nav>
 			<div id="nav-title">gchriswill</div>
-            <a id="github-link-button" href="https://github.com/gchriswill" aria-label="Visit GitHub profile"></a>
-			<a id="linkedin-link-button" href="https://linkedin.com/in/gchriswill" aria-label="Visit LinkedIn profile"></a>
+            <!-- <a id="github-link-button" href="https://github.com/gchriswill" aria-label="Visit GitHub profile"></a>
+			<a id="linkedin-link-button" href="https://linkedin.com/in/gchriswill" aria-label="Visit LinkedIn profile"></a> -->
 
+			<div id="nav-menu" onclick="toogleNav()">
+				=
+			</div>
         </nav>
 
         <main id="main">
             <div id="scene">
-                <div id="logo-container" data-depth="0.05"></div>
-                <div id="logo-container1" data-depth="0.1"></div>
-                <div id="logo-container2" data-depth="0.3"></div>
-                <div id="logo-container3" data-depth="0.5"></div>
+                <div id="logo-container0" class="logo-containers" data-depth="0.05"></div>
+                <div id="logo-container1" class="logo-containers" data-depth="0.1"></div>
+                <div id="logo-container2" class="logo-containers" data-depth="0.3"></div>
+                <div id="logo-container3" class="logo-containers" data-depth="0.5"></div>
             </div>
         </main>
 
@@ -157,7 +163,7 @@
 
 				<b>Copyright</b>
 				<span id="copys">©️</span>
-				<b>2018-2025 Christopher W Gonzalez Melendez. All rights reserved.</b>
+				<b>2018-2025 Christopher W. Gonzalez Melendez. All rights reserved.</b>
 				<br>
 				<b>
 					Designed and built with ❤️ by
@@ -167,6 +173,27 @@
 			</p>
 
 		</footer>
+
+		<!-- Side Navigation component -->
+		<div id="side-nav">
+			
+			<div id="nav-menu-item0" class="nav-menu-items" alt="ID">
+				🪪
+			</div>
+			
+			<div id="nav-menu-item1" class="nav-menu-items" alt="Portfolio">
+				💼
+			</div>
+
+			<div id="nav-menu-item2" class="nav-menu-items" alt="Resume">
+				📄
+			</div>
+
+			<div id="nav-menu-item3" class="nav-menu-items" alt="Chat">
+				💬
+			</div>
+
+		</div>
 
     </body>
 

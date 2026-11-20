@@ -13,7 +13,7 @@ document.addEventListener("readystatechange", function(ev) {
     // Initial Page Settings
     if (document.readyState === "complete") {
 
-        var logo = document.getElementById("logo-container");
+        var logo = document.getElementById("logo-container0");
         var logo1 = document.getElementById("logo-container1");
         var logo2 = document.getElementById("logo-container2");
         var logo3 = document.getElementById("logo-container3");
@@ -24,42 +24,43 @@ document.addEventListener("readystatechange", function(ev) {
 
                 // Initial Implementations
                 sessionStorage.initialLand = 1;
-                logo.style.transition = "opacity 3s";
-                logo.style.opacity = "1";
 
-                if (logo1) {
-                    logo1.style.transition = "opacity 3s";
-                    logo1.style.opacity = "0.75";
-                }
+                // logo.style.transition = "opacity 3s";
+                // logo.style.opacity = "1";
 
-                if (logo2) {
+                // if (logo1) {
+                //     logo1.style.transition = "opacity 3s";
+                //     logo1.style.opacity = "0.75";
+                // }
 
-                    logo2.style.transition = "opacity 3s";
-                    logo2.style.opacity = "0.5";
-                }
+                // if (logo2) {
 
-                if (logo3) {
+                //     logo2.style.transition = "opacity 3s";
+                //     logo2.style.opacity = "0.5";
+                // }
 
-                    logo3.style.transition = "opacity 3s";
-                    logo3.style.opacity = "0.25";
-                }
+                // if (logo3) {
+
+                //     logo3.style.transition = "opacity 3s";
+                //     logo3.style.opacity = "0.25";
+                // }
 
                 // alertUser();
             } else {
 
-                logo.style.opacity = "1";
+                // logo.style.opacity = "1";
 
-                if (logo1) {
-                    logo1.style.opacity = "0.75";
-                }
+                // if (logo1) {
+                //     logo1.style.opacity = "0.75";
+                // }
 
-                if (logo2) {
-                    logo2.style.opacity = "0.5";
-                }
+                // if (logo2) {
+                //     logo2.style.opacity = "0.5";
+                // }
 
-                if (logo3) {
-                    logo3.style.opacity = "0.25";
-                }
+                // if (logo3) {
+                //     logo3.style.opacity = "0.25";
+                // }
             }
         }
         
@@ -357,6 +358,44 @@ function startGhostParallax() {
         }
     } else {
         console.error('Scene not found or Parallax not loaded');
+    }
+}
+
+// =============================================================================
+function toogleNav() {
+
+    var sidenav = document.getElementById("side-nav");
+        
+
+    var navmenu = document.getElementById("nav-menu");
+    var main = document.getElementsByTagName("main")[0];
+
+    if (navmenu.innerHTML == "×") {
+
+        navmenu.style.transition = "0.3s";
+        navmenu.style.transform = "rotate(0deg)";
+        navmenu.innerHTML = "=";
+
+        main.style.transition = "0.3s";
+        main.style.transform = "scale(1)";
+
+        sidenav.style.transition = "0.3s";
+        sidenav.style.transform = "translateX(100px)";
+        sidenav.style.visibility = "hidden";
+
+    } else {
+
+        navmenu.style.transition = "0.6s";
+        navmenu.style.transform = "rotate(180deg)";
+        navmenu.innerHTML = "×";
+
+        main.style.transition = "0.6s";
+        main.style.transform = "scale(0.5)";
+
+        sidenav.style.transition = "0.6s";
+        sidenav.style.transform = "translateX(0px)";
+        sidenav.style.visibility = "visible";
+
     }
 }
 
