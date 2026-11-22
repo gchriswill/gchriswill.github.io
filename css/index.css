@@ -115,6 +115,9 @@ nav {
 
     top: 24px;
     left: 24px;
+
+    width: auto;
+    height: 36px;
     
     font-size: 24px;
     font-weight: bold;
@@ -142,8 +145,8 @@ nav {
 	top: 24px;  
 	right: 24px;
 
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
 
     font-size: 24px;
     font-weight: bold;
@@ -350,6 +353,8 @@ nav {
     #nav-menu {
         transition: 00.3s;
         right: 16px;
+        width: 24px;
+        height: 24px;
         font-size: 18px;
     }
 
