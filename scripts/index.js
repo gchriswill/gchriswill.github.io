@@ -372,11 +372,15 @@ function toogleNav() {
     var navmenu = document.getElementById("nav-menu");
     var main = document.getElementsByTagName("main")[0];
 
-    if (navmenu.innerHTML == "×") {
+    if (navmenu.innerHTML == "✖️") {
 
         navmenu.style.transition = "0.3s";
+
+        navmenu.style.webkitTransform = "rotate(0deg)";
+        navmenu.style.msTransform = "rotate(0deg)";
         navmenu.style.transform = "rotate(0deg)";
-        navmenu.innerHTML = "=";
+
+        navmenu.innerHTML = "🟰";
 
         main.style.transition = "0.3s";
         main.style.transform = "scale(1)";
@@ -388,8 +392,12 @@ function toogleNav() {
     } else {
 
         navmenu.style.transition = "0.6s";
+
+        navmenu.style.webkitTransform = "rotate(180deg)";
+        navmenu.style.msTransform = "rotate(180deg)";
         navmenu.style.transform = "rotate(180deg)";
-        navmenu.innerHTML = "×";
+
+        navmenu.innerHTML = "✖️";
 
         main.style.transition = "0.6s";
         main.style.transform = "scale(0.5)";
