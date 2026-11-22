@@ -13,7 +13,7 @@ document.addEventListener("readystatechange", function(ev) {
     // Initial Page Settings
     if (document.readyState === "complete") {
 
-        var logo = document.getElementById("logo-container0");
+        var logo0 = document.getElementById("logo-container0");
         var logo1 = document.getElementById("logo-container1");
         var logo2 = document.getElementById("logo-container2");
         var logo3 = document.getElementById("logo-container3");
@@ -25,49 +25,51 @@ document.addEventListener("readystatechange", function(ev) {
                 // Initial Implementations
                 sessionStorage.initialLand = 1;
 
-                // logo.style.transition = "opacity 3s";
-                // logo.style.opacity = "1";
+                if (logo0) {
+                    logo0.style.transition = "opacity 3s";
+                }
+                
+                if (logo1) {
+                    logo1.style.transition = "opacity 3s";
+                }
 
-                // if (logo1) {
-                //     logo1.style.transition = "opacity 3s";
-                //     logo1.style.opacity = "0.75";
-                // }
+                if (logo2) {
+                    logo2.style.transition = "opacity 3s";
+                }
 
-                // if (logo2) {
-
-                //     logo2.style.transition = "opacity 3s";
-                //     logo2.style.opacity = "0.5";
-                // }
-
-                // if (logo3) {
-
-                //     logo3.style.transition = "opacity 3s";
-                //     logo3.style.opacity = "0.25";
-                // }
+                if (logo3) {
+                    logo3.style.transition = "opacity 3s";
+                }
 
                 // alertUser();
-            } else {
-
-                // logo.style.opacity = "1";
-
-                // if (logo1) {
-                //     logo1.style.opacity = "0.75";
-                // }
-
-                // if (logo2) {
-                //     logo2.style.opacity = "0.5";
-                // }
-
-                // if (logo3) {
-                //     logo3.style.opacity = "0.25";
-                // }
             }
+
+            if (logo0) {
+                logo0.style.opacity = "1";
+                logo0.style.visibility = "visible";
+            }
+             
+            if (logo1) {
+                logo1.style.opacity = "1";
+                logo1.style.visibility = "visible";
+            }
+
+            if (logo2) {
+                logo2.style.opacity = "1";
+                logo2.style.visibility = "visible";
+            }
+
+            if (logo3) {
+                logo3.style.opacity = "1";
+                logo3.style.visibility = "visible";
+            }
+           
         }
         
         // Clear transitions after fade-in to allow parallax transforms
         setTimeout(function() {
 
-            logo.style.transition = "none";
+            logo0.style.transition = "none";
 
             if (logo1) {
                 logo1.style.transition = "none";
