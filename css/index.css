@@ -383,10 +383,6 @@ nav {
 
 @media (max-height: 525px) {
 
-    /* div#scene {
-        top: 0%;
-    } */
-
     div.logo-containers {
         
         mask-image: radial-gradient(circle at center, white -40%, transparent 40%);
@@ -402,7 +398,7 @@ nav {
     }
 
     #side-nav {
-        width: 140px;
+        width: 150px;
     }
 }
 
@@ -517,18 +513,13 @@ nav {
 
 footer {
 
-	
-    top: 100vh;
+    top: auto;
 	bottom: 0px;
 	width: 100%;
 	height: 80px;
 	z-index: 200;
 
-    position: -webkit-sticky; /* Safari */
-    position: -moz-sticky; /* Firefox */
-    position: -ms-sticky; /* IE 10+ */
-    position: -o-sticky; /* Opera */
-	position: sticky;
+	position: fixed;
 
 	background-color: rgba(240, 240, 240, 0.99);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .1), 0 0 8px rgba(0, 0, 0, .2);
