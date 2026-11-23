@@ -367,43 +367,53 @@ function startGhostParallax() {
 function toogleNav() {
 
     var sidenav = document.getElementById("side-nav");
-        
-
     var navmenu = document.getElementById("nav-menu");
     var main = document.getElementsByTagName("main")[0];
 
     if (navmenu.innerHTML == "✖️") {
 
-        navmenu.style.transition = "0.3s";
-
+        navmenu.style.transition = "0.25s ease-in-out";
         navmenu.style.webkitTransform = "rotate(0deg)";
         navmenu.style.msTransform = "rotate(0deg)";
+        navmenu.style.mozTransform = "rotate(0deg)";
         navmenu.style.transform = "rotate(0deg)";
-
         navmenu.innerHTML = "🟰";
 
-        main.style.transition = "0.3s";
+        main.style.transition = "0.25s ease-in";
+        main.style.webkitTransform = "scale(1)";
+        main.style.msTransform = "scale(1)";
+        main.style.mozTransform = "scale(1)";
         main.style.transform = "scale(1)";
 
-        sidenav.style.transition = "0.3s";
-        sidenav.style.transform = "translateX(100px)";
+        sidenav.style.transition = "0.25s ease-in";
+        sidenav.style.webkitTransform = "translateX(150px)";
+        sidenav.style.msTransform = "translateX(150px)";
+        sidenav.style.mozTransform = "translateX(150px)";
+        sidenav.style.transform = "translateX(150px)";
+        sidenav.style.opacity = "0.1";
         sidenav.style.visibility = "hidden";
 
     } else {
 
-        navmenu.style.transition = "0.6s";
-
+        navmenu.style.transition = "0.5s ease-in-out";
         navmenu.style.webkitTransform = "rotate(180deg)";
         navmenu.style.msTransform = "rotate(180deg)";
+        navmenu.style.mozTransform = "rotate(180deg)";
         navmenu.style.transform = "rotate(180deg)";
-
         navmenu.innerHTML = "✖️";
 
-        main.style.transition = "0.6s";
+        main.style.transition = "0.5s ease-out";
+        main.style.webkitTransform = "scale(0.5)";
+        main.style.msTransform = "scale(0.5)";
+        main.style.mozTransform = "scale(0.5)";
         main.style.transform = "scale(0.5)";
 
-        sidenav.style.transition = "0.6s";
+        sidenav.style.transition = "0.5s ease-out";
+        sidenav.style.webkitTransform = "translateX(0px)";
+        sidenav.style.msTransform = "translateX(0px)";
+        sidenav.style.mozTransform = "translateX(0px)";
         sidenav.style.transform = "translateX(0px)";
+        sidenav.style.opacity = "0.99";
         sidenav.style.visibility = "visible";
 
     }

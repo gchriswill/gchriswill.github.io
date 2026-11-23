@@ -22,7 +22,9 @@ body {
     width: 100vw;
     height: 100vh;
 
-    overflow: hidden;
+    position: fixed;
+    
+    overflow: scroll;
     
     background-image: url("../assets/swift_super_dev.png");
     background-color: white;
@@ -30,7 +32,7 @@ body {
     background-origin: border-box;
     /* background-repeat: no-repeat; */
     background-position: top;
-    /* background-size: contain; */
+    /* background-size: cover; */
 
     font-family : sans-serif;
     -webkit-font-smoothing : antialiased;
@@ -60,24 +62,22 @@ body::before {
     transform: translateZ(0);
 }
 
-body, main {
-    position: fixed;
-}
-
 
 main {
 
-    top: auto;
-    left: auto;
-    right: auto;
-    bottom: auto;
+    top: inherit;
+    left: inherit;
+    right: inherit;
+    bottom: inherit;
 
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    margin: inherit;
+    padding: inherit;
+    width: inherit;
+    height: inherit;
 
-    overflow: hidden;
+    position: fixed;
+
+    /* overflow: hidden; */
     background-color: rgba(211, 211, 211, 0.25);
 
     -webkit-backdrop-filter: blur(10px);
@@ -92,7 +92,12 @@ nav {
 	top: 0px;
 	width: 100%;
 	height: 80px;
-	position: fixed;
+
+    position: -webkit-sticky; /* Safari */
+    position: -moz-sticky; /* Firefox */
+    position: -ms-sticky; /* IE 10+ */
+    position: -o-sticky; /* Opera */
+	position: sticky;
 	z-index: 200;
 
 	/* display: flex;
@@ -378,6 +383,10 @@ nav {
 
 @media (max-height: 525px) {
 
+    /* div#scene {
+        top: 0%;
+    } */
+
     div.logo-containers {
         
         mask-image: radial-gradient(circle at center, white -40%, transparent 40%);
@@ -399,8 +408,8 @@ nav {
 
 #scene {
 
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
     top: 25%;
     left: 25%;
     position: fixed;
@@ -508,26 +517,35 @@ nav {
 
 footer {
 
-	text-align: center;
+	
+    top: 100vh;
 	bottom: 0px;
 	width: 100%;
 	height: 80px;
 	z-index: 200;
-	position: fixed;
+
+    position: -webkit-sticky; /* Safari */
+    position: -moz-sticky; /* Firefox */
+    position: -ms-sticky; /* IE 10+ */
+    position: -o-sticky; /* Opera */
+	position: sticky;
+
 	background-color: rgba(240, 240, 240, 0.99);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .1), 0 0 8px rgba(0, 0, 0, .2);
 	box-shadow: 0 0 8px rgba(0, 0, 0, .1), 0 0 8px rgba(0, 0, 0, .2);
 
+    text-align: center;
 	/* Flexbox for vertical centering */
-	display: flex;
+	/* display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center; */
 }
 
 p#copyr {
 
 	line-height: 2;
 	padding: 0;
+    padding-top: 8px;
     padding-bottom: 16px;
 	margin: 0;
 	font-size: 0.75em;
@@ -537,7 +555,7 @@ p#copyr {
 p#copyr a {
 
 	color: orangered;
-	text-decoration : none;
+	text-decoration: none;
 	
 	/* Add smooth transitions like nav buttons */
 	transition: transform 0.3s ease, opacity 0.3s ease;

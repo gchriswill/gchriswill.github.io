@@ -1,91 +1,88 @@
 <!DOCTYPE html>
 
-<!--
-@Author: Christopher Gonzalez <gchriswill>
-@Date:   2017-01-07T19:04:58-06:00
-@Filename: index.html
-@Last modified by:   gchriswill
-@Last modified time: 2018-08-12T04:56:59-05:00
--->
-
-<html lang="en">
+<html lang="en-US">
 
 	<head>
 
 	    <!-- Default Meta-Supported -->
-		<meta charset="utf-8"/>
+		<meta charset="utf-8">
         <title>gchriswill</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" user-scalable="false"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<meta name="color-scheme" content="light only"/>
 
-		<meta name="description" content="Undiscovered gifted, independently spirited, fiercely unconventional and all-mighty digitally powered..."/>
-		<meta name="keywords" content="gchriswill, Christopher, Gonzalez, Christopher Gonzalez, Christopher Gonzalez Melendez, Christopher W, Christopher W Gonzalez, Christopher W Gonzalez Melendez"/>
+		<meta name="description" content="Undiscovered gifted, independently spirited, fiercely unconventional and all-mighty digitally powered...">
+		<meta name="keywords" content="gchriswill, Christopher, Gonzalez, Christopher Gonzalez, Christopher Gonzalez Melendez, Christopher W, Christopher W Gonzalez, Christopher W Gonzalez Melendez">
 
         <!-- For Humans -->
-        <meta name="author" content="Christopher W Gonzalez Melendez"/>
-        <meta name="Copyright" content="Copyright (c) 2018-2025 Christopher W Gonzalez Melendez. All rights reserved."/>
+        <meta name="author" content="Christopher W Gonzalez Melendez">
+        <meta name="Copyright" content="Copyright (c) 2018-2025 Christopher W Gonzalez Melendez. All rights reserved.">
 
         <!-- For Robots -->
-		<meta name="robots" content="all"/>
-		<meta name="robots" content="index, follow"/>
-		<meta name="st:robots" content="follow, index"/>
+		<meta name="robots" content="all">
+		<meta name="robots" content="index, follow">
+		<meta name="st:robots" content="follow, index">
 
 		<!-- For Search Engines -->
-		<script type="application/ld+json" async=true>
-			[{
-			  "@context": "http://schema.org",
-			  "@type": "WebSite",
-			  "name": "gchriswill",
-			  "url": "http://www.gchriswill.me",
-			  "image": "http://www.gchriswill.me/assets/gchriswill-copilot_20260804_144759_highres.png",
-			  "description": "Undiscovered gifted, independently spirited, fiercely unconventional and all-mighty digitally powered...",
-			  "about":{
-			  	"@type": "Thing",
-			    "description": "This site is gchriswill's professional brand website."
-			  },
-			  "author":{
-			  	"@type": "Person",
-			    "name": "Christopher",
-			    "familyName": "Gonzalez Melendez",
-			    "additionalName": "Will",
-			    "alternateName": "gchriswill",
-			    "url": "http://www.gchriswill.me"
-			  },
-			  "creator":{
-			  	"@type": "Person",
-			    "name": "Christopher",
-			    "familyName": "Gonzalez",
-			    "additionalName": "Will",
-			    "alternateName": "gchriswill",
-			    "url": "http://www.gchriswill.me"
-			  }
-			}]
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+			  	"@graph": [
+			  		{
+						"@type": "WebSite",
+						"@language": "en-US",
+						"name": "gchriswill",
+						"url": "http://www.gchriswill.me",
+						"image": "http://www.gchriswill.me/assets/gchriswill-copilot_20260804_144759_highres.png",
+						"description": "Undiscovered gifted, independently spirited, fiercely unconventional and all-mighty digitally powered...",
+						"about":{
+							"@type": "Thing",
+							"description": "This site is gchriswill's professional brand website."
+						},
+						"author":{
+							"@type": "Person",
+							"name": "Christopher",
+							"familyName": "Gonzalez Melendez",
+							"additionalName": "Will",
+							"alternateName": "gchriswill",
+							"url": "http://www.gchriswill.me"
+						},
+						"creator":{
+							"@type": "Person",
+							"name": "Christopher",
+							"familyName": "Gonzalez",
+							"additionalName": "Will",
+							"alternateName": "gchriswill",
+							"url": "http://www.gchriswill.me"
+						}
+					}
+				]
+			}
 		</script>
 
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="assets/favicon.ico"/>
+		<link rel="icon" type="image/png" href="assets/favicon.ico">
 
 			<!-- Preload Brand Images -->
-        <link rel="preload" href="assets/gchriswill-copilot_20260804_144759_highres.png" as="image"/>
+        <link rel="preload" href="assets/gchriswill-copilot_20260804_144759_highres.png" as="image">
 
-		<link rel="preload" href="assets/swift_super_dev.png" as="image"/>
+		<link rel="preload" href="assets/swift_super_dev.png" as="image">
         
 			<!-- DNS Prefetch and Preconnect for Cross-Site Resources -->
-        <link rel="dns-prefetch" href="//www.gchriswill.me"/>
-        <link rel="preconnect" href="https://www.gchriswill.me" crossorigin/>
+        <link rel="dns-prefetch" href="//www.gchriswill.me">
+        <link rel="preconnect" href="https://www.gchriswill.me" crossorigin>
 
 		<!-- Parallax.js Library -->
-		<link rel="preload" href="scripts/parallax.min.js" as="script"/>
-        <script type="text/javascript" src="scripts/parallax.min.js" async="true"></script>
+		<link rel="preload" href="scripts/parallax.min.js" as="script">
+        <script src="scripts/parallax.min.js" async></script>
 
 		<!-- Local js script -->
-		<link rel="preload" href="scripts/index.js" as="script"/>
-        <script type="text/javascript" src="scripts/index.js" async="true"></script>
+		<link rel="preload" href="scripts/index.js" as="script">
+        <script src="scripts/index.js" async="true"></script>
 
         <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/index.css" media="screen"/>
+        <link rel="stylesheet" href="css/index.css" media="screen">
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-76C6GD19RC"></script>
@@ -99,36 +96,36 @@
 
         
         <!-- Google Meta-Supported -->
-		<meta name="google" content="translate"/>
+		<meta name="google" content="translate">
         
 		<!-- Add more alternate links for other domain extensions, e.g.: -->
-		<link rel="alternate" href="https://www.gchriswill.com"/>
-		<link rel="alternate" href="https://www.gchriswill.us"/>
-		<link rel="alternate" href="https://www.gchriswill.dev"/>
+		<link rel="alternate" href="https://www.gchriswill.com">
+		<link rel="alternate" href="https://www.gchriswill.us">
+		<link rel="alternate" href="https://www.gchriswill.dev">
 
 		<!-- Add more alternate links for other supported languages, e.g.: -->
-		<!-- <link rel="alternate" href="https://www.gchriswill.me/es/" hreflang="es"/> -->
+		<!-- <link rel="alternate" href="https://www.gchriswill.me/es/" hreflang="es"> -->
 
 		<!-- Twitter/X Card Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image"/>
-		<meta name="twitter:site" content="@gchriswill"/>
-		<meta name="twitter:creator" content="@gchriswill"/>
-		<meta name="twitter:title" content="gchriswill"/>
-		<meta name="twitter:image:alt" content="A profile picture of gchriswill"/>
-		<meta name="twitter:image" content="https://www.gchriswill.me/assets/gchriswill-copilot_20260804_144759_highres.png" />
-		<meta name="twitter:description" content="Undiscovered gifted, independently spirited, fiercely unconventional and all-mighty digitally powered..."/>
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@gchriswill">
+		<meta name="twitter:creator" content="@gchriswill">
+		<meta name="twitter:title" content="gchriswill">
+		<meta name="twitter:image:alt" content="A profile picture of gchriswill">
+		<meta name="twitter:image" content="https://www.gchriswill.me/assets/gchriswill-copilot_20260804_144759_highres.png">
+		<meta name="twitter:description" content="Undiscovered gifted, independently spirited, fiercely unconventional and all-mighty digitally powered...">
 
 
 		<!-- Open Graph Meta-Supported -->
-		<meta property="og:type" content="website"/>
-		<meta property="fb:app_id" content=""/>
-		<meta property="og:locale" content="en_US"/>
-		<meta property="og:title" content="gchriswill"/>
+		<meta property="og:type" content="website">
+		<meta property="fb:app_id" content="">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:title" content="gchriswill">
 		<meta property="og:site_name" content="gchriswill.me">
-		<meta property="og:url" content="https://www.gchriswill.me"/>
-		<meta property="og:image:type" content="image/png"/>
-		<meta property="og:image" content="https://www.gchriswill.me/assets/gchriswill-copilot_20260804_144759_highres.png"/>
-		<meta property="og:description" content="Undiscovered gifted, independently spirited, fiercely unconventional and all-mighty digitally powered..."/>
+		<meta property="og:url" content="https://www.gchriswill.me">
+		<meta property="og:image:type" content="image/png">
+		<meta property="og:image" content="https://www.gchriswill.me/assets/gchriswill-copilot_20260804_144759_highres.png">
+		<meta property="og:description" content="Undiscovered gifted, independently spirited, fiercely unconventional and all-mighty digitally powered...">
 
 
 		<!-- Android Meta-Supported -->
@@ -210,19 +207,19 @@
 		<!-- Side Navigation component -->
 		<div id="side-nav">
 			
-			<div id="nav-menu-item0" class="nav-menu-items" alt="ID">
+			<div id="nav-menu-item0" class="nav-menu-items">
 				🪪
 			</div>
 			
-			<div id="nav-menu-item1" class="nav-menu-items" alt="Portfolio">
+			<div id="nav-menu-item1" class="nav-menu-items">
 				💼
 			</div>
 
-			<div id="nav-menu-item2" class="nav-menu-items" alt="Resume">
+			<div id="nav-menu-item2" class="nav-menu-items">
 				📄
 			</div>
 
-			<div id="nav-menu-item3" class="nav-menu-items" alt="Chat">
+			<div id="nav-menu-item3" class="nav-menu-items">
 				💬
 			</div>
 
