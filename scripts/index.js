@@ -403,10 +403,10 @@ function toogleNav() {
         navmenu.innerHTML = "✖️";
 
         main.style.transition = "0.5s ease-out";
-        main.style.webkitTransform = "scale(0.5)";
-        main.style.msTransform = "scale(0.5)";
-        main.style.mozTransform = "scale(0.5)";
-        main.style.transform = "scale(0.5)";
+        main.style.webkitTransform = "scale(0.4)";
+        main.style.msTransform = "scale(0.4)";
+        main.style.mozTransform = "scale(0.4)";
+        main.style.transform = "scale(0.4)";
 
         sidenav.style.transition = "0.5s ease-out";
         sidenav.style.webkitTransform = "translateX(0px)";
