@@ -12,6 +12,7 @@
 }
 
 body {
+
     top: 0;
     left: 0;
     right: 0;
@@ -45,6 +46,14 @@ body {
     /* Optimize for mobile performance */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+
+    scrollbar-color: auto;
+    scrollbar-width: auto;  /* Firefox */
+    -ms-overflow-style: none; 
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 body::before {
@@ -85,6 +94,7 @@ main {
 
     -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.15);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.15);
+
 }
 
 nav {
